@@ -8,12 +8,14 @@ class ProductTest {
 
 	@Test
 	void testProduct() {
-		fail("Not yet implemented");
+		Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true);
+		
 	}
 
 	@Test
 	void testGetProductName() {
-		fail("Not yet implemented");
+		Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true);
+		
 	}
 
 	@Test

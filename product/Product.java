@@ -1,20 +1,22 @@
 package product;
 
+
+
 public class Product {
 	
 	private String ProductName;
 	private double Price;
 	private String Manufacturer;
 	private int ProductID;
-	private int Quantity;
 	private boolean IsFood;
 	
-	public Product(String ProductName, double Price, String Manufacturer, int ProductID, int Quantity, boolean isFood, boolean IsFood) {
+	
+	//Constructor of the Product which has the name, price, manufacturer, id, and specifies if product is food.
+	public Product(String ProductName, double Price, String Manufacturer, int ProductID,  boolean IsFood) {
 		this.ProductName = ProductName;
 		this.Price = Price;
 		this.Manufacturer = Manufacturer;
 		this.ProductID = ProductID;
-		this.Quantity = Quantity;
 		this.IsFood = IsFood;
 			
 	}
@@ -32,9 +34,7 @@ public class Product {
 	public int getProductID() {
 		return ProductID;
 	}
-	public int getQuantity() {
-		return Quantity;
-	}
+
 	public boolean isIsFood() {
 		return IsFood;
 	}
@@ -54,9 +54,7 @@ public class Product {
 	public void setProductID(int productID) {
 		ProductID = productID;
 	}
-	public void setQuantity(int quantity) {
-		Quantity = quantity;
-	}
+	
 	public void setIsFood(boolean isFood) {
 		IsFood = isFood;
 	}
@@ -67,8 +65,8 @@ public class Product {
 		
 		
 		
-		String ts = String.format("%s - %s, $ %d, ID - %d , %d , SNAP Eligibility: %b \n", ProductName,
-				Manufacturer, Price, ProductID, Quantity, IsFood);
+		String ts = String.format("%s - %s , $ %d , ID - %d , SNAP Eligibility: %b \n", ProductName,
+				Manufacturer, Price, ProductID, IsFood);
 		return ts;
 	}
 	
