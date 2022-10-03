@@ -26,20 +26,26 @@ public class Inventory {
 	}
 	
 	public void batchAddUpdate(File file) {
-	 	try{
+	 	try {
 			
 			Scanner fileScanner = new Scanner(file); 
 
+			while(fileScanner.hasNextLine()) {
+				
+			}
+			
 			
 			fileScanner.close();
 	
-		}catch(IOException e){
+		}
+	 	catch(IOException e) {
 			System.out.println("Error opening file.");
 			System.exit(0);
-		}
+	 	}
 	}
 	
 	public static void main(String[] args) {
+		
 	}
 	
 }
