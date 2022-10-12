@@ -6,12 +6,12 @@ class ProductTest {
 
 	@Test
 	void testProduct() {
-		Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true);
+		Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true, 10);
 	}
 
 	@Test
 	void testGetProductName() {
-		Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true);
+		Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true, 10);
 	}
 
 	@Test
