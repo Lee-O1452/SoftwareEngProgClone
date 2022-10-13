@@ -17,6 +17,7 @@ public class Inventory {
 		inventory.put(p.getProductID(), p);
 	}
 	
+
 	public void batchAddOrUpdate(File file) {
 	 	try {
 			
@@ -56,6 +57,7 @@ public class Inventory {
 			System.exit(0);
 	 	}
 	}
+
 	
 	public void removeProduct(Product p) {
 		inventory.remove(p.getProductID());
@@ -65,5 +67,5 @@ public class Inventory {
 		inventory.get(productID).setQuantity(quantity);
 	}
 	
-	
+
 }
