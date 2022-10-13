@@ -70,10 +70,4 @@ public class Inventory {
 		inventory.get(productID).setQuantity(quantity);
 	}
 	
-	public boolean containsProduct(int productID){
-		return inventory.containsKey(productID);
-} 
-
-	
-
 }
