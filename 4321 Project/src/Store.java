@@ -9,7 +9,12 @@ public class Store {
 	
 	public Store(int storeID, String storeName) {
 		store = new HashMap<Integer, Customer>();
+		this.storeID = storeID;
 		this.storeName = storeName;
+	}
+	
+	public Map<Integer, Customer> getStore(){
+		return store;
 	}
 	
 	public String getStoreName() {
