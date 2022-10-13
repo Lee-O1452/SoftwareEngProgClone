@@ -16,7 +16,7 @@ public class InventoryController {
 		if(checkID.isIdValidProduct(productID)) {
 			if(!inventory.containsProduct(productID)) {
 				Product p = new Product(productName, price, manufacturer, productID, isFood, quantity);
-				inventory.addCustomer(p);
+				inventory.addProduct(p);
 				//add confirmation here
 			}
 			//already exists
