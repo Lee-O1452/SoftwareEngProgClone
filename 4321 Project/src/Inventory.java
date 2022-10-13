@@ -17,24 +17,47 @@ public class Inventory {
 		inventory.put(p.getProductID(), p);
 	}
 	
-//	public void batchAddOrUpdate(File file) {
-//	 	try {
-//			
-//			Scanner fileScanner = new Scanner(file); 
-//
-//			while(fileScanner.hasNextLine()) {
-//				
-//			}
-//			
-//			
-//			fileScanner.close();
-//	
-//		}
-//	 	catch(IOException e) {
-//			System.out.println("Error opening file.");
-//			System.exit(0);
-//	 	}
-//	}
+
+	public void batchAddOrUpdate(File file) {
+	 	try {
+			
+			Scanner fileScanner = new Scanner(file); 
+			Scanner productMaker = new Scanner(file);
+
+			while(fileScanner.hasNextLine()) {
+				int checkid = fileScanner.nextInt();
+				if(Inventory.containsKey(checkid) ){
+					int quantitynew = fileScanner.nextInt();
+					int quantityold = inventory.get(checkid).qetQuantity();
+					inventory.updateQuantity(checkid, quantityold + quantitynew);
+
+				}
+				else{ 
+					Product a = new Product();
+					a.setProductName = productMaker.nextString();
+					a.setManufacturer = productMaker.nextString();
+					a.setPrice = productMaker.nextDouble();
+					a.setProductID = productMaker.nextInt();
+					a.setIsFood = productMaker.nextBoolean();
+					a.setQuantity = productMaker.nextInt();
+					inventory.addProduct(a.getProductID(), a);
+
+				}
+				fileScanner.nextLine();
+				productMaker.nextLine();
+			}
+			
+			
+			fileScanner.close();
+			productMaker.close();
+	
+		}
+	 	catch(IOException e) {
+			System.out.println("Error opening file.");
+			System.exit(0);
+	 	}
+	}
+
 	
 	public void removeProduct(Product p) {
 		inventory.remove(p.getProductID());
@@ -44,4 +67,5 @@ public class Inventory {
 		inventory.get(productID).setQuantity(quantity);
 	}
 	
+
 }
