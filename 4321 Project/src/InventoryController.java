@@ -6,7 +6,7 @@ public class InventoryController {
 	
 //	public InventoryController(StoreGui gui) {
 //		this.gui = gui;
-//		this.inventory = InventoryPersistence.buildInventory();
+//		this.inventory = MapPersistence.buildInventory();
 //	}
 	
 //	public void addProduct(int productID, String productName, double price, String manufacturer, boolean isFood, int quantity) {
