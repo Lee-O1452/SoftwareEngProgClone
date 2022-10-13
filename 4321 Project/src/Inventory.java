@@ -44,8 +44,4 @@ public class Inventory {
 		inventory.get(productID).setQuantity(quantity);
 	}
 	
-	public static void main(String[] args) {
-		
-	}
-	
 }
