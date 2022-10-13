@@ -25,22 +25,25 @@ public class Inventory {
 			Scanner productMaker = new Scanner(file);
 
 			while(fileScanner.hasNextLine()) {
-				int checkid = fileScanner.nextInt();
-				if(Inventory.containsKey(checkid) ){
-					int quantitynew = fileScanner.nextInt();
-					int quantityold = inventory.get(checkid).qetQuantity();
-					inventory.updateQuantity(checkid, quantityold + quantitynew);
+				int checkId = fileScanner.nextInt();
+				if(inventory.containsKey(checkId) ){
+					int quantityNew = fileScanner.nextInt();
+					int quantityOld = inventory.get(checkId).getQuantity();
+					updateQuantity(checkId, quantityOld + quantityNew);
 
 				}
 				else{ 
-					Product a = new Product();
-					a.setProductName = productMaker.nextString();
-					a.setManufacturer = productMaker.nextString();
-					a.setPrice = productMaker.nextDouble();
-					a.setProductID = productMaker.nextInt();
-					a.setIsFood = productMaker.nextBoolean();
-					a.setQuantity = productMaker.nextInt();
-					inventory.addProduct(a.getProductID(), a);
+					Product p = new Product(
+					productMaker.next(),
+					productMaker.nextDouble(),
+					productMaker.next(),
+					productMaker.nextInt(),
+					productMaker.nextBoolean(),
+					productMaker.nextInt()
+					);
+					
+					addProduct(p);
+					
 
 				}
 				fileScanner.nextLine();
