@@ -21,9 +21,19 @@ public class IDValidator {
 		}
 	}
 	
-	public boolean isIdValidOrder(int storeID) {
+	public boolean isIdValidOrder(int orderID) {
+		int length = String.valueOf(orderID).length();
+		if(length == 6) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public boolean isIdValidStore(int storeID) {
 		int length = String.valueOf(storeID).length();
-		if(length == 4) {
+		if(length == 2) {
 			return true;
 		}
 		else {
