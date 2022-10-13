@@ -13,8 +13,8 @@ public class Store {
 		this.storeName = storeName;
 	}
 	
-	public Map<Integer, Customer> getStore(){
-		return store;
+	public boolean containsCustomer(int customerID) {
+		return store.containsKey(customerID);
 	}
 	
 	public String getStoreName() {
