@@ -10,7 +10,7 @@ public class InventoryController {
 //	}
 	
 //	public void addProduct(int productID, String productName, double price, String manufacturer, boolean isFood, int quantity) {
-//		boolean isValid = ProductValidator.isIdValid(productID);
+//		boolean isValid = IDValidator.isIdValidProduct(productID);
 //		
 //		if(isValid) {
 //			if(!inventory.containsProduct(productID)) {
