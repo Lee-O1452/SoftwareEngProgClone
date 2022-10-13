@@ -27,16 +27,16 @@ public class Customer {
 	
 	
 	//setters
-	public void setCustomerID() {
-		customerID = customerID;
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
 	}
 	
-	public void setfirstName() {
-		firstName = firstName;
+	public void setfirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	
-	public void setlastName() {
-		lastName = lastName;
+	public void setlastName(String lastName) {
+		this.lastName = lastName;
 	}
 	
 	

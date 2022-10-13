@@ -44,22 +44,22 @@ public class Product {
 	
 	//Setters
 	public void setProductName(String productName) {
-		productName = productName;
+		this.productName = productName;
 	}
 	public void setPrice(double price) {
-		price = price;
+		this.price = price;
 	}
 	public void setManufacturer(String manufacturer) {
-		manufacturer = manufacturer;
+		this.manufacturer = manufacturer;
 	}
 	public void setProductID(int productID) {
-		productID = productID;
+		this.productID = productID;
 	}
 	public void setIsFood(boolean isFood) {
-		isFood = isFood;
+		this.isFood = isFood;
 	}
 	public void setQuantity(int quantity) {
-		quantity = quantity;
+		this.quantity = quantity;
 	}
 	
 
