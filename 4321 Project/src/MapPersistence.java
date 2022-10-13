@@ -12,8 +12,8 @@ public class MapPersistence {
 		return o;
 	}
 	
-	public Store buildStore(String storeName) {
-		Store s = new Store(storeName);
+	public Store buildStore(int storeID, String storeName) {
+		Store s = new Store(storeID, storeName);
 		return s;
 	}
 
