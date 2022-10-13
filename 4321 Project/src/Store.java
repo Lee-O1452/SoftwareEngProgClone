@@ -9,7 +9,12 @@ public class Store {
 	
 	public Store(int storeID, String storeName) {
 		store = new HashMap<Integer, Customer>();
+		this.storeID = storeID;
 		this.storeName = storeName;
+	}
+	
+	public boolean containsCustomer(int customerID) {
+		return store.containsKey(customerID);
 	}
 	
 	public String getStoreName() {
