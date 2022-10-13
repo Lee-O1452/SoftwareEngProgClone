@@ -17,11 +17,11 @@ public class Customer {
 		return customerID;
 	}
 	
-	public int getfirstName() {
+	public String getfirstName() {
 		return firstName;
 	}
 	
-	public int getlastName() {
+	public String getlastName() {
 		return lastName;
 	}
 	
