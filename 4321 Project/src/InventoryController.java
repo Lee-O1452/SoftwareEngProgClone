@@ -21,9 +21,5 @@ public class InventoryController {
 //		}
 //	}
 	
-	
-	public static void main(String[] args) {
-
-	}
 
 }
