@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class ProductTest {
-	Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true, 10);
+	Product x = new Product(1001, 10, "Apple", 0.50, "Davie's Apple Orchard", true);
 
 	@Test
 	@DisplayName("test getProductName()")
