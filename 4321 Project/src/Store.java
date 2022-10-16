@@ -40,7 +40,7 @@ public class Store {
 	}
 	
 	public void displayCustomers() {
-		System.out.println("There are " + store.size() + " customers in the system.");
+		System.out.println("There are " + store.size() + " customers in the system.\n");
 		ArrayList<Customer> allCustomers = new ArrayList<Customer>(store.values());
 		Collections.sort(allCustomers, new Comparator<Customer>() {
 			@Override
