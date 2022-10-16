@@ -1,10 +1,11 @@
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Order {
 
-	private Map<Integer, Product> order;
+	private LinkedHashMap<Integer, Product> order;
 	private int orderID;
 	private int customerID;
 	private Date date;
@@ -13,7 +14,7 @@ public class Order {
 	
 	
 	public Order(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid) {
-		order = new HashMap<Integer, Product>();
+		order = new LinkedHashMap<Integer, Product>();
 		this.orderID = orderID;
 		this.customerID = customerID;
 		this.date = date;
