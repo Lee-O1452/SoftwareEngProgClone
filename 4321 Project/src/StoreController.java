@@ -23,4 +23,10 @@ public class StoreController {
 			}
 			//invalid id
 		}
+		
+
+		public void displayCustomers() {
+			store.displayCustomers();
+			//gui stuff here
+		}
 }
