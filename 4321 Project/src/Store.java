@@ -1,14 +1,15 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Store {
 	
-	private Map<Integer, Customer> store;
+	private LinkedHashMap<Integer, Customer> store;
 	private int storeID;
 	private String storeName;
 	
 	public Store(int storeID, String storeName) {
-		store = new HashMap<Integer, Customer>();
+		store = new LinkedHashMap<Integer, Customer>();
 		this.storeID = storeID;
 		this.storeName = storeName;
 	}

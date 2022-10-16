@@ -2,15 +2,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Inventory {
 
-	private Map<Integer, Product> inventory;
+	private LinkedHashMap<Integer, Product> inventory;
 	
 	public Inventory() {
-		inventory = new HashMap<Integer, Product>();
+		inventory = new LinkedHashMap<Integer, Product>();
 	}
 	
 	public void addProduct(Product p) {
@@ -34,12 +35,12 @@ public class Inventory {
 				}
 				else{ 
 					Product p = new Product(
+					productMaker.nextInt(),
+					productMaker.nextInt(),
 					productMaker.next(),
 					productMaker.nextDouble(),
 					productMaker.next(),
-					productMaker.nextInt(),
-					productMaker.nextBoolean(),
-					productMaker.nextInt()
+					productMaker.nextBoolean()
 					);
 					
 					addProduct(p);
