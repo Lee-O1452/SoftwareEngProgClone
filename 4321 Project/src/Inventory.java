@@ -35,12 +35,12 @@ public class Inventory {
 				}
 				else{ 
 					Product p = new Product(
+					productMaker.nextInt(),
+					productMaker.nextInt(),
 					productMaker.next(),
 					productMaker.nextDouble(),
 					productMaker.next(),
-					productMaker.nextInt(),
-					productMaker.nextBoolean(),
-					productMaker.nextInt()
+					productMaker.nextBoolean()
 					);
 					
 					addProduct(p);
