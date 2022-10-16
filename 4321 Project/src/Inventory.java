@@ -71,5 +71,7 @@ public class Inventory {
 	public boolean containsProduct(int productID){
 		return inventory.containsKey(productID);
 	} 
-	
+	public Product getProduct(int productID) {
+		return inventory.get(productID);
+	}
 }
