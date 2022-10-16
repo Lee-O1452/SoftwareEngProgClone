@@ -42,7 +42,7 @@ public class Customer {
 	
 	@Override
 	public String toString() {
-		String ts = String.format("%d , %s , %s\n", customerID, firstName, lastName);
+		String ts = String.format("Customer ID - %d , First Name - %s , Last Name - %s\n", customerID, firstName, lastName);
 		return ts;
 	}
 	

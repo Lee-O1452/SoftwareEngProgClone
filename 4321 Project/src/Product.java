@@ -65,7 +65,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		String ts = String.format("ID - %d, %d, %s, $ %d, %s, SNAP Eligibility: %b\n", productID, quantity, productName, price, manufacturer, isFood);
+		String ts = String.format("Product ID - %d , Quantity - %d , Product Name - %s , Price - $%d , Manufacturer - %s , Food Item - %b\n", productID, quantity, productName, price, manufacturer, isFood);
 		return ts;
 	}
 
