@@ -8,11 +8,14 @@ public class Store {
 	private LinkedHashMap<Integer, Customer> store;
 	private int storeID;
 	private String storeName;
+	private Inventory storeInventory;
 	
 	public Store(int storeID, String storeName) {
 		store = new LinkedHashMap<Integer, Customer>();
 		this.storeID = storeID;
 		this.storeName = storeName;
+		MapPersistence storeMaps = new MapPersistence();
+		storeInventory = storeMaps.buildInventory();
 	}
 	
 	public boolean containsCustomer(int customerID) {
