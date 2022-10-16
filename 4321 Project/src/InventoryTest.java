@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 class InventoryTest {
 	Inventory inventory = new Inventory();
-	Product x = new Product("Apple", 0.50, "Davie's Apple Orchard", 1001, true, 10);
-	Product y = new Product("Fish", 1.00, "phill's Fishery", 0001, true, 10);
+	Product x = new Product(1001, 10, "Apple", 0.50, "Davie's Apple Orchard", true);
+	Product y = new Product(0001, 10, "Fish", 1.00, "phill's Fishery", true);
 
 
 	@Test
