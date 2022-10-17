@@ -1,7 +1,5 @@
 import java.util.Date;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class Order {
 
@@ -11,15 +9,17 @@ public class Order {
 	private Date date;
 	private boolean usingSnap;
 	private boolean isPaid;
+	private Store store;
 	
 	
-	public Order(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid) {
+	public Order(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		order = new LinkedHashMap<Integer, Product>();
 		this.orderID = orderID;
 		this.customerID = customerID;
 		this.date = date;
 		usingSnap = false;
 		isPaid = false;
+		this.store = store;
 	}
 
 		
@@ -66,7 +66,22 @@ public class Order {
 		this.isPaid = isPaid;
 	}
 	
+	public Store getStore() {
+		return store;
+	}
+	
 	public void addProduct(Product p) {
 		order.put(p.getProductID(), p);
 	}
+	
+	public String getDateString() {
+		String dateString = getDate().toGMTString();
+		return dateString;
+	}
+	
+	public void orderReport() {
+		
+	}
+	
+	
 }

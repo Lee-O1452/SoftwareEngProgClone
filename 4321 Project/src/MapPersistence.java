@@ -7,8 +7,8 @@ public class MapPersistence {
 		return i;
 	}
 	
-	public Order buildOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid) {
-		Order o = new Order(orderID, customerID, date, usingSnap, isPaid);
+	public Order buildOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+		Order o = new Order(orderID, customerID, date, usingSnap, isPaid, store);
 		return o;
 	}
 	
