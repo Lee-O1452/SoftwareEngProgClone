@@ -79,5 +79,9 @@ public class Order {
 		return dateString;
 	}
 	
+	public void orderReport() {
+		
+	}
+	
 	
 }
