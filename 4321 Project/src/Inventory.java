@@ -118,7 +118,7 @@ public class Inventory {
 		return allProducts;
 	}
 	
-	public ArrayList<Product> productIsFood() {
+	public ArrayList<Product> productReportIsFood() {
 		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
 		Collections.sort(allProducts, new Comparator<Product>() {
 			@Override
