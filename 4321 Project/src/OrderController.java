@@ -19,10 +19,6 @@ public class OrderController {
 		//invalid id
 	}
 	
-	public void payOrder() {
-		order.setisPaid(true);
-	}
-	
 	public void addToOrder(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		ArrayList<Product> allProductsName = order.getStore().getStoreInventory().productReportName();
 		for(int i = 0; i < allProductsName.size(); i++) {
@@ -33,5 +29,9 @@ public class OrderController {
 		Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
 		order.addProduct(p);
 	}
-	
+
+	public void payOrder() {
+		order.setisPaid(true);
+		order.orderReport();
+	}
 }
