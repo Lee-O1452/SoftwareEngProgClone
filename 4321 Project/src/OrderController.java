@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class OrderController {
@@ -20,6 +21,17 @@ public class OrderController {
 	
 	public void payOrder() {
 		order.setisPaid(true);
+	}
+	
+	public void addToOrder(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+		ArrayList<Product> allProductsName = order.getStore().getStoreInventory().productReportName();
+		for(int i = 0; i < allProductsName.size(); i++) {
+			System.out.println(allProductsName.get(i));
+		}
+		//need way to then select the product from gui
+		//this may need to be split into two methods for the gui, the top part for just displaying which then calls the bottom part when a product is clicked on
+		Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
+		order.addProduct(p);
 	}
 	
 }

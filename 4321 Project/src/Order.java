@@ -66,7 +66,12 @@ public class Order {
 		this.isPaid = isPaid;
 	}
 	
+	public Store getStore() {
+		return store;
+	}
 	public void addProduct(Product p) {
 		order.put(p.getProductID(), p);
 	}
+	
+	
 }
