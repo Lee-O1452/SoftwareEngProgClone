@@ -9,15 +9,17 @@ public class Order {
 	private Date date;
 	private boolean usingSnap;
 	private boolean isPaid;
+	private Store store;
 	
 	
-	public Order(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid) {
+	public Order(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		order = new LinkedHashMap<Integer, Product>();
 		this.orderID = orderID;
 		this.customerID = customerID;
 		this.date = date;
 		usingSnap = false;
 		isPaid = false;
+		this.store = store;
 	}
 
 		
