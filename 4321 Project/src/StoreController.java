@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class StoreController {
 
@@ -33,8 +34,12 @@ public class StoreController {
 		}
 		
 
-		public void displayCustomers() {
-			store.displayCustomers();
+		public void printDisplayCustomers() {
+			ArrayList<Customer> allCustomers = store.displayCustomers();
+			System.out.println("There are " + store.getStoreSize() + " customers in the system.\n");
+			for(int i = 0; i < allCustomers.size(); i++) {
+				System.out.println(allCustomers.get(i));
+			}
 			//gui stuff here
 		}
 }
