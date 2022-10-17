@@ -1,5 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +33,11 @@ class StoreTest {
 		store.addCustomer(c4);
 		store.addCustomer(c5);
 		store.addCustomer(c6);
-		store.displayCustomers();
+		ArrayList<Customer> allCustomers = store.displayCustomers();
+		System.out.println("There are " + store.getStoreSize() + " customers in the system.\n");
+		for(int i = 0; i < allCustomers.size(); i++) {
+			System.out.println(allCustomers.get(i));
+		}
 	}
 
 }
