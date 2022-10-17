@@ -42,8 +42,11 @@ public class Store {
 		store.put(c.getCustomerID(), c);
 	}
 	
-	public void displayCustomers() {
-		System.out.println("There are " + store.size() + " customers in the system.\n");
+	public int getStoreSize() {
+		return store.size();
+	}
+	
+	public ArrayList<Customer> displayCustomers() {
 		ArrayList<Customer> allCustomers = new ArrayList<Customer>(store.values());
 		Collections.sort(allCustomers, new Comparator<Customer>() {
 			@Override
@@ -60,8 +63,6 @@ public class Store {
 				return c1.getFirstName().compareTo(c2.getFirstName());
 		    }
 		});
-		for(int i = 0; i < allCustomers.size(); i++) {
-			System.out.println(allCustomers.get(i));
-		}
+		return allCustomers;
 	}
 }
