@@ -40,7 +40,9 @@ public class Product {
 	public int getQuantity() {
 		return quantity;
 	}
-	
+	public double getTotalValue() {
+		return price * quantity;
+	}
 	
 	//Setters
 	public void setProductName(String productName) {
