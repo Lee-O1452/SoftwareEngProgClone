@@ -1,5 +1,8 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
@@ -70,8 +73,70 @@ public class Inventory {
 	
 	public boolean containsProduct(int productID){
 		return inventory.containsKey(productID);
-	} 
+	}
+	
 	public Product getProduct(int productID) {
 		return inventory.get(productID);
 	}
+	
+	public ArrayList<Product> productReportName() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				return p1.getProductName().compareToIgnoreCase(p2.getProductName());
+		    }
+		});
+		return allProducts;
+	}
+	
+	public ArrayList<Product> productReportID() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				if(p1.getProductID() > p2.getProductID()) {
+					return 1;
+				}
+				return -1;
+		    }
+		});
+		return allProducts;
+	}
+	
+	public ArrayList<Product> productReportManufacturer() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				if(p1.getManufacturer().compareToIgnoreCase(p2.getManufacturer()) == 0) {
+					return p1.getProductName().compareToIgnoreCase(p2.getProductName());
+				}
+				return p1.getManufacturer().compareToIgnoreCase(p2.getManufacturer());
+		    }
+		});
+		return allProducts;
+	}
+	
+	public ArrayList<Product> productIsFood() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				
+				if(p1.getIsFood() == true && p2.getIsFood() == false) {
+					return 1;
+				}
+				if(p1.getIsFood() == false && p2.getIsFood() == true) {
+					return -1;
+				}
+				return p1.getProductName().compareToIgnoreCase(p2.getProductName());
+		    }
+		});
+		return allProducts;
+	}
+	
+	
+	
+	
 }
