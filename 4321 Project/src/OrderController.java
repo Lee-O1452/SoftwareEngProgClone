@@ -9,11 +9,11 @@ public class OrderController {
 //		this.gui = gui;
 //	}
 	
-	public void createOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid) {
+	public void createOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		IDValidator checkID = new IDValidator(); 
 		MapPersistence orderBuilder = new MapPersistence();
 		if(checkID.isIdValidOrder(orderID)) {
-			this.order = orderBuilder.buildOrder(orderID, customerID, date, usingSnap, isPaid);
+			this.order = orderBuilder.buildOrder(orderID, customerID, date, usingSnap, isPaid, store);
 		}
 		//invalid id
 	}
