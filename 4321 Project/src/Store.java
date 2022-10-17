@@ -46,6 +46,10 @@ public class Store {
 		return store.size();
 	}
 	
+	public Inventory getStoreInventory() {
+		return storeInventory;
+	}
+	
 	public ArrayList<Customer> displayCustomers() {
 		ArrayList<Customer> allCustomers = new ArrayList<Customer>(store.values());
 		Collections.sort(allCustomers, new Comparator<Customer>() {
