@@ -69,8 +69,14 @@ public class Order {
 	public Store getStore() {
 		return store;
 	}
+	
 	public void addProduct(Product p) {
 		order.put(p.getProductID(), p);
+	}
+	
+	public String getDateString() {
+		String dateString = getDate().toGMTString();
+		return dateString;
 	}
 	
 	
