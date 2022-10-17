@@ -18,4 +18,8 @@ public class OrderController {
 		//invalid id
 	}
 	
+	public void payOrder() {
+		order.setisPaid(true);
+	}
+	
 }
