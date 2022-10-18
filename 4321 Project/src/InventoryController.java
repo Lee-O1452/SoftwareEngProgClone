@@ -55,4 +55,8 @@ public class InventoryController {
 			System.out.println(allProductsIsFood.get(i));
 		}
 	}
+	
+	public void updateQuantity(int productID, int quantity) {
+		inventory.getProduct(productID).setQuantity(quantity);
+	}
 }
