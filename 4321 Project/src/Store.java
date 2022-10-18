@@ -9,6 +9,8 @@ public class Store {
 	private int storeID;
 	private String storeName;
 	private Inventory storeInventory;
+	private double foodTax;
+	private double nonFoodTax;
 	
 	public Store(int storeID, String storeName) {
 		store = new LinkedHashMap<Integer, Customer>();
@@ -16,6 +18,8 @@ public class Store {
 		this.storeName = storeName;
 		MapPersistence storeMaps = new MapPersistence();
 		storeInventory = storeMaps.buildInventory();
+		foodTax = 0.04;
+		nonFoodTax = 0.08;
 	}
 	
 	public boolean containsCustomer(int customerID) {
@@ -68,5 +72,21 @@ public class Store {
 		    }
 		});
 		return allCustomers;
+	}
+	
+	public double getFoodTax() {
+		return foodTax;
+	}
+	
+	public void setFoodTax(double foodTax) {
+		this.foodTax = foodTax;
+	}
+	
+	public double getNonFoodTax() {
+		return nonFoodTax;
+	}
+	
+	public void setNonFoodTax(double nonFoodTax) {
+		this.nonFoodTax = nonFoodTax;
 	}
 }
