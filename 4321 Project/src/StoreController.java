@@ -42,4 +42,9 @@ public class StoreController {
 			}
 			//gui stuff here
 		}
+		
+		public void updateTaxes(double foodTax, double nonFoodTax) {
+			store.setFoodTax(foodTax);
+			store.setNonFoodTax(nonFoodTax);
+		}
 }
