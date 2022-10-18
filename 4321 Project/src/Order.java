@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
@@ -80,8 +81,35 @@ public class Order {
 	}
 	
 	public void orderReport() {
-		
+		ArrayList<Product> productsOrdered = new ArrayList<Product>(order.values());
+		double totalPrice = 0;
+		double foodTax = 0;
+		double nonFoodTax = 0;
+		double totalTax = 0;
+		double grandTotal = 0;
+		for(int i = 0; i < productsOrdered.size(); i++) {
+			double productCost = productsOrdered.get(i).getPrice() * productsOrdered.get(i).getQuantity();
+			totalPrice += productCost;
+			if(productsOrdered.get(i).getIsFood()) {
+				foodTax += productCost * store.getFoodTax();
+			}
+			else {
+				nonFoodTax += productCost * store.getNonFoodTax();
+			}
+		}
+		totalTax = foodTax + nonFoodTax;
+		grandTotal = totalPrice + totalTax;
+		String storeInformation = String.format("Store Name - %s , Store ID - %s , Date - %s\n", store.getStoreName(), store.getStoreID(), getDateString());
+		System.out.println(storeInformation);
+		for(int i = 0; i < productsOrdered.size(); i++) {
+			String productInformation = String.format("Item - %s , Price - $%d , Quantity - %d", productsOrdered.get(i).getProductName(), productsOrdered.get(i).getPrice(), productsOrdered.get(i).getQuantity());
+			System.out.println(productInformation);
+		}
+		String costInformation = String.format("\nTotal Price - $%d , Taxes - $%d , Grand Total - $%d", totalPrice, totalTax, grandTotal);
+		System.out.println(costInformation);
 	}
+	
+	
 	
 	
 }
