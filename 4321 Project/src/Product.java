@@ -11,7 +11,7 @@ public class Product {
 	
 	
 	//Constructor of the Product which has the name, price, manufacturer, id, and specifies if product is food.
-	public Product(String productName, double price, String manufacturer, int productID,  boolean isFood, int quantity) {
+	public Product(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		this.productName = productName;
 		this.price = price;
 		this.manufacturer = manufacturer;
@@ -40,7 +40,9 @@ public class Product {
 	public int getQuantity() {
 		return quantity;
 	}
-	
+	public double getTotalValue() {
+		return price * quantity;
+	}
 	
 	//Setters
 	public void setProductName(String productName) {
@@ -65,8 +67,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		String ts = String.format("%s - %s , $ %d , ID - %d , SNAP Eligibility: %b , %d\n", productName,
-				manufacturer, price, productID, isFood, quantity);
+		String ts = String.format("Product ID - %d , Quantity - %d , Product Name - %s , Price - $%d , Manufacturer - %s , Food Item - %b\n", productID, quantity, productName, price, manufacturer, isFood);
 		return ts;
 	}
 

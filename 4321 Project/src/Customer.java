@@ -17,11 +17,11 @@ public class Customer {
 		return customerID;
 	}
 	
-	public String getfirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 	
-	public String getlastName() {
+	public String getLastName() {
 		return lastName;
 	}
 	
@@ -31,18 +31,18 @@ public class Customer {
 		this.customerID = customerID;
 	}
 	
-	public void setfirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 	
-	public void setlastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 	
 	
 	@Override
 	public String toString() {
-		String ts = String.format("%d , %s , %s\n", customerID, firstName, lastName);
+		String ts = String.format("Customer ID - %d , First Name - %s , Last Name - %s\n", customerID, firstName, lastName);
 		return ts;
 	}
 	

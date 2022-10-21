@@ -1,16 +1,17 @@
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class Inventory {
 
-	private Map<Integer, Product> inventory;
+	private LinkedHashMap<Integer, Product> inventory;
 	
 	public Inventory() {
-		inventory = new HashMap<Integer, Product>();
+		inventory = new LinkedHashMap<Integer, Product>();
 	}
 	
 	public void addProduct(Product p) {
@@ -25,22 +26,25 @@ public class Inventory {
 			Scanner productMaker = new Scanner(file);
 
 			while(fileScanner.hasNextLine()) {
-				int checkid = fileScanner.nextInt();
-				if(Inventory.containsKey(checkid) ){
-					int quantitynew = fileScanner.nextInt();
-					int quantityold = inventory.get(checkid).qetQuantity();
-					inventory.updateQuantity(checkid, quantityold + quantitynew);
+				int checkId = fileScanner.nextInt();
+				if(inventory.containsKey(checkId) ){
+					int quantityNew = fileScanner.nextInt();
+					int quantityOld = inventory.get(checkId).getQuantity();
+					updateQuantity(checkId, quantityOld + quantityNew);
 
 				}
 				else{ 
-					Product a = new Product();
-					a.setProductName = productMaker.nextString();
-					a.setManufacturer = productMaker.nextString();
-					a.setPrice = productMaker.nextDouble();
-					a.setProductID = productMaker.nextInt();
-					a.setIsFood = productMaker.nextBoolean();
-					a.setQuantity = productMaker.nextInt();
-					inventory.addProduct(a.getProductID(), a);
+					Product p = new Product(
+					productMaker.nextInt(),
+					productMaker.nextInt(),
+					productMaker.next(),
+					productMaker.nextDouble(),
+					productMaker.next(),
+					productMaker.nextBoolean()
+					);
+					
+					addProduct(p);
+					
 
 				}
 				fileScanner.nextLine();
@@ -67,5 +71,72 @@ public class Inventory {
 		inventory.get(productID).setQuantity(quantity);
 	}
 	
-
+	public boolean containsProduct(int productID){
+		return inventory.containsKey(productID);
+	}
+	
+	public Product getProduct(int productID) {
+		return inventory.get(productID);
+	}
+	
+	public ArrayList<Product> productReportName() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				return p1.getProductName().compareToIgnoreCase(p2.getProductName());
+		    }
+		});
+		return allProducts;
+	}
+	
+	public ArrayList<Product> productReportID() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				if(p1.getProductID() > p2.getProductID()) {
+					return 1;
+				}
+				return -1;
+		    }
+		});
+		return allProducts;
+	}
+	
+	public ArrayList<Product> productReportManufacturer() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				if(p1.getManufacturer().compareToIgnoreCase(p2.getManufacturer()) == 0) {
+					return p1.getProductName().compareToIgnoreCase(p2.getProductName());
+				}
+				return p1.getManufacturer().compareToIgnoreCase(p2.getManufacturer());
+		    }
+		});
+		return allProducts;
+	}
+	
+	public ArrayList<Product> productReportIsFood() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		Collections.sort(allProducts, new Comparator<Product>() {
+			@Override
+			public int compare(Product p1, Product p2) {
+				
+				if(p1.getIsFood() == true && p2.getIsFood() == false) {
+					return 1;
+				}
+				if(p1.getIsFood() == false && p2.getIsFood() == true) {
+					return -1;
+				}
+				return p1.getProductName().compareToIgnoreCase(p2.getProductName());
+		    }
+		});
+		return allProducts;
+	}
+	
+	
+	
+	
 }
