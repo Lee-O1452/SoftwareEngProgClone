@@ -67,4 +67,20 @@ public class InventoryController {
 	public void removeProduct(int productID) {
 		inventory.removeProduct(inventory.getProduct(productID));
 	}
+
+	public void manufacturerProductReport(String manufacturer){
+		
+		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
+		
+		System.out.println("All Products made by " + manufacturer + " :");
+		for(int i = 0; i < allProductsManufacturer.size(); i++){
+			if (allProductsManufacturer.get(i).getManufacturer() == manufacturer){
+				double totalInventoryValue = allProductsManufacturer.get(i).getTotalValue();
+				System.out.println(allProductsManufacturer.get(i).toString() + " Total Value: " + totalInventoryValue);
+
+			}
+
+		}
+
+	}
 }

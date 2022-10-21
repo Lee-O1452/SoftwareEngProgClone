@@ -33,5 +33,16 @@ public class OrderController {
 	public void payOrder() {
 		order.setisPaid(true);
 		order.orderReport();
+		//need to figure out how to number each item and use Inventory
+			// for(int i = 0; i < order.length; i++){
+			// 	order.getStore().getStoreInventory().decreaseQuantity(0, 0);
+			// }
+			
+	}
+
+	public void returnItem(int productID, int quantity){
+
+		order.getStore().getStoreInventory().increaseQuantity(productID, quantity);
+		order.returnProduct(productID);
 	}
 }

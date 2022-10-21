@@ -47,4 +47,6 @@ public class StoreController {
 			store.setFoodTax(foodTax);
 			store.setNonFoodTax(nonFoodTax);
 		}
+
+		
 }
