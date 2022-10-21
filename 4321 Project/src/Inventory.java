@@ -76,6 +76,13 @@ public class Inventory {
 		int currentQuantity = quantity + getProduct(productID).getQuantity();
 		getProduct(productID).setQuantity(currentQuantity);
 	}
+
+	public void decreaseQuantity(int productID, int quantity){
+
+		int currentQuantity = getProduct(productID).getQuantity() - quantity;
+		getProduct(productID).setQuantity(currentQuantity);
+	}
+	
 	
 	public boolean containsProduct(int productID){
 		return inventory.containsKey(productID);
