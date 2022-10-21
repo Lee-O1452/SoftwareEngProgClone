@@ -74,6 +74,11 @@ public class Order {
 	public void addProduct(Product p) {
 		order.put(p.getProductID(), p);
 	}
+
+	public void returnProduct(int productID){
+		order.remove(productID);
+
+	}
 	
 	public String getDateString() {
 		String dateString = getDate().toGMTString();
