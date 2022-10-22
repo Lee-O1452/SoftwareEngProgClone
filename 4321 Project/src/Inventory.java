@@ -18,7 +18,7 @@ public class Inventory {
 		inventory.put(p.getProductID(), p);
 	}
 	
-
+    //checks each line for if a product with the ID already exists in the map, if it does then quantity is updated, if it doesn't then it is added as a new product
 	public void batchAddOrUpdate(File file) {
 	 	try {
 			
@@ -71,12 +71,14 @@ public class Inventory {
 		inventory.get(productID).setQuantity(quantity);
 	}
 
+	//for when an order has a product returned, adds the quantity back into the inventory
 	public void increaseQuantity(int productID, int quantity){
 
 		int currentQuantity = quantity + getProduct(productID).getQuantity();
 		getProduct(productID).setQuantity(currentQuantity);
 	}
 
+	//for when an order is payed, removes the quantity of product purchased from inventory
 	public void decreaseQuantity(int productID, int quantity){
 
 		int currentQuantity = getProduct(productID).getQuantity() - quantity;
@@ -92,6 +94,7 @@ public class Inventory {
 		return inventory.get(productID);
 	}
 	
+	//turns the map into an array, creates a comparator to sort based on product name (case in-sensitive), and returns the array
 	public ArrayList<Product> productReportName() {
 		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
 		Collections.sort(allProducts, new Comparator<Product>() {
@@ -103,6 +106,7 @@ public class Inventory {
 		return allProducts;
 	}
 	
+    //turns the map into an array, creates a comparator to sort based on product id, and returns the array
 	public ArrayList<Product> productReportID() {
 		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
 		Collections.sort(allProducts, new Comparator<Product>() {
@@ -117,6 +121,7 @@ public class Inventory {
 		return allProducts;
 	}
 	
+	//turns the map into an array, creates a comparator to sort based on manufacturer name (case in-sensitive), and returns the array
 	public ArrayList<Product> productReportManufacturer() {
 		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
 		Collections.sort(allProducts, new Comparator<Product>() {
@@ -131,6 +136,7 @@ public class Inventory {
 		return allProducts;
 	}
 	
+	//turns the map into an array, creates a comparator to sort based on if its a food product, and returns the array
 	public ArrayList<Product> productReportIsFood() {
 		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
 		Collections.sort(allProducts, new Comparator<Product>() {

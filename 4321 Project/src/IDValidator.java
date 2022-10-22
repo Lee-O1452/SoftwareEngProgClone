@@ -1,6 +1,8 @@
 
 public class IDValidator {
 
+    //class may be made redundant, changing IDs to generated
+    
     public static boolean isIdValidProduct(int productID) {
         int length = String.valueOf(productID).length();
         if(length == 4) {
