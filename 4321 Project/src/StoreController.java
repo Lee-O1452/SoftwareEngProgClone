@@ -47,6 +47,11 @@ public class StoreController {
 			store.setFoodTax(foodTax);
 			store.setNonFoodTax(nonFoodTax);
 		}
+		
+		//legwork for this is not done
+		public void displayPopularProducts(){
+			
 
+		}
 		
 }
