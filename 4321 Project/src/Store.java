@@ -12,6 +12,7 @@ public class Store {
 	private double foodTax;
 	private double nonFoodTax;
 	
+	//every store has same default tax value and builds its inventory on creation
 	public Store(int storeID, String storeName) {
 		store = new LinkedHashMap<Integer, Customer>();
 		this.storeID = storeID;
@@ -54,6 +55,7 @@ public class Store {
 		return storeInventory;
 	}
 	
+	//turns map into an array and creates comparator to sort it first based off first name, then last name, then ID if neccessary.
 	public ArrayList<Customer> displayCustomers() {
 		ArrayList<Customer> allCustomers = new ArrayList<Customer>(store.values());
 		Collections.sort(allCustomers, new Comparator<Customer>() {

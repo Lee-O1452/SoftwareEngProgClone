@@ -10,6 +10,7 @@ public class InventoryController {
 //		this.inventory = MapPersistence.buildInventory();
 //	}
 	
+	//needs GUI integration, checks if the product ID entered is 4 digits and if so then creates a product and adds it to inventory. Need to add a check for ID already in use, and a message if ID is denied.
 	public void addProduct(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		
 		IDValidator checkID = new IDValidator(); 
@@ -24,6 +25,7 @@ public class InventoryController {
 		//invalid id
 	}
 	
+	//needs GUI integration, has options for displaying each sorting method of product report
 	public void displayProductReport(){
 		ArrayList<Product> allProductsName = inventory.productReportName();
 		ArrayList<Product> allProductsID = inventory.productReportID();
@@ -56,18 +58,22 @@ public class InventoryController {
 		}
 	}
 	
+	//needs GUI integration
 	public void updateQuantity(int productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(quantity);
 	}
 	
+	//needs GUI integration
 	public void updatePrice(int productID, double price) {
 		inventory.getProduct(productID).setPrice(price);
 	}
 	
+	//needs GUI integration
 	public void removeProduct(int productID) {
 		inventory.removeProduct(inventory.getProduct(productID));
 	}
 
+	//needs GUI integration
 	public void manufacturerProductReport(String manufacturer){
 		
 		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();

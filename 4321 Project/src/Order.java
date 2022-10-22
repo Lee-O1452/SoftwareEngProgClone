@@ -86,6 +86,7 @@ public class Order {
 	}
 	
 	public void orderReport() {
+	    //holding variables for display
 		ArrayList<Product> productsOrdered = new ArrayList<Product>(order.values());
 		ArrayList<Product> foodItems = new ArrayList<Product>();
 		ArrayList<Product> nonFoodItems = new ArrayList<Product>();
@@ -96,9 +97,11 @@ public class Order {
 		double grandTotal = 0;
 		double foodTotal = 0;
 		double nonFoodTotal = 0;
+		//gets the total cost for each product from their price and quantity
 		for(int i = 0; i < productsOrdered.size(); i++) {
 			double productCost = productsOrdered.get(i).getPrice() * productsOrdered.get(i).getQuantity();
 			totalPrice += productCost;
+			//if the product is food then checks if customer is using snap or not to add to correct variables
 			if(productsOrdered.get(i).getIsFood()) {
 				if(getUsingSnap()) {
 					foodTotal += productCost;
@@ -108,6 +111,7 @@ public class Order {
 					foodTax += productCost * store.getFoodTax();
 				}
 			}
+			//if the food is not food then checks if customer is using snap to add extra details
 			else {
 				nonFoodTax += productCost * store.getNonFoodTax();
 				if(getUsingSnap()) {
@@ -120,6 +124,7 @@ public class Order {
 		grandTotal = totalPrice + totalTax;
 		String storeInformation = String.format("Store Name - %s , Store ID - %s , Date - %s\n", store.getStoreName(), store.getStoreID(), getDateString());
 		System.out.println(storeInformation);
+		//different output for snap users, shows products seperated by if food or not along with the total of each section
 		if(getUsingSnap()) {
 			System.out.println("Food Items:");
 			for(int i = 0; i < productsOrdered.size(); i++) {
@@ -136,6 +141,7 @@ public class Order {
 			String costInformation = String.format("\nTaxes - $%d , Nonfood Total - $%d , Grand Total - $%d", totalTax, nonFoodTotal + totalTax,grandTotal);
 			System.out.println(costInformation);
 		}
+		//output for non-snap users just shows all products together with combined total price 
 		else {
 			for(int i = 0; i < productsOrdered.size(); i++) {
 				String productInformation = String.format("Item - %s , Price - $%d , Quantity - %d", productsOrdered.get(i).getProductName(), productsOrdered.get(i).getPrice(), productsOrdered.get(i).getQuantity());

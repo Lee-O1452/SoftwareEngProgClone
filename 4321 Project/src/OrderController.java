@@ -10,6 +10,7 @@ public class OrderController {
 //		this.gui = gui;
 //	}
 	
+	//needs GUI integration, update ID to being generated instead of manually entered
 	public void createOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		IDValidator checkID = new IDValidator(); 
 		MapPersistence orderBuilder = new MapPersistence();
@@ -19,13 +20,13 @@ public class OrderController {
 		//invalid id
 	}
 	
+    //need way to then select the product from gui
+    //this may need to be split into two methods for the gui, the top part for just displaying which then calls the bottom part when a product is clicked on
 	public void addToOrder(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		ArrayList<Product> allProductsName = order.getStore().getStoreInventory().productReportName();
 		for(int i = 0; i < allProductsName.size(); i++) {
 			System.out.println(allProductsName.get(i));
 		}
-		//need way to then select the product from gui
-		//this may need to be split into two methods for the gui, the top part for just displaying which then calls the bottom part when a product is clicked on
 		Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
 		order.addProduct(p);
 	}

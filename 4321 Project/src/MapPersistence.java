@@ -1,7 +1,5 @@
 import java.util.Date;
 
-//CTWOOD WAS HERE
-
 public class MapPersistence {
 
 	public Inventory buildInventory() {
