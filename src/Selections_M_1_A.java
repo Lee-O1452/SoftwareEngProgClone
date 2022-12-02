@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedHashMap;
+import java.util.Vector;
 
 
 public class Selections_M_1_A extends JFrame {
@@ -22,6 +23,7 @@ public class Selections_M_1_A extends JFrame {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        StoreSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
         createStoreButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,7 +52,8 @@ public class Selections_M_1_A extends JFrame {
                     Selections_M_2_A afterLogin = new Selections_M_2_A();
                 }
             }
-        });;
+        });
+
 
 
     }
