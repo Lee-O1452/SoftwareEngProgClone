@@ -34,7 +34,7 @@ public class Selections_C_1_5 {
             public void actionPerformed(ActionEvent e){
                 if(e.getSource() == loginButton){
                     frame.dispose();
-                    Login_C_2_B login = new Login_C_2_B();
+                    AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5();
                 }
             }
         });

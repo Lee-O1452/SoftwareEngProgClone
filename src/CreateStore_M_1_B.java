@@ -12,8 +12,7 @@ public class CreateStore_M_1_B extends JFrame{
     private JLabel nameLabel;
     private JPanel panel1;
     JFrame frame = new JFrame();
-    private StoreController StoreController;
-
+    StoreController storeController = new StoreController();
     public CreateStore_M_1_B(){
 
         frame.setContentPane(panel1);
@@ -30,7 +29,7 @@ public class CreateStore_M_1_B extends JFrame{
                     String id2 = idField.getText();
                     int id = Integer.parseInt(id2);
                     String name = nameField.getText();
-                    StoreController.createStore(id, name);
+                    storeController.createStore(id, name);
                 }
             }
         });

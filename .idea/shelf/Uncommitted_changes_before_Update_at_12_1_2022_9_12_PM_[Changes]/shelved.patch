@@ -1,0 +1,149 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\r\n\r\n    public static void main(String [] args){\r\n        MainMenu_1_ mainMenu = new MainMenu_1_();\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision bc2d57870955c0361776b30c3ef90699b45293f9)
++++ b/src/Main.java	(date 1669946915231)
+@@ -1,7 +1,10 @@
++import java.util.LinkedHashMap;
++
+ public class Main {
+ 
+     public static void main(String [] args){
+-        MainMenu_1_ mainMenu = new MainMenu_1_();
++        LinkedHashMap<Integer, Store> storeList = new LinkedHashMap<>();
++        MainMenu_1_ mainMenu = new MainMenu_1_(storeList);
+ 
+ 
+     }
+Index: src/CreateStore_M_1_B.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport javax.swing.JFrame;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic class CreateStore_M_1_B extends JFrame{\r\n    private JButton backButton;\r\n    private JButton createStoreButton;\r\n    private JTextField nameField;\r\n    private JTextField idField;\r\n    private JLabel idLabel;\r\n    private JLabel nameLabel;\r\n    private JPanel panel1;\r\n    JFrame frame = new JFrame();\r\n    private StoreController StoreController;\r\n\r\n    public CreateStore_M_1_B(){\r\n\r\n        frame.setContentPane(panel1);\r\n        frame.setTitle(\"Create a New Store\");\r\n        frame.setSize(900,600);\r\n        frame.setResizable(false);\r\n        frame.setVisible(true);\r\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        createStoreButton.addActionListener(new ActionListener() {\r\n\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if(e.getSource() == createStoreButton){\r\n                    String id2 = idField.getText();\r\n                    int id = Integer.parseInt(id2);\r\n                    String name = nameField.getText();\r\n                    StoreController.createStore(id, name);\r\n                }\r\n            }\r\n        });\r\n        backButton.addActionListener(new ActionListener(){\r\n            @Override\r\n                    public void actionPerformed(ActionEvent e){\r\n                if(e.getSource()==backButton){\r\n                    frame.dispose();\r\n                    Selections_M_1_A selections = new Selections_M_1_A();\r\n                }\r\n            }\r\n        });\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CreateStore_M_1_B.java b/src/CreateStore_M_1_B.java
+--- a/src/CreateStore_M_1_B.java	(revision bc2d57870955c0361776b30c3ef90699b45293f9)
++++ b/src/CreateStore_M_1_B.java	(date 1669944859082)
+@@ -12,7 +12,7 @@
+     private JLabel nameLabel;
+     private JPanel panel1;
+     JFrame frame = new JFrame();
+-    private StoreController StoreController;
++    private StoreController storeController = new StoreController();
+ 
+     public CreateStore_M_1_B(){
+ 
+@@ -30,7 +30,7 @@
+                     String id2 = idField.getText();
+                     int id = Integer.parseInt(id2);
+                     String name = nameField.getText();
+-                    StoreController.createStore(id, name);
++                    storeController.createStore(id, name);
+                 }
+             }
+         });
+Index: src/MainMenu_1_.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport javax.swing.JFrame;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic class MainMenu_1_ extends JFrame{\r\n    private JButton customerButton;\r\n    private JPanel panel1;\r\n    private JButton managerButton;\r\n    private JLabel welcomeToStore;\r\n    JFrame frame = new JFrame();\r\n    public MainMenu_1_() {\r\n\r\n        frame.setContentPane(panel1);\r\n        frame.setTitle(\"Hello! Welcome to Store!\");\r\n        frame.setSize(900, 600);\r\n        frame.setVisible(true);\r\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n\r\n        customerButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if (e.getSource() == customerButton) {\r\n                    frame.dispose();\r\n                    Selections_C_1_5 selections = new Selections_C_1_5();\r\n                }\r\n            }\r\n\r\n        });\r\n        managerButton.addActionListener(new ActionListener(){\r\n           @Override\r\n           public void actionPerformed(ActionEvent e){\r\n               if(e.getSource() == managerButton){\r\n                   frame.dispose();\r\n                   Selections_M_1_A selections = new Selections_M_1_A();\r\n                }\r\n\r\n            }\r\n        });\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/MainMenu_1_.java b/src/MainMenu_1_.java
+--- a/src/MainMenu_1_.java	(revision bc2d57870955c0361776b30c3ef90699b45293f9)
++++ b/src/MainMenu_1_.java	(date 1669946915226)
+@@ -2,6 +2,7 @@
+ import javax.swing.JFrame;
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
++import java.util.LinkedHashMap;
+ 
+ public class MainMenu_1_ extends JFrame{
+     private JButton customerButton;
+@@ -9,7 +10,7 @@
+     private JButton managerButton;
+     private JLabel welcomeToStore;
+     JFrame frame = new JFrame();
+-    public MainMenu_1_() {
++    public MainMenu_1_(LinkedHashMap<Integer, Store> storeList) {
+ 
+         frame.setContentPane(panel1);
+         frame.setTitle("Hello! Welcome to Store!");
+Index: src/StoreController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\n\r\npublic class StoreController {\r\n\r\n\t//private StoreGui gui;\r\n\tprivate Store store;\r\n\t\t\r\n//\t\tpublic StoreController(StoreGui gui) {\r\n//\t\t\tthis.gui = gui;\r\n//\t\t}\r\n\t\t\r\n\t\tpublic void createStore(int storeID, String storeName) {\r\n\t\t\tIDValidator checkID = new IDValidator(); \r\n\t\t\tMapPersistence storeBuilder = new MapPersistence();\r\n\t\t\tif(checkID.isIdValidStore(storeID)) {\r\n\t\t\t\tthis.store = storeBuilder.buildStore(storeID, storeName);\r\n\t\t\t}\r\n\t\t\t//invalid id\r\n\t\t}\r\n\t\r\n\t\tpublic void registerCustomer(int customerID, String firstName, String lastName) {\r\n\t\t\t\r\n\t\t\tIDValidator checkID = new IDValidator(); \r\n\t\t\t\r\n\t\t\tif(checkID.isIdValidCustomer(customerID)) {\r\n\t\t\t\tif(!store.containsCustomer(customerID)) {\r\n\t\t\t\t\tCustomer c = new Customer(customerID, firstName, lastName);\r\n\t\t\t\t\tstore.addCustomer(c);\r\n\t\t\t\t\t//add confirmation here\r\n\t\t\t\t}\r\n\t\t\t\t//already exists\r\n\t\t\t}\r\n\t\t\t//invalid id\r\n\t\t}\r\n\t\t\r\n\r\n\t\tpublic void printDisplayCustomers() {\r\n\t\t\tArrayList<Customer> allCustomers = store.displayCustomers();\r\n\t\t\tSystem.out.println(\"There are \" + allCustomers.size() + \" customers in the system.\\n\");\r\n\t\t\tfor(int i = 0; i < allCustomers.size(); i++) {\r\n\t\t\t\tSystem.out.println(allCustomers.get(i));\r\n\t\t\t}\r\n\t\t\t//gui stuff here\r\n\t\t}\r\n\t\t\r\n\t\tpublic void updateTaxes(double foodTax, double nonFoodTax) {\r\n\t\t\tstore.setFoodTax(foodTax);\r\n\t\t\tstore.setNonFoodTax(nonFoodTax);\r\n\t\t}\r\n\t\t\r\n\t\t//legwork for this is not done\r\n\t\tpublic void displayPopularProducts(){\r\n\t\t\t\r\n\r\n\t\t}\r\n\t\t\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/StoreController.java b/src/StoreController.java
+--- a/src/StoreController.java	(revision bc2d57870955c0361776b30c3ef90699b45293f9)
++++ b/src/StoreController.java	(date 1669946915204)
+@@ -14,6 +14,7 @@
+ 			MapPersistence storeBuilder = new MapPersistence();
+ 			if(checkID.isIdValidStore(storeID)) {
+ 				this.store = storeBuilder.buildStore(storeID, storeName);
++
+ 			}
+ 			//invalid id
+ 		}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"04a543ac-6101-4bd3-a6d6-df51045d560f\" name=\"Changes\" comment=\"new\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/_4321_Project.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/_4321_Project.iml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"4c916e42-aa30-436b-8ec8-bdc525653bc8\" />\r\n        <option name=\"url\" value=\"https://github.com/vsu-se/22fa_team5.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IKrThPdf46TSeW86lpF2ZbaP3z\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Nakota/IdeaProjects\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"project.propVCSSupport.DirectoryMappings\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"04a543ac-6101-4bd3-a6d6-df51045d560f\" name=\"Changes\" comment=\"\" />\r\n      <created>1669941128821</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1669941128821</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"new\">\r\n      <created>1669941170747</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669941170747</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"new\">\r\n      <created>1669941543805</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669941543805</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"new\">\r\n      <created>1669941667047</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669941667047</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"new\">\r\n      <created>1669941848708</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669941848708</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"new\">\r\n      <created>1669942591925</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669942591925</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"new\">\r\n      <created>1669943101902</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669943101902</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"new\">\r\n      <created>1669943467101</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669943467101</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"Szymoniak\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/..\" />\r\n      <path value=\"$PROJECT_DIR$\" />\r\n    </ignored-roots>\r\n    <MESSAGE value=\"new\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"new\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bc2d57870955c0361776b30c3ef90699b45293f9)
++++ b/.idea/workspace.xml	(date 1669946915583)
+@@ -5,9 +5,12 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="new">
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/_4321_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_4321_Project.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/MainMenu_1_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu_1_.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/StoreList.java" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -47,8 +50,8 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "last_opened_file_path": "C:/Users/Nakota/IdeaProjects",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.0",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
+     "project.structure.side.proportion": "0.2",
+     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+   }
+@@ -111,7 +114,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669943467101</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="new">
++      <created>1669944161730</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1669944161730</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+diff --git a/src/StoreList.java b/src/StoreList.java
+deleted file mode 100644
