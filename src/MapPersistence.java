@@ -5,16 +5,15 @@ import java.util.Date;
 public class MapPersistence {
 
 	public Inventory buildInventory() {
-		Inventory i = new Inventory();
-		return i;
+		return new Inventory();
 	}
 	
-	public Order buildOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+	public Order buildOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		Order o = new Order(orderID, customerID, date, usingSnap, isPaid, store);
 		return o;
 	}
 	
-	public Store buildStore(int storeID, String storeName) {
+	public Store buildStore(String storeID, String storeName) {
 		Store s = new Store(storeID, storeName);
 		Main.getStoreList().put(storeID, s);
 		return s;

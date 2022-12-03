@@ -1,8 +1,5 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.LinkedHashMap;
 import java.util.Vector;
 
 
@@ -13,7 +10,6 @@ public class Selections_M_1_A extends JFrame {
     private JButton createStoreButton;
     private JPanel panel1;
     private JButton selectStoreButton;
-    private JOptionPane noStoreSelected;
     JFrame frame = new JFrame();
 
     public Selections_M_1_A() {
@@ -25,38 +21,30 @@ public class Selections_M_1_A extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         storeSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
-        createStoreButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(e.getSource() == createStoreButton){
-                    frame.dispose();
-                    CreateStore_M_1_B createStore = new CreateStore_M_1_B();
-                }
+
+        createStoreButton.addActionListener(e -> {
+            if(e.getSource() == createStoreButton){
+                frame.dispose();
+                CreateStore_M_1_B createStore = new CreateStore_M_1_B();
+            }
+
+        });
+        backButton.addActionListener(e -> {
+            if (e.getSource() == backButton) {
+                frame.dispose();
+                MainMenu_1_ mainMenu = new MainMenu_1_();
 
             }
         });
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == backButton) {
+        selectStoreButton.addActionListener(e -> {
+            if(e.getSource()==selectStoreButton){
+                if(storeSelect.getSelectedValue()!=null){
+                    storeSelect.getSelectedValue();
                     frame.dispose();
-                    MainMenu_1_ mainMenu = new MainMenu_1_();
-
+                    Selections_M_2_A afterLogin = new Selections_M_2_A(Main.getStoreList().get(storeSelect.getSelectedValue()));
                 }
-            }
-        });
-        selectStoreButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==selectStoreButton){
-                    if(storeSelect.getSelectedValue()!=null){
-                        storeSelect.getSelectedValue();
-                        frame.dispose();
-                        Selections_M_2_A afterLogin = new Selections_M_2_A(Main.getStoreList().get((Integer) storeSelect.getSelectedValue()));
-                    }
-                    else{
-                        noStoreSelected.showMessageDialog(frame, "Select a store from the list or create a new one to continue.");
-                    }
+                else{
+                    JOptionPane.showMessageDialog(frame, "Select a store from the list or create a new one to continue.");
                 }
             }
         });

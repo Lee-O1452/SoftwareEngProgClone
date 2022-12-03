@@ -1,6 +1,5 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class OrderHistory_C_5_A {
     private JButton backButton;
@@ -10,25 +9,19 @@ public class OrderHistory_C_5_A {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public OrderHistory_C_5_A(){
+    public OrderHistory_C_5_A(Store store){
 
 
-        backButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==backButton){
-                    frame.dispose();
-                    AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5();
-                }
+        backButton.addActionListener(e -> {
+            if(e.getSource()==backButton){
+                frame.dispose();
+                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store);
             }
         });
-        viewOrderButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==viewOrderButton){
-                    frame.dispose();
-                    Receipt_C_5_B priorReceipt = new Receipt_C_5_B();
-                }
+        viewOrderButton.addActionListener(e -> {
+            if(e.getSource()==viewOrderButton){
+                frame.dispose();
+                Receipt_C_5_B priorReceipt = new Receipt_C_5_B();
             }
         });
     }

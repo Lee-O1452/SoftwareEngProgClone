@@ -1,13 +1,14 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class Selections_C_1_5 {
     private JButton backButton;
     private JButton registerButton;
     private JButton loginButton;
     private JPanel panel1;
+    private JList storeSelect;
+
     JFrame frame = new JFrame();
 
     public Selections_C_1_5(){
@@ -18,34 +19,36 @@ public class Selections_C_1_5 {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        registerButton.addActionListener(new ActionListener(){
+        storeSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
 
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource() == registerButton){
+        registerButton.addActionListener(e -> {
+            if(e.getSource() == registerButton){
+                if(storeSelect.getSelectedValue()!=null) {
+                    storeSelect.getSelectedValue();
                     frame.dispose();
-                    Registration_C_2_A registration = new Registration_C_2_A();
+                    Registration_C_2_A registration = new Registration_C_2_A(Main.getStoreList().get(storeSelect.getSelectedValue()));
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
                 }
             }
         });
-        loginButton.addActionListener(new ActionListener(){
-
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource() == loginButton){
+        loginButton.addActionListener(e -> {
+            if(e.getSource() == loginButton){
+                if(storeSelect.getSelectedValue()!=null) {
+                    storeSelect.getSelectedValue();
                     frame.dispose();
-                    AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5();
+                    AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(Main.getStoreList().get(storeSelect.getSelectedValue()));
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
                 }
             }
         });
-        backButton.addActionListener(new ActionListener(){
-
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource() == backButton){
-                    frame.dispose();
-                    MainMenu_1_ mainMenu = new MainMenu_1_();
-                }
+        backButton.addActionListener(e -> {
+            if(e.getSource() == backButton){
+                frame.dispose();
+                MainMenu_1_ mainMenu = new MainMenu_1_();
             }
         });
     }

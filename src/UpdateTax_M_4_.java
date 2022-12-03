@@ -2,6 +2,7 @@ import javax.swing.*;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.EventObject;
 
 public class UpdateTax_M_4_ extends JFrame {
     private JButton backButton;
@@ -20,32 +21,10 @@ public class UpdateTax_M_4_ extends JFrame {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        backButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==backButton){
-                    frame.dispose();
-                    Selections_M_2_A selections = new Selections_M_2_A(store);
-                }
-            }
-        });
-
-        updateButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==updateButton){
-
-
-                }
-            }
-        });
-
-        updateButton1.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==updateButton1){
-
-                }
+        backButton.addActionListener(e -> {
+            if(e.getSource()==backButton){
+                frame.dispose();
+                Selections_M_2_A selections = new Selections_M_2_A(store);
             }
         });
 

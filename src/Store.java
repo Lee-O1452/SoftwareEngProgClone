@@ -1,19 +1,18 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 
 public class Store {
 	
-	private LinkedHashMap<Integer, Customer> store;
-	private int storeID;
+	private LinkedHashMap<String, Customer> store;
+	private String storeID;
 	private String storeName;
 	private Inventory storeInventory;
 	private double foodTax;
 	private double nonFoodTax;
 	
-	public Store(int storeID, String storeName) {
-		store = new LinkedHashMap<Integer, Customer>();
+	public Store(String storeID, String storeName) {
+		store = new LinkedHashMap<>();
 		this.storeID = storeID;
 		this.storeName = storeName;
 		MapPersistence storeMaps = new MapPersistence();
@@ -22,7 +21,7 @@ public class Store {
 		nonFoodTax = 0.08;
 	}
 	
-	public boolean containsCustomer(int customerID) {
+	public boolean containsCustomer(String customerID) {
 		return store.containsKey(customerID);
 	}
 	
@@ -30,7 +29,7 @@ public class Store {
 		return storeName;
 	}
 	
-	public int getStoreID() {
+	public String getStoreID() {
 		return storeID;
 	}
 	
@@ -38,7 +37,7 @@ public class Store {
 		this.storeName = storeName;
 	}
 	
-	public void setStoreID(int storeID) {
+	public void setStoreID(String storeID) {
 		this.storeID = storeID;
 	}
 	
@@ -55,21 +54,15 @@ public class Store {
 	}
 	
 	public ArrayList<Customer> displayCustomers() {
-		ArrayList<Customer> allCustomers = new ArrayList<Customer>(store.values());
-		Collections.sort(allCustomers, new Comparator<Customer>() {
-			@Override
-			public int compare(Customer c1, Customer c2) {
-				if(c1.getFirstName().compareToIgnoreCase(c2.getFirstName()) == 0) {
-					if(c1.getLastName().compareToIgnoreCase(c2.getLastName()) == 0) {
-						if(c1.getCustomerID() > c2.getCustomerID()) {
-							return 1;
-						}
-						return -1;
-					}
-					return c1.getLastName().compareToIgnoreCase(c2.getLastName());
+		ArrayList<Customer> allCustomers = new ArrayList<>(store.values());
+		allCustomers.sort((c1, c2) -> {
+			if (c1.getFirstName().compareToIgnoreCase(c2.getFirstName()) == 0) {
+				if (c1.getLastName().compareToIgnoreCase(c2.getLastName()) == 0) {
+					return c1.getCustomerID().compareTo(c2.getCustomerID());
 				}
-				return c1.getFirstName().compareTo(c2.getFirstName());
-		    }
+				return c1.getLastName().compareToIgnoreCase(c2.getLastName());
+			}
+			return c1.getFirstName().compareToIgnoreCase(c2.getFirstName());
 		});
 		return allCustomers;
 	}

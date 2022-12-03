@@ -1,6 +1,6 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.EventObject;
+
 
 public class ReturnItem_C_4_ {
     private JButton backButton;
@@ -11,7 +11,7 @@ public class ReturnItem_C_4_ {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public ReturnItem_C_4_(){
+    public ReturnItem_C_4_(Store store){
 
         frame.setContentPane(panel1);
         frame.setTitle("Return an Item");
@@ -20,23 +20,12 @@ public class ReturnItem_C_4_ {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        backButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==backButton){
-                    frame.dispose();
-                    AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5();
-                }
+        backButton.addActionListener(e -> {
+            if(e.getSource()==backButton){
+                frame.dispose();
+                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store);
             }
         });
 
-        returnItemButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==returnItemButton){
-
-                }
-            }
-        });
     }
 }

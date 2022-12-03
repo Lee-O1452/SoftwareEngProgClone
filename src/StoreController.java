@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class StoreController {
 	private Store store;
-		public void createStore(int storeID, String storeName) {
+		public void createStore(String storeID, String storeName) {
 			IDValidator checkID = new IDValidator(); 
 			MapPersistence storeBuilder = new MapPersistence();
 			if(checkID.isIdValidStore(storeID)) {
@@ -14,8 +14,9 @@ public class StoreController {
 			//invalid id
 		}
 	
-		public void registerCustomer(int customerID, String firstName, String lastName) {
-			
+		public void registerCustomer(String customerID, String firstName, String lastName) {
+
+
 			IDValidator checkID = new IDValidator(); 
 			
 			if(checkID.isIdValidCustomer(customerID)) {

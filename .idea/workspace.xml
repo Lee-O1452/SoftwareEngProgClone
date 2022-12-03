@@ -4,11 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddProduct_M_3_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProduct_M_3_B.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateDeal_M_3_H.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDeal_M_3_H.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IDValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IDValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login_C_2_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_C_2_B.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login_C_2_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_C_2_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu_1_.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu_1_.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu_1_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu_1_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderHistory_C_5_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderHistory_C_5_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registration_C_2_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration_C_2_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registration_C_2_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration_C_2_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReturnItem_C_4_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReturnItem_C_4_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_2_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_2_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_2_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_2_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UpdateProduct_M_3_G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UpdateProduct_M_3_G.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UpdateTax_M_4_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UpdateTax_M_4_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +90,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "324",
+    "last_opened_file_path": "C:/Users/Nakota/IdeaProjects",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.folding"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -168,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670037087321</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Finished displayProducts sorting on GUI">
+      <created>1670099436069</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670099436069</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +256,8 @@
     <MESSAGE value="updated addProduct GUI to properly add a product" />
     <MESSAGE value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
     <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
+    <MESSAGE value="Finished displayProducts sorting on GUI" />
+    <MESSAGE value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
   </component>
 </project>

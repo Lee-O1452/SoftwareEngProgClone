@@ -1,7 +1,5 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class RemoveProduct_M_3_F extends JFrame{
     private JButton backButton;

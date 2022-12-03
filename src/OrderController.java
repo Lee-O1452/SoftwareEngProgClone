@@ -10,7 +10,7 @@ public class OrderController {
 //		this.gui = gui;
 //	}
 	
-	public void createOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+	public void createOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		IDValidator checkID = new IDValidator(); 
 		MapPersistence orderBuilder = new MapPersistence();
 		if(checkID.isIdValidOrder(orderID)) {
@@ -19,10 +19,10 @@ public class OrderController {
 		//invalid id
 	}
 	
-	public void addToOrder(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+	public void addToOrder(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		ArrayList<Product> allProductsName = order.getStore().getStoreInventory().productReportName();
-		for(int i = 0; i < allProductsName.size(); i++) {
-			System.out.println(allProductsName.get(i));
+		for (Product product : allProductsName) {
+			System.out.println(product);
 		}
 		//need way to then select the product from gui
 		//this may need to be split into two methods for the gui, the top part for just displaying which then calls the bottom part when a product is clicked on
@@ -31,7 +31,7 @@ public class OrderController {
 	}
 
 	public void payOrder() {
-		order.setisPaid(true);
+		order.setIsPaid(true);
 		order.orderReport();
 		//need to figure out how to number each item and use Inventory
 			// for(int i = 0; i < order.length; i++){
@@ -40,7 +40,7 @@ public class OrderController {
 			
 	}
 
-	public void returnItem(int productID, int quantity){
+	public void returnItem(String productID, int quantity){
 
 		order.getStore().getStoreInventory().increaseQuantity(productID, quantity);
 		order.returnProduct(productID);
