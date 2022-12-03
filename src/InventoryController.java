@@ -21,39 +21,41 @@ public class InventoryController {
 		}
 		//invalid id
 	}
-	
-	public void displayProductReport(){
+
+	public int displayNumberOfProducts(){
+		return inventory.getSize();
+	}
+	public double displayTotalValue(){
+		return inventory.getTotalInventoryValue();
+	}
+	public void displayProductReportName(){
 		ArrayList<Product> allProductsName = inventory.productReportName();
-		ArrayList<Product> allProductsID = inventory.productReportID();
-		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
-		ArrayList<Product> allProductsIsFood = inventory.productReportIsFood();
-		
-		System.out.println("There are " + allProductsName.size() + " products in the system.\n");
-		double totalInventoryValue = 0;
-		for(int i = 0; i < allProductsName.size(); i++) {
-			totalInventoryValue += allProductsName.get(i).getTotalValue();
-		}
-		System.out.println("The total value of all products combined is $" + totalInventoryValue + ".\n");
-		
-		//needs code for selecting which to display based off the gui button selected, default is name
-		
+
 		for(int i = 0; i < allProductsName.size(); i++) {
 			System.out.println(allProductsName.get(i));
 		}
-		
+	}
+	public void displayProductReportID(){
+		ArrayList<Product> allProductsID = inventory.productReportID();
+
 		for(int i = 0; i < allProductsID.size(); i++) {
 			System.out.println(allProductsID.get(i));
 		}
-		
+	}
+	public void displayProductReportManufacturer(){
+		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
+
 		for(int i = 0; i < allProductsManufacturer.size(); i++) {
 			System.out.println(allProductsManufacturer.get(i));
 		}
-		
+	}
+	public void displayProductReportIsFood(){
+		ArrayList<Product> allProductsIsFood = inventory.productReportIsFood();
+
 		for(int i = 0; i < allProductsIsFood.size(); i++) {
 			System.out.println(allProductsIsFood.get(i));
 		}
 	}
-	
 	public void updateQuantity(int productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(quantity);
 	}
@@ -72,7 +74,7 @@ public class InventoryController {
 		
 		System.out.println("All Products made by " + manufacturer + " :");
 		for(int i = 0; i < allProductsManufacturer.size(); i++){
-			if (allProductsManufacturer.get(i).getManufacturer() == manufacturer){
+			if (allProductsManufacturer.get(i).getManufacturer().equals(manufacturer)){
 				double totalInventoryValue = allProductsManufacturer.get(i).getTotalValue();
 				System.out.println(allProductsManufacturer.get(i).toString() + " Total Value: " + totalInventoryValue);
 

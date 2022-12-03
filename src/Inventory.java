@@ -148,8 +148,17 @@ public class Inventory {
 		});
 		return allProducts;
 	}
-	
-	
-	
-	
+
+	public int getSize(){
+		return inventory.size();
+	}
+
+	public double getTotalInventoryValue() {
+		ArrayList<Product> allProducts = new ArrayList<Product>(inventory.values());
+		double totalInventoryValue = 0;
+		for(int i = 0; i < allProducts.size(); i++) {
+			totalInventoryValue += allProducts.get(i).getTotalValue();
+		}
+		return totalInventoryValue;
+	}
 }

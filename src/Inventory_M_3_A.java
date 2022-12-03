@@ -64,7 +64,7 @@ public class Inventory_M_3_A extends JFrame {
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==displayProductsButton){
                     frame.dispose();
-                    DisplayProducts_M_3_D displayProducts = new DisplayProducts_M_3_D();
+                    DisplayProducts_M_3_D displayProducts = new DisplayProducts_M_3_D(store);
                 }
             }
         });
