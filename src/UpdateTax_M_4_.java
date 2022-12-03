@@ -12,7 +12,7 @@ public class UpdateTax_M_4_ extends JFrame {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public UpdateTax_M_4_(){
+    public UpdateTax_M_4_(Store store){
 
         frame.setContentPane(panel1);
         frame.setTitle("Update Taxes");
@@ -25,7 +25,7 @@ public class UpdateTax_M_4_ extends JFrame {
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==backButton){
                     frame.dispose();
-                    Selections_M_2_A selections = new Selections_M_2_A();
+                    Selections_M_2_A selections = new Selections_M_2_A(store);
                 }
             }
         });

@@ -9,7 +9,7 @@ public class ReportSelections_M_6_ extends JFrame{
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public ReportSelections_M_6_(){
+    public ReportSelections_M_6_(Store store){
         frame.setContentPane(panel1);
         frame.setTitle("Reports");
         frame.setSize(900, 600);
@@ -21,7 +21,7 @@ public class ReportSelections_M_6_ extends JFrame{
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==backButton){
                     frame.dispose();
-                    Selections_M_2_A selections = new Selections_M_2_A();
+                    Selections_M_2_A selections = new Selections_M_2_A(store);
                 }
             }
         });

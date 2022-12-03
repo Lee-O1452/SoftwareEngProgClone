@@ -14,7 +14,7 @@ public class Inventory_M_3_A extends JFrame {
     private JPanel pane1;
     JFrame frame = new JFrame();
 
-    public Inventory_M_3_A() {
+    public Inventory_M_3_A(Store store) {
         frame.setContentPane(pane1);
         frame.setTitle("Inventories");
         frame.setSize(900, 600);
@@ -26,7 +26,7 @@ public class Inventory_M_3_A extends JFrame {
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==backButton){
                     frame.dispose();
-                    Selections_M_2_A selections = new Selections_M_2_A();
+                    Selections_M_2_A selections = new Selections_M_2_A(store);
                 }
             }
         });

@@ -9,18 +9,21 @@ public class Selections_M_2_A extends JFrame{
     private JButton updateTaxButton;
     private JButton customersButton;
     private JButton reportsButton;
-    private JTextField StoreNameField;
-    private JTextField StoreIDField;
+    private JTextField storeNameField;
+    private JTextField storeIDField;
     private JPanel pane1;
     JFrame frame = new JFrame();
 
-    public Selections_M_2_A(){
+    public Selections_M_2_A(Store store){
 
         frame.setContentPane(pane1);
         frame.setTitle("Selections");
         frame.setSize(900,600);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        storeNameField.setText(store.getStoreName());
+        storeIDField.setText(String.valueOf(store.getStoreID()));
 
         backButton.addActionListener(new ActionListener() {
             @Override
@@ -38,7 +41,7 @@ public class Selections_M_2_A extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == inventoryButton) {
                     frame.dispose();
-                    Inventory_M_3_A inventory = new Inventory_M_3_A();
+                    Inventory_M_3_A inventory = new Inventory_M_3_A(store);
 
                 }
             }
@@ -49,7 +52,7 @@ public class Selections_M_2_A extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == updateTaxButton) {
                     frame.dispose();
-                    UpdateTax_M_4_ updateTax = new UpdateTax_M_4_();
+                    UpdateTax_M_4_ updateTax = new UpdateTax_M_4_(store);
 
                 }
             }
@@ -60,7 +63,7 @@ public class Selections_M_2_A extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == customersButton) {
                     frame.dispose();
-                    CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A();
+                    CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A(store);
 
                 }
             }
@@ -71,7 +74,7 @@ public class Selections_M_2_A extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == reportsButton) {
                     frame.dispose();
-                    ReportSelections_M_6_ reports = new ReportSelections_M_6_();
+                    ReportSelections_M_6_ reports = new ReportSelections_M_6_(store);
 
                 }
             }

@@ -8,7 +8,7 @@ import java.util.Vector;
 
 public class Selections_M_1_A extends JFrame {
     private JButton backButton;
-    private JList StoreSelect;
+    private JList storeSelect;
     private JButton saveAllDataButton;
     private JButton createStoreButton;
     private JPanel panel1;
@@ -23,7 +23,7 @@ public class Selections_M_1_A extends JFrame {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        StoreSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
+        storeSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
         createStoreButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,8 +48,9 @@ public class Selections_M_1_A extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==selectStoreButton){
+                    storeSelect.getSelectedValue();
                     frame.dispose();
-                    Selections_M_2_A afterLogin = new Selections_M_2_A();
+                    Selections_M_2_A afterLogin = new Selections_M_2_A(Main.getStoreList().get((Integer) storeSelect.getSelectedValue()));
                 }
             }
         });

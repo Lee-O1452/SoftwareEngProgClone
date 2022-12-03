@@ -10,7 +10,7 @@ public class CustomerSelections_M_5_A extends JFrame{
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public CustomerSelections_M_5_A(){
+    public CustomerSelections_M_5_A(Store store){
         frame.setContentPane(panel1);
         frame.setTitle("Customer Selections");
         frame.setSize(900,600);
@@ -22,7 +22,7 @@ public class CustomerSelections_M_5_A extends JFrame{
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==backButton){
                     frame.dispose();
-                    Selections_M_2_A selections = new Selections_M_2_A();
+                    Selections_M_2_A selections = new Selections_M_2_A(store);
                 }
             }
         });
