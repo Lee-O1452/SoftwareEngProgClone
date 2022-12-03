@@ -13,6 +13,7 @@ public class Selections_M_1_A extends JFrame {
     private JButton createStoreButton;
     private JPanel panel1;
     private JButton selectStoreButton;
+    private JOptionPane noStoreSelected;
     JFrame frame = new JFrame();
 
     public Selections_M_1_A() {
@@ -48,9 +49,14 @@ public class Selections_M_1_A extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==selectStoreButton){
-                    storeSelect.getSelectedValue();
-                    frame.dispose();
-                    Selections_M_2_A afterLogin = new Selections_M_2_A(Main.getStoreList().get((Integer) storeSelect.getSelectedValue()));
+                    if(storeSelect.getSelectedValue()!=null){
+                        storeSelect.getSelectedValue();
+                        frame.dispose();
+                        Selections_M_2_A afterLogin = new Selections_M_2_A(Main.getStoreList().get((Integer) storeSelect.getSelectedValue()));
+                    }
+                    else{
+                        noStoreSelected.showMessageDialog(frame, "Select a store from the list or create a new one to continue.");
+                    }
                 }
             }
         });

@@ -5,23 +5,19 @@ import java.awt.event.ActionListener;
 
 public class AddProduct_M_3_B extends JFrame{
     private JButton backButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
+    private JTextField productID;
+    private JTextField productName;
+    private JTextField manufacturer;
+    private JTextField price;
+    private JTextField quantity;
     private JButton addButton;
     private JPanel panel1;
-
-    public void AddProduct_M_3_B(){
-
-    }
-    public static void main(String[] args){
-        AddProduct_M_3_B c = new AddProduct_M_3_B();
-        c.setContentPane(c.panel1);
-        c.setTitle("Add Product");
-        c.setSize(900, 600);
-        c.setVisible(true);
-        c.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    JFrame frame = new JFrame();
+    public AddProduct_M_3_B(){
+        frame.setContentPane(panel1);
+        frame.setTitle("Add Product");
+        frame.setSize(900, 600);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

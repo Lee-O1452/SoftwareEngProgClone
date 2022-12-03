@@ -11,6 +11,7 @@ public class CreateStore_M_1_B extends JFrame{
     private JLabel idLabel;
     private JLabel nameLabel;
     private JPanel panel1;
+    private JOptionPane storeCreated;
     JFrame frame = new JFrame();
     StoreController storeController = new StoreController();
     public CreateStore_M_1_B(){
@@ -30,6 +31,7 @@ public class CreateStore_M_1_B extends JFrame{
                     int id = Integer.parseInt(id2);
                     String name = nameField.getText();
                     storeController.createStore(id, name);
+                    storeCreated.showMessageDialog(frame, "Store has been added, please return to store selection.");
                 }
             }
         });

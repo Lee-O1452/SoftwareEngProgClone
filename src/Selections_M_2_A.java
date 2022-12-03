@@ -9,8 +9,8 @@ public class Selections_M_2_A extends JFrame{
     private JButton updateTaxButton;
     private JButton customersButton;
     private JButton reportsButton;
-    private JTextField storeNameField;
-    private JTextField storeIDField;
+    private JLabel storeNameField;
+    private JLabel storeIDField;
     private JPanel pane1;
     JFrame frame = new JFrame();
 
@@ -22,8 +22,8 @@ public class Selections_M_2_A extends JFrame{
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        storeNameField.setText(store.getStoreName());
-        storeIDField.setText(String.valueOf(store.getStoreID()));
+        storeNameField.setText("Store Name: " + store.getStoreName());
+        storeIDField.setText("Store ID: " + store.getStoreID());
 
         backButton.addActionListener(new ActionListener() {
             @Override
