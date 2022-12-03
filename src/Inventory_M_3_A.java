@@ -55,7 +55,7 @@ public class Inventory_M_3_A extends JFrame {
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==addProductButton){
                     frame.dispose();
-                    AddProduct_M_3_B addProduct = new AddProduct_M_3_B();
+                    AddProduct_M_3_B addProduct = new AddProduct_M_3_B(store);
                 }
             }
         });

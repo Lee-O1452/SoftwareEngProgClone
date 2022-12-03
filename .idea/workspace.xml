@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added popups to store creation and selection, fixed addproduct page to properly load">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="updated addProduct GUI to properly add a product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddProduct_M_3_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProduct_M_3_B.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670030218884</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="updated addProduct GUI to properly add a product">
+      <created>1670032080114</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670032080114</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +184,7 @@
     <MESSAGE value="added a global store map, updated buildStore to add to the map, updated GUI to populate store selection screen from it upon loading" />
     <MESSAGE value="updated multiple gui pages to pass a store throughout once selected" />
     <MESSAGE value="added popups to store creation and selection, fixed addproduct page to properly load" />
-    <option name="LAST_COMMIT_MESSAGE" value="added popups to store creation and selection, fixed addproduct page to properly load" />
+    <MESSAGE value="updated addProduct GUI to properly add a product" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated addProduct GUI to properly add a product" />
   </component>
 </project>
