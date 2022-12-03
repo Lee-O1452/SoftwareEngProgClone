@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="fixed addProduct back button, updated inventoryController to be connected to a store object">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_FF" />
+      </set>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -156,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670033619814</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option">
+      <created>1670037087321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670037087321</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +206,7 @@
     <MESSAGE value="added popups to store creation and selection, fixed addproduct page to properly load" />
     <MESSAGE value="updated addProduct GUI to properly add a product" />
     <MESSAGE value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
+    <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
   </component>
 </project>

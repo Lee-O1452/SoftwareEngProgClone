@@ -22,9 +22,62 @@ public class DisplayProducts_M_3_D extends JFrame {
 
         productList.setText(
                 "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
-                "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n"
-
+                        "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
+                        inventoryController.displayProductReportName().toString()
         );
+
+        nameSort.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(e.getSource()==nameSort){
+                    productList.setText(
+                            "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
+                                    "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
+                                    inventoryController.displayProductReportName().toString()
+                    );
+                }
+            }
+        });
+
+        idSort.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(e.getSource()==idSort){
+                    productList.setText(
+                            "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
+                                    "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
+                                    inventoryController.displayProductReportID().toString()
+                    );
+                }
+            }
+        });
+
+        manufacturerSort.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(e.getSource()==manufacturerSort){
+                    productList.setText(
+                            "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
+                                    "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
+                                    inventoryController.displayProductReportManufacturer().toString()
+                    );
+                }
+            }
+        });
+
+        foodSort.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(e.getSource()==foodSort){
+                    productList.setText(
+                            "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
+                                    "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
+                                    inventoryController.displayProductReportIsFood().toString()
+                    );
+                }
+            }
+        });
+
         backButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){

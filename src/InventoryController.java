@@ -28,33 +28,24 @@ public class InventoryController {
 	public double displayTotalValue(){
 		return inventory.getTotalInventoryValue();
 	}
-	public void displayProductReportName(){
+	public ArrayList<Product> displayProductReportName(){
 		ArrayList<Product> allProductsName = inventory.productReportName();
-
-		for(int i = 0; i < allProductsName.size(); i++) {
-			System.out.println(allProductsName.get(i));
-		}
+		return allProductsName;
 	}
-	public void displayProductReportID(){
+	public ArrayList<Product> displayProductReportID(){
 		ArrayList<Product> allProductsID = inventory.productReportID();
 
-		for(int i = 0; i < allProductsID.size(); i++) {
-			System.out.println(allProductsID.get(i));
-		}
+		return allProductsID;
 	}
-	public void displayProductReportManufacturer(){
+	public ArrayList<Product> displayProductReportManufacturer(){
 		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
 
-		for(int i = 0; i < allProductsManufacturer.size(); i++) {
-			System.out.println(allProductsManufacturer.get(i));
-		}
+		return allProductsManufacturer;
 	}
-	public void displayProductReportIsFood(){
+	public ArrayList<Product> displayProductReportIsFood(){
 		ArrayList<Product> allProductsIsFood = inventory.productReportIsFood();
 
-		for(int i = 0; i < allProductsIsFood.size(); i++) {
-			System.out.println(allProductsIsFood.get(i));
-		}
+		return allProductsIsFood;
 	}
 	public void updateQuantity(int productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(quantity);
