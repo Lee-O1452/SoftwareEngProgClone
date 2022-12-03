@@ -11,6 +11,7 @@ public class CreateStore_M_1_B extends JFrame{
     private JLabel idLabel;
     private JLabel nameLabel;
     private JPanel panel1;
+    private JOptionPane storeCreated;
     JFrame frame = new JFrame();
     StoreController storeController = new StoreController();
     public CreateStore_M_1_B(){
@@ -26,10 +27,10 @@ public class CreateStore_M_1_B extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getSource() == createStoreButton){
-                    String id2 = idField.getText();
-                    int id = Integer.parseInt(id2);
+                    int id = Integer.parseInt(idField.getText());
                     String name = nameField.getText();
                     storeController.createStore(id, name);
+                    storeCreated.showMessageDialog(frame, "Store has been added, please return to store selection.");
                 }
             }
         });

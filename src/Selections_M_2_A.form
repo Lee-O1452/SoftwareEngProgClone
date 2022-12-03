@@ -16,11 +16,6 @@
           <text value="Back"/>
         </properties>
       </component>
-      <hspacer id="bff19">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
       <vspacer id="74b95">
         <constraints>
           <grid row="1" column="0" row-span="6" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -67,7 +62,7 @@
           <text value="Customers"/>
         </properties>
       </component>
-      <component id="95af5" class="javax.swing.JTextField" binding="StoreNameField">
+      <component id="95af5" class="javax.swing.JLabel" binding="storeNameField">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -75,7 +70,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="a5549" class="javax.swing.JTextField" binding="StoreIDField">
+      <component id="a5549" class="javax.swing.JLabel" binding="storeIDField">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

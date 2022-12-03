@@ -1,19 +1,15 @@
 import java.util.ArrayList;
 
 public class StoreController {
-
-	//private StoreGui gui;
 	private Store store;
-		
-//		public StoreController(StoreGui gui) {
-//			this.gui = gui;
-//		}
-		
 		public void createStore(int storeID, String storeName) {
 			IDValidator checkID = new IDValidator(); 
 			MapPersistence storeBuilder = new MapPersistence();
 			if(checkID.isIdValidStore(storeID)) {
-				this.store = storeBuilder.buildStore(storeID, storeName);
+				if(!Main.getStoreList().containsKey(storeID)){
+					this.store = storeBuilder.buildStore(storeID, storeName);
+				}
+				//already exists
 			}
 			//invalid id
 		}

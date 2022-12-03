@@ -16,6 +16,7 @@ public class MapPersistence {
 	
 	public Store buildStore(int storeID, String storeName) {
 		Store s = new Store(storeID, storeName);
+		Main.getStoreList().put(storeID, s);
 		return s;
 	}
 
