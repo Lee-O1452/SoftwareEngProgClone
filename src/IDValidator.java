@@ -1,15 +1,19 @@
 
 public class IDValidator {
 	
-	public boolean isIdValidProduct(String productID) {
-		int length = String.valueOf(productID).length();
-		if(length == 4) {
-			return true;
+	public int isIdValidProduct(String productID) {
+		int length = productID.length();
+		if(length != 4) {
+			return 1;
+		}
+		if(!productID.matches("[0-9]+")){
+			return 2;
 		}
 		else {
-			return false;
+			return 3;
 		}
 	}
+
 	
 	public boolean isIdValidCustomer(String customerID) {
 		int length = String.valueOf(customerID).length();
@@ -32,6 +36,15 @@ public class IDValidator {
 	}
 	
 	public boolean isIdValidStore(String storeID) {
+		int length = String.valueOf(storeID).length();
+		if(length == 2) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	public boolean doesIdValidStore(String storeID) {
 		int length = String.valueOf(storeID).length();
 		if(length == 2) {
 			return true;

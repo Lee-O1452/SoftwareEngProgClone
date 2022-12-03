@@ -9,19 +9,31 @@ public class InventoryController {
 		this.inventory = store.getStoreInventory();
 	}
 	
-	public void addProduct(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
-		
-		IDValidator checkID = new IDValidator(); 
-		if(checkID.isIdValidProduct(productID)) {
-			if(!inventory.containsProduct(productID)) {
+	public String addProduct(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+
+		IDValidator checkID = new IDValidator();
+
+		//check length
+		if (checkID.isIdValidProduct(productID) == 1) {
+			return "Make sure the ID is four digits.";
+		}
+
+		//check characters
+		else if (checkID.isIdValidProduct(productID) == 2) {
+			return "Make sure the ID only contains digits.";
+		}
+
+		else {
+			if(inventory.containsProduct(productID)){
+				return "Product already exists.";
+			}
+			else{
 				Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
 				inventory.addProduct(p);
+				return "Product has been added.";
 			}
-			//already exists
 		}
-		//invalid id
 	}
-
 	public int displayNumberOfProducts(){
 		return inventory.getSize();
 	}

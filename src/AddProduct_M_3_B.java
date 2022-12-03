@@ -29,8 +29,7 @@ public class AddProduct_M_3_B extends JFrame{
                 double price = Double.parseDouble(priceField.getText());
                 int quantity = Integer.parseInt(quantityField.getText());
                 boolean isFood = isFoodBox.isSelected();
-                inventoryController.addProduct(productID, quantity, productName, price, manufacturer, isFood);
-                JOptionPane.showMessageDialog(frame, "Product has been added.");
+                JOptionPane.showMessageDialog(frame, inventoryController.addProduct(productID, quantity, productName, price, manufacturer, isFood));
             }
         });
 

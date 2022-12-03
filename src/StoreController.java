@@ -34,8 +34,8 @@ public class StoreController {
 		public void printDisplayCustomers() {
 			ArrayList<Customer> allCustomers = store.displayCustomers();
 			System.out.println("There are " + allCustomers.size() + " customers in the system.\n");
-			for(int i = 0; i < allCustomers.size(); i++) {
-				System.out.println(allCustomers.get(i));
+			for (Customer allCustomer : allCustomers) {
+				System.out.println(allCustomer);
 			}
 			//gui stuff here
 		}
