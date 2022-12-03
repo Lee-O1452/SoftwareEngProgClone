@@ -2,16 +2,29 @@ import java.util.ArrayList;
 
 public class StoreController {
 	private Store store;
-		public void createStore(String storeID, String storeName) {
-			IDValidator checkID = new IDValidator(); 
+		public String createStore(String storeID, String storeName) {
+
+			IDValidator checkID = new IDValidator();
+
 			MapPersistence storeBuilder = new MapPersistence();
-			if(checkID.isIdValidStore(storeID)) {
-				if(!Main.getStoreList().containsKey(storeID)){
-					this.store = storeBuilder.buildStore(storeID, storeName);
-				}
-				//already exists
+
+			if (checkID.isIdValidStore(storeID) == 1) {
+				return "Make sure the ID is two digits.";
 			}
-			//invalid id
+
+			else if (checkID.isIdValidProduct(storeID) == 2) {
+				return "Make sure the ID only contains digits.";
+			}
+
+			else {
+				if(Main.getStoreList().containsKey(storeID)){
+					return "Store already exists.";
+				}
+				else{
+					this.store = storeBuilder.buildStore(storeID, storeName);
+					return "Store has been added, please return to store selection or add more.";
+				}
+			}
 		}
 	
 		public void registerCustomer(String customerID, String firstName, String lastName) {

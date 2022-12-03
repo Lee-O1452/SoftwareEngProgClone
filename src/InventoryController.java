@@ -30,7 +30,7 @@ public class InventoryController {
 			else{
 				Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
 				inventory.addProduct(p);
-				return "Product has been added.";
+				return "Product has been added, please return to inventory menu or add more.";
 			}
 		}
 	}

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IDValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IDValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670107749156</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI">
+      <created>1670110504799</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670110504799</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +232,7 @@
     <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
     <MESSAGE value="Finished displayProducts sorting on GUI" />
     <MESSAGE value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
+    <MESSAGE value="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI" />
   </component>
 </project>
