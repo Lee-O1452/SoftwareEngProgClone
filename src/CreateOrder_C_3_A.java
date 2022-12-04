@@ -11,7 +11,7 @@ public class CreateOrder_C_3_A {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public CreateOrder_C_3_A(Store store){
+    public CreateOrder_C_3_A(Store store, Customer customer){
         frame.setContentPane(panel1);
         frame.setTitle("Create a New Store");
         frame.setSize(900,600);
@@ -22,7 +22,7 @@ public class CreateOrder_C_3_A {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store);
+                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store, customer);
             }
         });
 

@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.util.EventObject;
 
 
 public class ReturnItem_C_4_ {
@@ -11,7 +10,7 @@ public class ReturnItem_C_4_ {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public ReturnItem_C_4_(Store store){
+    public ReturnItem_C_4_(Store store, Customer customer){
 
         frame.setContentPane(panel1);
         frame.setTitle("Return an Item");
@@ -23,7 +22,7 @@ public class ReturnItem_C_4_ {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store);
+                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store, customer);
             }
         });
 

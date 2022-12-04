@@ -24,6 +24,10 @@ public class Store {
 	public boolean containsCustomer(String customerID) {
 		return store.containsKey(customerID);
 	}
+
+	public Customer getCustomer(String customerID){
+		return store.get(customerID);
+	}
 	
 	public String getStoreName() {
 		return storeName;

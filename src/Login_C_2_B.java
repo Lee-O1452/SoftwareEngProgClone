@@ -4,11 +4,11 @@ import javax.swing.JFrame;
 
 public class Login_C_2_B extends JFrame {
     private JButton backButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JList StoreListButton;
     private JButton loginButton;
+    private JLabel storeNameField;
+    private JLabel storeIDField;
     private JPanel panel;
+    private JTextField customerIDField;
     JFrame frame = new JFrame();
 
 
@@ -20,16 +20,20 @@ public class Login_C_2_B extends JFrame {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        storeNameField.setText("Store Name: " + store.getStoreName());
+        storeIDField.setText("Store ID: " + store.getStoreID());
+
         loginButton.addActionListener(e -> {
             if(e.getSource() == loginButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(store);
+                store.getCustomer(customerIDField.getText());
+                AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(store, store.getCustomer(customerIDField.getText()));
             }
         });
         backButton.addActionListener(e -> {
             if(e.getSource() == backButton){
                 frame.dispose();
-                MainMenu_1_ mainMenu = new MainMenu_1_();
+                Selections_C_1_5 selections = new Selections_C_1_5();
             }
         });
 

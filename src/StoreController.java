@@ -10,11 +10,12 @@ public class StoreController {
 			return storeID;
 		}
 	
-		public void registerCustomer(Store store, String firstName, String lastName) {
+		public String registerCustomer(Store store, String firstName, String lastName) {
 			IDValidator buildID = new IDValidator();
 			String customerID = buildID.generateCustomerID(store);
 			Customer c = new Customer(customerID, firstName, lastName);
 			store.addCustomer(c);
+			return customerID;
 		}
 
 		public void printDisplayCustomers(Store store) {

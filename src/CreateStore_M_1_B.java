@@ -6,7 +6,6 @@ public class CreateStore_M_1_B extends JFrame{
     private JButton createStoreButton;
     private JTextField nameField;
     private JPanel panel1;
-
     JFrame frame = new JFrame();
     StoreController storeController = new StoreController();
     public CreateStore_M_1_B(){

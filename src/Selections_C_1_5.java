@@ -38,7 +38,7 @@ public class Selections_C_1_5 {
                 if(storeSelect.getSelectedValue()!=null) {
                     storeSelect.getSelectedValue();
                     frame.dispose();
-                    AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(Main.getStoreList().get(storeSelect.getSelectedValue()));
+                    Login_C_2_B login = new Login_C_2_B(Main.getStoreList().get(storeSelect.getSelectedValue()));
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
