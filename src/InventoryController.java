@@ -9,62 +9,61 @@ public class InventoryController {
 		this.inventory = store.getStoreInventory();
 	}
 	
-	public void addProduct(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
-		
-		IDValidator checkID = new IDValidator(); 
-		if(checkID.isIdValidProduct(productID)) {
-			if(!inventory.containsProduct(productID)) {
+	public String addProduct(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+
+		IDValidator checkID = new IDValidator();
+
+		//check length
+		if (checkID.isIdValidProduct(productID) == 1) {
+			return "Make sure the ID is four digits.";
+		}
+
+		//check characters
+		else if (checkID.isIdValidProduct(productID) == 2) {
+			return "Make sure the ID only contains digits.";
+		}
+
+		else {
+			if(inventory.containsProduct(productID)){
+				return "Product already exists.";
+			}
+			else{
 				Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
 				inventory.addProduct(p);
+				return "Product has been added, please return to inventory menu or add more.";
 			}
-			//already exists
 		}
-		//invalid id
 	}
-
 	public int displayNumberOfProducts(){
 		return inventory.getSize();
 	}
 	public double displayTotalValue(){
 		return inventory.getTotalInventoryValue();
 	}
-	public void displayProductReportName(){
-		ArrayList<Product> allProductsName = inventory.productReportName();
-
-		for(int i = 0; i < allProductsName.size(); i++) {
-			System.out.println(allProductsName.get(i));
-		}
+	public ArrayList<Product> displayProductReportName(){
+		return inventory.productReportName();
 	}
-	public void displayProductReportID(){
-		ArrayList<Product> allProductsID = inventory.productReportID();
+	public ArrayList<Product> displayProductReportID(){
 
-		for(int i = 0; i < allProductsID.size(); i++) {
-			System.out.println(allProductsID.get(i));
-		}
+		return inventory.productReportID();
 	}
-	public void displayProductReportManufacturer(){
-		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
+	public ArrayList<Product> displayProductReportManufacturer(){
 
-		for(int i = 0; i < allProductsManufacturer.size(); i++) {
-			System.out.println(allProductsManufacturer.get(i));
-		}
+		return inventory.productReportManufacturer();
 	}
-	public void displayProductReportIsFood(){
-		ArrayList<Product> allProductsIsFood = inventory.productReportIsFood();
+	public ArrayList<Product> displayProductReportIsFood(){
 
-		for(int i = 0; i < allProductsIsFood.size(); i++) {
-			System.out.println(allProductsIsFood.get(i));
-		}
+		return inventory.productReportIsFood();
 	}
-	public void updateQuantity(int productID, int quantity) {
+	public void updateQuantity(String productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(quantity);
 	}
 	
-	public void updatePrice(int productID, double price) {
+	public void updatePrice(String productID, double price) {
 		inventory.getProduct(productID).setPrice(price);
 	}
 	
-	public void removeProduct(int productID) {
+	public void removeProduct(String productID) {
 		inventory.removeProduct(inventory.getProduct(productID));
 	}
 
@@ -73,10 +72,10 @@ public class InventoryController {
 		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
 		
 		System.out.println("All Products made by " + manufacturer + " :");
-		for(int i = 0; i < allProductsManufacturer.size(); i++){
-			if (allProductsManufacturer.get(i).getManufacturer().equals(manufacturer)){
-				double totalInventoryValue = allProductsManufacturer.get(i).getTotalValue();
-				System.out.println(allProductsManufacturer.get(i).toString() + " Total Value: " + totalInventoryValue);
+		for (Product product : allProductsManufacturer) {
+			if (product.getManufacturer().equals(manufacturer)) {
+				double totalInventoryValue = product.getTotalValue();
+				System.out.println(product + " Total Value: " + totalInventoryValue);
 
 			}
 

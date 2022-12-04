@@ -1,11 +1,11 @@
 
 public class Customer {
 
-	private int customerID;
+	private String customerID;
 	private String firstName;
 	private String lastName;
 	
-	public Customer(int customerID, String firstName, String lastName) {
+	public Customer(String customerID, String firstName, String lastName) {
 		this.customerID = customerID;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -13,7 +13,7 @@ public class Customer {
 	
 	
 	//getters
-	public int getCustomerID() {
+	public String getCustomerID() {
 		return customerID;
 	}
 	
@@ -27,7 +27,7 @@ public class Customer {
 	
 	
 	//setters
-	public void setCustomerID(int customerID) {
+	public void setCustomerID(String customerID) {
 		this.customerID = customerID;
 	}
 	
@@ -43,8 +43,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		String ts = String.format("Customer ID - %d , First Name - %s , Last Name - %s\n", customerID, firstName, lastName);
-		return ts;
+		return String.format("Customer ID - %s , First Name - %s , Last Name - %s\n", customerID, firstName, lastName);
 	}
 	
 	

@@ -1,43 +1,52 @@
 
 public class IDValidator {
 	
-	public boolean isIdValidProduct(int productID) {
-		int length = String.valueOf(productID).length();
-		if(length == 4) {
-			return true;
+	public int isIdValidProduct(String productID) {
+		int length = productID.length();
+		if(length != 4) {
+			return 1;
+		}
+		if(!productID.matches("[0-9]+")){
+			return 2;
 		}
 		else {
-			return false;
+			return 3;
 		}
 	}
-	
-	public boolean isIdValidCustomer(int customerID) {
-		int length = String.valueOf(customerID).length();
-		if(length == 4) {
-			return true;
+
+	public String generateStoreID() {
+		String size = String.valueOf(Main.getStoreList().size() + 1);
+		int length = size.length();
+		String base = "00";
+		if(length == 2){
+			return size;
 		}
-		else {
-			return false;
-		}
-	}
-	
-	public boolean isIdValidOrder(int orderID) {
-		int length = String.valueOf(orderID).length();
-		if(length == 6) {
-			return true;
-		}
-		else {
-			return false;
+		else{
+			return base.substring(0, 2-length) + size;
 		}
 	}
-	
-	public boolean isIdValidStore(int storeID) {
-		int length = String.valueOf(storeID).length();
-		if(length == 2) {
-			return true;
+
+	public String generateCustomerID(Store store) {
+		String size = String.valueOf(store.getStoreSize() + 1);
+		int length = size.length();
+		String base = "0000";
+		if(length == 4){
+			return size;
 		}
-		else {
-			return false;
+		else{
+			return base.substring(0, 4-length) + size;
+		}
+	}
+
+	public String generateOrderID() {
+		String size = String.valueOf(Main.getOrderList().size() + 1);
+		int length = size.length();
+		String base = "000000";
+		if(length == 6){
+			return size;
+		}
+		else{
+			return base.substring(0, 6-length) + size;
 		}
 	}
 }

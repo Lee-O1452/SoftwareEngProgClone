@@ -1,6 +1,5 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class CreateOrder_C_3_A {
     private JButton backButton;
@@ -12,7 +11,7 @@ public class CreateOrder_C_3_A {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public CreateOrder_C_3_A(){
+    public CreateOrder_C_3_A(Store store){
         frame.setContentPane(panel1);
         frame.setTitle("Create a New Store");
         frame.setSize(900,600);
@@ -20,35 +19,18 @@ public class CreateOrder_C_3_A {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        backButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==backButton){
-                    frame.dispose();
-                    AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5();
-                }
-            }
-        });
-        addToOrderButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==addToOrderButton){
-
-                }
-            }
-        });
-        createOrderButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(e.getSource()==createOrderButton){
-                    frame.dispose();
-                    Receipt_C_3_B receipt = new Receipt_C_3_B();
-                }
+        backButton.addActionListener(e -> {
+            if(e.getSource()==backButton){
+                frame.dispose();
+                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store);
             }
         });
 
-
+        createOrderButton.addActionListener(e -> {
+            if(e.getSource()==createOrderButton){
+                frame.dispose();
+                Receipt_C_3_B receipt = new Receipt_C_3_B();
+            }
+        });
     }
-
-
 }

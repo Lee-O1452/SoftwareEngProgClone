@@ -5,13 +5,13 @@ public class Product {
 	private String productName;
 	private double price;
 	private String manufacturer;
-	private int productID;
+	private String productID;
 	private boolean isFood;
 	private int quantity;
 	
 	
 	//Constructor of the Product which has the name, price, manufacturer, id, and specifies if product is food.
-	public Product(int productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+	public Product(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		this.productName = productName;
 		this.price = price;
 		this.manufacturer = manufacturer;
@@ -31,7 +31,7 @@ public class Product {
 	public String getManufacturer() {
 		return manufacturer;
 	}
-	public int getProductID() {
+	public String getProductID() {
 		return productID;
 	}
 	public boolean getIsFood() {
@@ -54,7 +54,7 @@ public class Product {
 	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
-	public void setProductID(int productID) {
+	public void setProductID(String productID) {
 		this.productID = productID;
 	}
 	public void setIsFood(boolean isFood) {
@@ -67,8 +67,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		String ts = String.format("Product ID - %d , Quantity - %d , Product Name - %s , Price - $%d , Manufacturer - %s , Food Item - %b", productID, quantity, productName, price, manufacturer, isFood);
-		return ts;
+		return String.format("Product ID - %s , Quantity - %d , Product Name - %s , Price - $%.2f , Manufacturer - %s , Food Item - %b\n", productID, quantity, productName, price, manufacturer, isFood);
 	}
 
 }

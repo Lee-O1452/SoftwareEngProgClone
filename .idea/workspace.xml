@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="fixed addProduct back button, updated inventoryController to be connected to a store object">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_FF" />
+      </set>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,18 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "324",
+    "last_opened_file_path": "C:/Users/Nakota/IdeaProjects",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.folding"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -156,7 +161,70 @@
       <option name="project" value="LOCAL" />
       <updated>1670033619814</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option">
+      <created>1670037087321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670037087321</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Finished displayProducts sorting on GUI">
+      <created>1670099436069</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670099436069</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups">
+      <created>1670107749156</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670107749156</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI">
+      <created>1670110504799</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670110504799</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated IDValidator checks, made createStore more failproof, and added more popups to create store GUI">
+      <created>1670111698502</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670111698502</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match">
+      <created>1670114431297</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670114431297</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match">
+      <created>1670115537080</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670115537080</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match">
+      <created>1670115571475</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670115571475</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0">
+      <created>1670116018932</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670116018932</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +262,15 @@
     <MESSAGE value="added popups to store creation and selection, fixed addproduct page to properly load" />
     <MESSAGE value="updated addProduct GUI to properly add a product" />
     <MESSAGE value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
+    <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
+    <MESSAGE value="Finished displayProducts sorting on GUI" />
+    <MESSAGE value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
+    <MESSAGE value="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI" />
+    <MESSAGE value="Updated IDValidator checks, made createStore more failproof, and added more popups to create store GUI" />
+    <MESSAGE value="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match" />
+    <MESSAGE value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
+    <MESSAGE value="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match" />
+    <MESSAGE value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
   </component>
 </project>

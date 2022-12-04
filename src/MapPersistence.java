@@ -1,23 +1,20 @@
 import java.util.Date;
 
-//CTWOOD WAS HERE
 
 public class MapPersistence {
 
 	public Inventory buildInventory() {
-		Inventory i = new Inventory();
-		return i;
+		return new Inventory();
 	}
 	
-	public Order buildOrder(int orderID, int customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+	public void buildOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		Order o = new Order(orderID, customerID, date, usingSnap, isPaid, store);
-		return o;
+		Main.getOrderList().put(orderID, o);
 	}
 	
-	public Store buildStore(int storeID, String storeName) {
+	public void buildStore(String storeID, String storeName) {
 		Store s = new Store(storeID, storeName);
 		Main.getStoreList().put(storeID, s);
-		return s;
 	}
 
 //for saving the inventory to a text file

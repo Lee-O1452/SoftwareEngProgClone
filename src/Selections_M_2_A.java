@@ -1,7 +1,5 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Selections_M_2_A extends JFrame{
     private JButton backButton;
@@ -25,58 +23,43 @@ public class Selections_M_2_A extends JFrame{
         storeNameField.setText("Store Name: " + store.getStoreName());
         storeIDField.setText("Store ID: " + store.getStoreID());
 
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == backButton) {
-                    frame.dispose();
-                    Selections_M_1_A selectionsM1 = new Selections_M_1_A();
+        backButton.addActionListener(e -> {
+            if (e.getSource() == backButton) {
+                frame.dispose();
+                Selections_M_1_A selectionsM1 = new Selections_M_1_A();
 
-                }
             }
         });
 
-        inventoryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == inventoryButton) {
-                    frame.dispose();
-                    Inventory_M_3_A inventory = new Inventory_M_3_A(store);
+        inventoryButton.addActionListener(e -> {
+            if (e.getSource() == inventoryButton) {
+                frame.dispose();
+                Inventory_M_3_A inventory = new Inventory_M_3_A(store);
 
-                }
             }
         });
 
-        updateTaxButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == updateTaxButton) {
-                    frame.dispose();
-                    UpdateTax_M_4_ updateTax = new UpdateTax_M_4_(store);
+        updateTaxButton.addActionListener(e -> {
+            if (e.getSource() == updateTaxButton) {
+                frame.dispose();
+                UpdateTax_M_4_ updateTax = new UpdateTax_M_4_(store);
 
-                }
             }
         });
 
-        customersButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == customersButton) {
-                    frame.dispose();
-                    CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A(store);
+        customersButton.addActionListener(e -> {
+            if (e.getSource() == customersButton) {
+                frame.dispose();
+                CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A(store);
 
-                }
             }
         });
 
-        reportsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == reportsButton) {
-                    frame.dispose();
-                    ReportSelections_M_6_ reports = new ReportSelections_M_6_(store);
+        reportsButton.addActionListener(e -> {
+            if (e.getSource() == reportsButton) {
+                frame.dispose();
+                ReportSelections_M_6_ reports = new ReportSelections_M_6_(store);
 
-                }
             }
         });
     }

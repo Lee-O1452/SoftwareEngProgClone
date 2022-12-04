@@ -1,45 +1,32 @@
 import java.util.ArrayList;
 
 public class StoreController {
-	private Store store;
-		public void createStore(int storeID, String storeName) {
-			IDValidator checkID = new IDValidator(); 
+
+		public String createStore(String storeName) {
+			IDValidator buildID = new IDValidator();
 			MapPersistence storeBuilder = new MapPersistence();
-			if(checkID.isIdValidStore(storeID)) {
-				if(!Main.getStoreList().containsKey(storeID)){
-					this.store = storeBuilder.buildStore(storeID, storeName);
-				}
-				//already exists
-			}
-			//invalid id
+			String storeID = buildID.generateStoreID();
+			storeBuilder.buildStore(storeID, storeName);
+			return storeID;
 		}
 	
-		public void registerCustomer(int customerID, String firstName, String lastName) {
-			
-			IDValidator checkID = new IDValidator(); 
-			
-			if(checkID.isIdValidCustomer(customerID)) {
-				if(!store.containsCustomer(customerID)) {
-					Customer c = new Customer(customerID, firstName, lastName);
-					store.addCustomer(c);
-					//add confirmation here
-				}
-				//already exists
-			}
-			//invalid id
+		public void registerCustomer(Store store, String firstName, String lastName) {
+			IDValidator buildID = new IDValidator();
+			String customerID = buildID.generateCustomerID(store);
+			Customer c = new Customer(customerID, firstName, lastName);
+			store.addCustomer(c);
 		}
-		
 
-		public void printDisplayCustomers() {
+		public void printDisplayCustomers(Store store) {
 			ArrayList<Customer> allCustomers = store.displayCustomers();
 			System.out.println("There are " + allCustomers.size() + " customers in the system.\n");
-			for(int i = 0; i < allCustomers.size(); i++) {
-				System.out.println(allCustomers.get(i));
+			for (Customer allCustomer : allCustomers) {
+				System.out.println(allCustomer);
 			}
 			//gui stuff here
 		}
 		
-		public void updateTaxes(double foodTax, double nonFoodTax) {
+		public void updateTaxes(Store store, double foodTax, double nonFoodTax) {
 			store.setFoodTax(foodTax);
 			store.setNonFoodTax(nonFoodTax);
 		}
