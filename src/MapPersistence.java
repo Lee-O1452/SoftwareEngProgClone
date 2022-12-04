@@ -1,6 +1,5 @@
 import java.util.Date;
 
-//CTWOOD WAS HERE
 
 public class MapPersistence {
 
@@ -13,10 +12,9 @@ public class MapPersistence {
 		return o;
 	}
 	
-	public Store buildStore(String storeID, String storeName) {
+	public void buildStore(String storeID, String storeName) {
 		Store s = new Store(storeID, storeName);
 		Main.getStoreList().put(storeID, s);
-		return s;
 	}
 
 //for saving the inventory to a text file

@@ -27,16 +27,18 @@ public class IDValidator {
 		}
 	}
 
-	public boolean isIdValidCustomer(String customerID) {
-		int length = String.valueOf(customerID).length();
-		if(length == 4) {
-			return true;
+	public String generateCustomerID(Store store) {
+		String size = String.valueOf(store.getStoreSize());
+		int length = size.length();
+		String base = "0000";
+		if(length == 4){
+			return size;
 		}
-		else {
-			return false;
+		else{
+			return base.substring(0, 4-length) + size;
 		}
 	}
-	
+
 	public boolean isIdValidOrder(String orderID) {
 		int length = String.valueOf(orderID).length();
 		if(length == 6) {

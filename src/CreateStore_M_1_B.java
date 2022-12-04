@@ -23,8 +23,7 @@ public class CreateStore_M_1_B extends JFrame{
             if(e.getSource() == createStoreButton){
                 String id = idField.getText();
                 String name = nameField.getText();
-                storeController.createStore(id, name);
-                JOptionPane.showMessageDialog(frame, "Store has been added, please return to store selection or add more.");
+                JOptionPane.showMessageDialog(frame, storeController.createStore(id, name));
             }
         });
 
