@@ -9,13 +9,13 @@ public class OrderHistory_C_5_A {
     private JPanel panel1;
     JFrame frame = new JFrame();
 
-    public OrderHistory_C_5_A(Store store){
+    public OrderHistory_C_5_A(Store store, Customer customer){
 
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store);
+                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store, customer);
             }
         });
         viewOrderButton.addActionListener(e -> {
