@@ -8,6 +8,8 @@ public class AfterLoginRegistration_C_2_5 {
     private JButton returnItemButton;
     private JButton orderHistoryButton;
     private JPanel panel1;
+    private JLabel storeNameField;
+    private JLabel storeIDField;
     JFrame frame = new JFrame();
 
     public AfterLoginRegistration_C_2_5(Store store){
@@ -18,10 +20,13 @@ public class AfterLoginRegistration_C_2_5 {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        storeNameField.setText("Store Name: " + store.getStoreName());
+        storeIDField.setText("Store ID: " + store.getStoreID());
+
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                MainMenu_1_ mainMenu = new MainMenu_1_();
+                Selections_C_1_5 selections = new Selections_C_1_5();
             }
         });
 

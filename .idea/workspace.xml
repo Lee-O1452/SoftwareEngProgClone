@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Added a scroll bar to the store list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_2_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_2_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreList.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "324",
-    "last_opened_file_path": "C:/Users/Nakota/IdeaProjects",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.folding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;324&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -224,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670116018932</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added a scroll bar to the store list">
+      <created>1670119208220</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670119208220</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,6 +282,7 @@
     <MESSAGE value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
     <MESSAGE value="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match" />
     <MESSAGE value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
+    <MESSAGE value="Added a scroll bar to the store list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a scroll bar to the store list" />
   </component>
 </project>
