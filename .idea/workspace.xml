@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IDValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IDValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MapPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match">
+      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670114431297</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match">
+      <created>1670115537080</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670115537080</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +254,7 @@
     <MESSAGE value="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI" />
     <MESSAGE value="Updated IDValidator checks, made createStore more failproof, and added more popups to create store GUI" />
     <MESSAGE value="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match" />
+    <MESSAGE value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
   </component>
 </project>
