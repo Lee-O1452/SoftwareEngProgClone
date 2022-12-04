@@ -14,16 +14,15 @@ public class IDValidator {
 		}
 	}
 
-	public int isIdValidStore(String storeID) {
-		int length = storeID.length();
-		if(length != 2) {
-			return 1;
+	public String generateStoreID() {
+		String size = String.valueOf(Main.getStoreList().size());
+		int length = size.length();
+		String base = "00";
+		if(length == 2){
+			return size;
 		}
-		if(!storeID.matches("[0-9]+")){
-			return 2;
-		}
-		else {
-			return 3;
+		else{
+			return base.substring(0, 2-length) + size;
 		}
 	}
 
@@ -39,13 +38,15 @@ public class IDValidator {
 		}
 	}
 
-	public boolean isIdValidOrder(String orderID) {
-		int length = String.valueOf(orderID).length();
-		if(length == 6) {
-			return true;
+	public String generateOrderID() {
+		String size = String.valueOf(Main.getOrderList().size());
+		int length = size.length();
+		String base = "000000";
+		if(length == 6){
+			return size;
 		}
-		else {
-			return false;
+		else{
+			return base.substring(0, 6-length) + size;
 		}
 	}
 }

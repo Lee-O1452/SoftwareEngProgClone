@@ -2,24 +2,16 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class OrderController {
+	
+	public void createOrder(String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 
-//	private StoreGui gui;
-	private Order order;
-	
-//	public OrderController(StoreGui gui) {
-//		this.gui = gui;
-//	}
-	
-	public void createOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
-		IDValidator checkID = new IDValidator(); 
+		IDValidator buildID = new IDValidator();
 		MapPersistence orderBuilder = new MapPersistence();
-		if(checkID.isIdValidOrder(orderID)) {
-			this.order = orderBuilder.buildOrder(orderID, customerID, date, usingSnap, isPaid, store);
-		}
-		//invalid id
+		String orderID = buildID.generateOrderID();
+		orderBuilder.buildOrder(orderID, customerID, date, usingSnap, isPaid, store);
 	}
 	
-	public void addToOrder(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+	public void addToOrder(Order order, String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
 		ArrayList<Product> allProductsName = order.getStore().getStoreInventory().productReportName();
 		for (Product product : allProductsName) {
 			System.out.println(product);
@@ -30,7 +22,7 @@ public class OrderController {
 		order.addProduct(p);
 	}
 
-	public void payOrder() {
+	public void payOrder(Order order) {
 		order.setIsPaid(true);
 		order.orderReport();
 		//need to figure out how to number each item and use Inventory
@@ -40,7 +32,7 @@ public class OrderController {
 			
 	}
 
-	public void returnItem(String productID, int quantity){
+	public void returnItem(Order order, String productID, int quantity){
 
 		order.getStore().getStoreInventory().increaseQuantity(productID, quantity);
 		order.returnProduct(productID);

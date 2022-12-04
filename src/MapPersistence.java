@@ -7,9 +7,9 @@ public class MapPersistence {
 		return new Inventory();
 	}
 	
-	public Order buildOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+	public void buildOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
 		Order o = new Order(orderID, customerID, date, usingSnap, isPaid, store);
-		return o;
+		Main.getOrderList().put(orderID, o);
 	}
 	
 	public void buildStore(String storeID, String storeName) {
