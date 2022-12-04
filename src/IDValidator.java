@@ -15,7 +15,7 @@ public class IDValidator {
 	}
 
 	public String generateStoreID() {
-		String size = String.valueOf(Main.getStoreList().size());
+		String size = String.valueOf(Main.getStoreList().size() + 1);
 		int length = size.length();
 		String base = "00";
 		if(length == 2){
@@ -27,7 +27,7 @@ public class IDValidator {
 	}
 
 	public String generateCustomerID(Store store) {
-		String size = String.valueOf(store.getStoreSize());
+		String size = String.valueOf(store.getStoreSize() + 1);
 		int length = size.length();
 		String base = "0000";
 		if(length == 4){
@@ -39,7 +39,7 @@ public class IDValidator {
 	}
 
 	public String generateOrderID() {
-		String size = String.valueOf(Main.getOrderList().size());
+		String size = String.valueOf(Main.getOrderList().size() + 1);
 		int length = size.length();
 		String base = "000000";
 		if(length == 6){

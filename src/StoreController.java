@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class StoreController {
 
-		public void createStore(String storeName) {
+		public String createStore(String storeName) {
 			IDValidator buildID = new IDValidator();
 			MapPersistence storeBuilder = new MapPersistence();
 			String storeID = buildID.generateStoreID();
 			storeBuilder.buildStore(storeID, storeName);
+			return storeID;
 		}
 	
 		public void registerCustomer(Store store, String firstName, String lastName) {
