@@ -10,6 +10,7 @@ public class Selections_M_1_A extends JFrame {
     private JButton createStoreButton;
     private JPanel panel1;
     private JButton selectStoreButton;
+
     JFrame frame = new JFrame();
 
     public Selections_M_1_A() {
@@ -21,6 +22,8 @@ public class Selections_M_1_A extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         storeSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
+
+
 
         createStoreButton.addActionListener(e -> {
             if(e.getSource() == createStoreButton){
