@@ -14,11 +14,19 @@ public class RemoveProduct_M_3_F extends JFrame{
         frame.setSize(900, 600);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        InventoryController inventoryController = new InventoryController(store);
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
                 Inventory_M_3_A inventorySelect = new Inventory_M_3_A (store);
+            }
+        });
+
+        removeProductButton.addActionListener(e -> {
+            if(e.getSource()==removeProductButton){
+                inventoryController.removeProduct(productIDField.getText());
+                JOptionPane.showMessageDialog(frame, "Product has been removed from the store.");
             }
         });
     }
