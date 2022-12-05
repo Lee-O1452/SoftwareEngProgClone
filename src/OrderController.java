@@ -26,12 +26,13 @@ public class OrderController {
 		ArrayList keySet = new ArrayList<>(order.getOrder().keySet());
 		for(int i = 0; i < order.getOrder().size(); i++){
 			Product p = order.getOrder().get(keySet.get(i));
-			inventoryController.updateQuantity(p.getProductID(), p.getQuantity());
+			inventoryController.removeQuantity(p.getProductID(), p.getQuantity());
 		}
 	}
 
 	public void returnItem(Order order, String productID, int quantity){
-		order.getStore().getStoreInventory().increaseQuantity(productID, quantity);
+		InventoryController inventoryController = new InventoryController(order.getStore());
+		inventoryController.removeQuantity(productID, quantity);
 		order.returnProduct(productID);
 	}
 }

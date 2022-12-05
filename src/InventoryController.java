@@ -90,8 +90,12 @@ public class InventoryController {
 
 		return inventory.productReportIsFood();
 	}
-	public void updateQuantity(String productID, int quantity) {
+	public void removeQuantity(String productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(inventory.getProduct(productID).getQuantity() - quantity);
+	}
+
+	public void addQuantity(String productID, int quantity) {
+		inventory.getProduct(productID).setQuantity(inventory.getProduct(productID).getQuantity() + quantity);
 	}
 	
 	public void updatePrice(String productID, double price) {

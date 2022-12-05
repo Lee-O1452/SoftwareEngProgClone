@@ -29,7 +29,7 @@ public class Inventory_M_3_A extends JFrame {
         updateProductButton.addActionListener(e -> {
             if(e.getSource()==updateProductButton){
                 frame.dispose();
-                UpdateProduct_M_3_G updateProduct = new UpdateProduct_M_3_G();
+                UpdateProduct_M_3_G updateProduct = new UpdateProduct_M_3_G(store);
             }
         });
 
