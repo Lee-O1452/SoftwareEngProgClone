@@ -26,12 +26,13 @@ public class Inventory {
 
 			while(fileScanner.hasNextLine()) {
 				String checkId = fileScanner.next();
-				if(inventory.containsKey(checkId) ){
+
+				if(inventory.containsKey(checkId)){
 					int quantityNew = fileScanner.nextInt();
 					int quantityOld = inventory.get(checkId).getQuantity();
 					updateQuantity(checkId, quantityOld + quantityNew);
-
 				}
+
 				else{ 
 					Product p = new Product(
 					productMaker.next(),
@@ -41,16 +42,11 @@ public class Inventory {
 					productMaker.next(),
 					productMaker.nextBoolean()
 					);
-					
 					addProduct(p);
-					
-
 				}
 				fileScanner.nextLine();
 				productMaker.nextLine();
 			}
-			
-			
 			fileScanner.close();
 			productMaker.close();
 	

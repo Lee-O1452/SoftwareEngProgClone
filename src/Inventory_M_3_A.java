@@ -25,6 +25,7 @@ public class Inventory_M_3_A extends JFrame {
                 Selections_M_2_A selections = new Selections_M_2_A(store);
             }
         });
+
         updateProductButton.addActionListener(e -> {
             if(e.getSource()==updateProductButton){
                 frame.dispose();
@@ -35,7 +36,7 @@ public class Inventory_M_3_A extends JFrame {
         batchAddUpdateButton.addActionListener(e -> {
             if(e.getSource()==batchAddUpdateButton){
                 frame.dispose();
-                BatchAdd_Update_M_3_E batchUpdate = new BatchAdd_Update_M_3_E();
+                BatchAdd_Update_M_3_E batchUpdate = new BatchAdd_Update_M_3_E(store);
             }
         });
 

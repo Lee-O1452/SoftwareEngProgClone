@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 
 public class InventoryController {
@@ -112,8 +113,10 @@ public class InventoryController {
 				System.out.println(product + " Total Value: " + totalInventoryValue);
 
 			}
-
 		}
-
 	}
+	public void batchAddUpdate(File file){
+		inventory.batchAddOrUpdate(file);
+	}
+
 }
