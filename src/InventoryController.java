@@ -9,7 +9,7 @@ public class InventoryController {
 		this.inventory = store.getStoreInventory();
 	}
 	
-	public String addProduct(String productID, int quantity, String productName, double price, String manufacturer, boolean isFood) {
+	public String addProduct(String productID, String quantity, String productName, String price, String manufacturer, boolean isFood) {
 
 		IDValidator checkID = new IDValidator();
 
@@ -23,12 +23,39 @@ public class InventoryController {
 			return "Make sure the ID only contains digits.";
 		}
 
+		else if (quantity.length() < 1){
+			return "Make sure the quantity is filled out.";
+		}
+
+		else if (productName.length() < 1){
+			return "Make sure the Product Name is filled out.";
+		}
+
+		else if (price.length() < 1){
+			return "Make sure the Price is filled out.";
+		}
+
+		else if (manufacturer.length() < 1){
+			return "Make sure the Manufacturer Name is filled out.";
+		}
+
 		else {
 			if(inventory.containsProduct(productID)){
 				return "Product already exists.";
 			}
+
 			else{
-				Product p = new Product(productID, quantity, productName, price, manufacturer, isFood);
+				try {
+					double d = Double.parseDouble(price);
+				} catch (NumberFormatException nfe) {
+					return "Price has to be a double!";
+				}
+				try {
+					int i = Integer.parseInt(quantity);
+				} catch (NumberFormatException nfe) {
+					return "Quantity has to be an Integer!";
+				}
+				Product p = new Product(productID, Integer.parseInt(quantity), productName, Double.parseDouble(price), manufacturer, isFood);
 				inventory.addProduct(p);
 				return "Product has been added, please return to inventory menu or add more.";
 			}
