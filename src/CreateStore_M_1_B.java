@@ -18,10 +18,15 @@ public class CreateStore_M_1_B extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         createStoreButton.addActionListener(e -> {
-            if(e.getSource() == createStoreButton){
+            if(e.getSource() == createStoreButton) {
                 String name = nameField.getText();
-                String storeID = storeController.createStore(name);
-                JOptionPane.showMessageDialog(frame, "Store has been created with ID: " + storeID + "\nPlease return to store selection or add more.");
+                if (name.length()<1) {
+                    JOptionPane.showMessageDialog(frame, "Please supply a store name.");
+                }
+                else{
+                    String storeID = storeController.createStore(name);
+                    JOptionPane.showMessageDialog(frame, "Store has been created with ID: " + storeID + "\nPlease return to store selection or add more.");
+                }
             }
         });
 
