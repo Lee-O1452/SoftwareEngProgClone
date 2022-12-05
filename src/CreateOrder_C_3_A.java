@@ -4,9 +4,9 @@ import javax.swing.*;
 public class CreateOrder_C_3_A {
     private JButton backButton;
     private JButton createOrderButton;
-    private JTextField textField1;
+    private JTextField searchField;
     private JTable productTable;
-    private JTextField textField2;
+    private JTextField quantityField;
     private JButton addToOrderButton;
     private JPanel panel1;
     JFrame frame = new JFrame();
