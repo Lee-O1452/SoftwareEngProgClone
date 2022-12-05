@@ -21,7 +21,7 @@ public class DisplayProducts_M_3_D extends JFrame {
         productList.setText(
                 "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
                         "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
-                        inventoryController.displayProductReportName().toString()
+                        inventoryController.displayProductReportName()
         );
 
         nameSort.addActionListener(e -> {
@@ -29,7 +29,7 @@ public class DisplayProducts_M_3_D extends JFrame {
                 productList.setText(
                         "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
                                 "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
-                                inventoryController.displayProductReportName().toString()
+                                inventoryController.displayProductReportName()
                 );
             }
         });
@@ -39,7 +39,7 @@ public class DisplayProducts_M_3_D extends JFrame {
                 productList.setText(
                         "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
                                 "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
-                                inventoryController.displayProductReportID().toString()
+                                inventoryController.displayProductReportID()
                 );
             }
         });
@@ -49,7 +49,7 @@ public class DisplayProducts_M_3_D extends JFrame {
                 productList.setText(
                         "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
                                 "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
-                                inventoryController.displayProductReportManufacturer().toString()
+                                inventoryController.displayProductReportManufacturer()
                 );
             }
         });
@@ -59,7 +59,7 @@ public class DisplayProducts_M_3_D extends JFrame {
                 productList.setText(
                         "There are " + inventoryController.displayNumberOfProducts() + " products in the system.\n" +
                                 "The total value of all products combined is $" + inventoryController.displayTotalValue() + ".\n" +
-                                inventoryController.displayProductReportIsFood().toString()
+                                inventoryController.displayProductReportIsFood()
                 );
             }
         });
