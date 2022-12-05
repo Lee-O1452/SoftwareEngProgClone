@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Vector;
 
 
@@ -27,6 +28,18 @@ public class CreateOrder_C_3_A {
         InventoryController inventoryController = new InventoryController(order.getStore());
         OrderController orderController = new OrderController();
         productList.setListData(new Vector<>(inventoryController.displayProductReportName()));
+
+        searchButton.addActionListener(e -> {
+            if(e.getSource()==searchButton){
+                ArrayList<Product> searchedProducts = new ArrayList<>();
+                for(int i = 0; i < inventoryController.displayProductReportName().size(); i++){
+                    if(inventoryController.displayProductReportName().get(i).getProductName().contains(searchField.getText())){
+                        searchedProducts.add(inventoryController.displayProductReportName().get(i));
+                    }
+                }
+                productList.setListData(new Vector<>(searchedProducts));
+            }
+        });
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){

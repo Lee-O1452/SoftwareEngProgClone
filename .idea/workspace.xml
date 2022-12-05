@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Added functionality to returnItem GUI and update to returnItem method">
-      <change beforePath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReturnItem_C_4_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReturnItem_C_4_.java" afterDir="false" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Added functionality to RemoveItem GUI">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670280515493</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added functionality to RemoveItem GUI">
+      <created>1670280689248</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670280689248</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +346,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="updated multiple gui pages to pass a store throughout once selected" />
     <MESSAGE value="added popups to store creation and selection, fixed addproduct page to properly load" />
     <MESSAGE value="updated addProduct GUI to properly add a product" />
     <MESSAGE value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
@@ -364,6 +370,7 @@
     <MESSAGE value="Added functionality to BatchAddUpdate GUI, added corresponding method to InventoryController" />
     <MESSAGE value="Added functionality to UpdateProduct GUI, changed updateQuantity to add and removeQuantity" />
     <MESSAGE value="Added functionality to returnItem GUI and update to returnItem method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to returnItem GUI and update to returnItem method" />
+    <MESSAGE value="Added functionality to RemoveItem GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to RemoveItem GUI" />
   </component>
 </project>
