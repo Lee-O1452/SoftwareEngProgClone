@@ -1,5 +1,7 @@
 import javax.swing.*;
 import javax.swing.JFrame;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class Selections_C_1_5 {
@@ -19,32 +21,34 @@ public class Selections_C_1_5 {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        storeSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
+        storeSelect.setListData(new Vector<>(Main.getStoreList().values()));
 
         registerButton.addActionListener(e -> {
             if(e.getSource() == registerButton){
                 if(storeSelect.getSelectedValue()!=null) {
-                    storeSelect.getSelectedValue();
+                    String s = (String) storeSelect.getSelectedValue();
                     frame.dispose();
-                    Registration_C_2_A registration = new Registration_C_2_A(Main.getStoreList().get(storeSelect.getSelectedValue()));
+                    Registration_C_2_A registration = new Registration_C_2_A((Store) storeSelect.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
                 }
             }
         });
+
         loginButton.addActionListener(e -> {
             if(e.getSource() == loginButton){
                 if(storeSelect.getSelectedValue()!=null) {
-                    storeSelect.getSelectedValue();
+                    String s = (String) storeSelect.getSelectedValue();
                     frame.dispose();
-                    Login_C_2_B login = new Login_C_2_B(Main.getStoreList().get(storeSelect.getSelectedValue()));
+                    Login_C_2_B login = new Login_C_2_B((Store) storeSelect.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
                 }
             }
         });
+
         backButton.addActionListener(e -> {
             if(e.getSource() == backButton){
                 frame.dispose();
@@ -52,5 +56,4 @@ public class Selections_C_1_5 {
             }
         });
     }
-
 }
