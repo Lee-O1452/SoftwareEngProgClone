@@ -86,4 +86,9 @@ public class Store {
 	public void setNonFoodTax(double nonFoodTax) {
 		this.nonFoodTax = nonFoodTax;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Store ID - %s , Store Name - %s\n", storeID,  storeName);
+	}
 }

@@ -1,5 +1,7 @@
 import javax.swing.*;
 import javax.swing.JFrame;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 
@@ -21,9 +23,7 @@ public class Selections_M_1_A extends JFrame {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        storeSelect.setListData(new Vector<>(Main.getStoreList().keySet()));
-
-
+        storeSelect.setListData(new Vector<>(Main.getStoreList().values()));
 
         createStoreButton.addActionListener(e -> {
             if(e.getSource() == createStoreButton){
@@ -32,6 +32,7 @@ public class Selections_M_1_A extends JFrame {
             }
 
         });
+
         backButton.addActionListener(e -> {
             if (e.getSource() == backButton) {
                 frame.dispose();
@@ -39,21 +40,18 @@ public class Selections_M_1_A extends JFrame {
 
             }
         });
+
         selectStoreButton.addActionListener(e -> {
             if(e.getSource()==selectStoreButton){
                 if(storeSelect.getSelectedValue()!=null){
-                    storeSelect.getSelectedValue();
                     frame.dispose();
-                    Selections_M_2_A afterLogin = new Selections_M_2_A(Main.getStoreList().get(storeSelect.getSelectedValue()));
+                    Selections_M_2_A afterLogin = new Selections_M_2_A((Store) storeSelect.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list or create a new one to continue.");
                 }
             }
         });
-
-
-
     }
 }
 
