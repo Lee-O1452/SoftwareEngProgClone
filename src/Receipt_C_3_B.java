@@ -4,7 +4,7 @@ public class Receipt_C_3_B {
     private JPanel panel1;
     private JButton payButton;
     private JButton backButton;
-    private JTextField receiptField;
+    private JTextArea receiptField;
     JFrame frame = new JFrame();
     public Receipt_C_3_B(Order order){
         frame.setContentPane(panel1);
@@ -30,11 +30,5 @@ public class Receipt_C_3_B {
                 CreateOrder_C_3_A createOrder = new CreateOrder_C_3_A(order);
             }
         });
-
-
-
-
-
-
     }
 }

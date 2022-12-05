@@ -26,6 +26,9 @@ public class Order {
 
 		
 	//getters
+	public LinkedHashMap<String, Product> getOrder() {
+		return order;
+	}
 	public String getOrderID() {
 		return orderID;
 	}
@@ -123,13 +126,23 @@ public class Order {
 		productInformation.append(String.format("Store Name - %s , Store ID - %s , Date - %s\n", store.getStoreName(), store.getStoreID(), getDateString()));
 		if(getUsingSnap()) {
 			productInformation.append("Food Items:\n");
-			for(int i = 0; i < productsOrdered.size(); i++) {
-				productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", foodItems.get(i).getProductName(), foodItems.get(i).getPrice(), foodItems.get(i).getQuantity()));
+			if(foodItems.size() > 0){
+				for (Product foodItem : foodItems) {
+					productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", foodItem.getProductName(), foodItem.getPrice(), foodItem.getQuantity()));
+				}
+			}
+			else{
+				productInformation.append("No Food Items\n");
 			}
 			productInformation.append("Food Total: $").append(foodTotal).append("\n");
 			productInformation.append("Non-food Items:\n");
-			for(int i = 0; i < productsOrdered.size(); i++) {
-				productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", nonFoodItems.get(i).getProductName(), nonFoodItems.get(i).getPrice(), nonFoodItems.get(i).getQuantity()));
+			if(nonFoodItems.size() > 0){
+				for (Product nonFoodItem : nonFoodItems) {
+					productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", nonFoodItem.getProductName(), nonFoodItem.getPrice(), nonFoodItem.getQuantity()));
+				}
+			}
+			else{
+				productInformation.append("No Non-food Items\n");
 			}
 			productInformation.append("Non-food Subtotal: $").append(nonFoodTotal).append("\n");
 			productInformation.append(String.format("Taxes - $%.2f , Nonfood Total - $%.2f , Grand Total - $%.2f\n", totalTax, nonFoodTotal + totalTax, grandTotal));

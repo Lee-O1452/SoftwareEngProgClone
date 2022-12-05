@@ -22,6 +22,12 @@ public class OrderController {
 
 	public void setOrderPayed(Order order) {
 		order.setIsPaid(true);
+		InventoryController inventoryController = new InventoryController(order.getStore());
+		ArrayList keySet = new ArrayList<>(order.getOrder().keySet());
+		for(int i = 0; i < order.getOrder().size(); i++){
+			Product p = order.getOrder().get(keySet.get(i));
+			inventoryController.updateQuantity(p.getProductID(), p.getQuantity());
+		}
 	}
 
 	public void returnItem(Order order, String productID, int quantity){
