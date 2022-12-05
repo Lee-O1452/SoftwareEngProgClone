@@ -12,6 +12,7 @@ public class CreateOrder_C_3_A {
     private JList productList;
     private JLabel orderIDField;
     private JCheckBox usingSNAPBox;
+    private JButton searchButton;
     JFrame frame = new JFrame();
 
     public CreateOrder_C_3_A(Order order){

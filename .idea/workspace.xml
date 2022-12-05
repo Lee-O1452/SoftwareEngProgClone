@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Receipt_C_3_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_3_B.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Receipt_C_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_3_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderHistory_C_5_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderHistory_C_5_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Receipt_C_5_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_5_B.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670216113135</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory">
+      <created>1670219397279</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670219397279</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,6 +329,7 @@
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
     <MESSAGE value="Readded test classes that got lost while switching over IDEs" />
     <MESSAGE value="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController" />
+    <MESSAGE value="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory" />
   </component>
 </project>
