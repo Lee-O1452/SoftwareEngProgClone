@@ -55,7 +55,7 @@ public class Inventory_M_3_A extends JFrame {
         removeProductButton.addActionListener(e -> {
             if(e.getSource()==removeProductButton){
                 frame.dispose();
-                RemoveProduct_M_3_F removeProduct = new RemoveProduct_M_3_F();
+                RemoveProduct_M_3_F removeProduct = new RemoveProduct_M_3_F(store);
             }
         });
         createDealButton.addActionListener(e -> {

@@ -32,7 +32,7 @@ public class OrderController {
 
 	public void returnItem(Order order, String productID, int quantity){
 		InventoryController inventoryController = new InventoryController(order.getStore());
-		inventoryController.removeQuantity(productID, quantity);
+		inventoryController.addQuantity(productID, quantity);
 		order.returnProduct(productID);
 	}
 }
