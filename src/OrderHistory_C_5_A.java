@@ -28,7 +28,7 @@ public class OrderHistory_C_5_A {
         });
 
         loadButton.addActionListener(e -> {
-            if(e.getSource()==viewOrderButton){
+            if(e.getSource()==loadButton){
                 String customerID = customerIDField.getText();
                 ArrayList<Order> allOrders = new ArrayList<>(Main.getOrderList().values());
                 ArrayList<Order> customersOrders = new ArrayList<>();

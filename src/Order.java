@@ -155,4 +155,9 @@ public class Order {
 		}
 		return productInformation.toString();
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Order ID - %s\n", orderID);
+	}
 }
