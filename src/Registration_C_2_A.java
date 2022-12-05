@@ -33,8 +33,13 @@ public class Registration_C_2_A {
             if (e.getSource() == registerButton) {
                 String firstName = firstNameField.getText();
                 String lastName = lastNameField.getText();
-                String customerID = storeController.registerCustomer(store, firstName, lastName);
-                JOptionPane.showMessageDialog(frame, "You have been registered with ID: " + customerID + "\nPlease return to store selection to login or register to another store.");
+                if(firstName.length()< 1 || lastName.length()< 1){
+                    JOptionPane.showMessageDialog(frame, "Please supply a first and last name.");
+                }
+                else{
+                    String customerID = storeController.registerCustomer(store, firstName, lastName);
+                    JOptionPane.showMessageDialog(frame, "You have been registered with ID: " + customerID + "\nPlease return to store selection to login or register to another store.");
+                }
             }
         });
     }
