@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Update to include Junit files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store.java" afterDir="false" />
-    </list>
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Readded test classes that got lost while switching over IDEs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,23 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "324",
-    "last_opened_file_path": "C:/Users/Nakota/IdeaProjects",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.folding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;324&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -267,14 +255,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670201082509</updated>
     </task>
-    <task id="LOCAL-00028" summary="Update to include Junit files">
-      <created>1670201345300</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1670201345300</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,7 +307,6 @@
     <MESSAGE value="Updated login page to be inbetween customer selections and afterloginregistration, added customer name and id to display" />
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
     <MESSAGE value="Readded test classes that got lost while switching over IDEs" />
-    <MESSAGE value="Update to include Junit files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to include Junit files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readded test classes that got lost while switching over IDEs" />
   </component>
 </project>
