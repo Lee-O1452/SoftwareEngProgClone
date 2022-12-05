@@ -25,8 +25,11 @@ public class StoreController {
 			return store.displayCustomers();
 		}
 		
-		public void updateTaxes(Store store, double foodTax, double nonFoodTax) {
+		public void updateFoodTax(Store store, double foodTax) {
 			store.setFoodTax(foodTax);
+		}
+
+		public void updateNonfoodTax(Store store, double nonFoodTax) {
 			store.setNonFoodTax(nonFoodTax);
 		}
 		

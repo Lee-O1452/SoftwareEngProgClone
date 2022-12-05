@@ -1,15 +1,12 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.EventObject;
 
 public class UpdateTax_M_4_ extends JFrame {
     private JButton backButton;
-    private JTextField textField1;
-    private JButton updateButton;
-    private JTextField textField2;
-    private JButton updateButton1;
+    private JTextField foodField;
+    private JButton updateFoodButton;
+    private JTextField nonfoodField;
+    private JButton updateNonfoodButton;
     private JPanel panel1;
     JFrame frame = new JFrame();
 
@@ -20,11 +17,24 @@ public class UpdateTax_M_4_ extends JFrame {
         frame.setSize(900, 600);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        StoreController storeController = new StoreController();
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
                 Selections_M_2_A selections = new Selections_M_2_A(store);
+            }
+        });
+
+        updateFoodButton.addActionListener(e -> {
+            if(e.getSource()==updateFoodButton){
+                storeController.updateFoodTax(store, Double.parseDouble(foodField.getText()));
+            }
+        });
+
+        updateNonfoodButton.addActionListener(e -> {
+            if(e.getSource()==updateNonfoodButton){
+                storeController.updateNonfoodTax(store, Double.parseDouble(nonfoodField.getText()));
             }
         });
 
