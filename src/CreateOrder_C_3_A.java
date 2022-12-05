@@ -1,14 +1,17 @@
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 
 public class CreateOrder_C_3_A {
     private JButton backButton;
     private JButton createOrderButton;
     private JTextField searchField;
-    private JTable productTable;
     private JTextField quantityField;
     private JButton addToOrderButton;
     private JPanel panel1;
+    private JList productList;
     JFrame frame = new JFrame();
 
     public CreateOrder_C_3_A(Store store, Customer customer){
@@ -18,6 +21,9 @@ public class CreateOrder_C_3_A {
         frame.setResizable(false);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        InventoryController inventoryController = new InventoryController(store);
+
+        productList.setListData(new Vector<>(inventoryController.displayProductReportName()));
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
