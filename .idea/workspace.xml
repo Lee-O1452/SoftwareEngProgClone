@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Added search function to createOrder GUI">
-      <change beforePath="$PROJECT_DIR$/src/UpdateTax_M_4_.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UpdateTax_M_4_.form" afterDir="false" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax">
+      <change afterPath="$PROJECT_DIR$/ProductReport.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UpdateTax_M_4_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UpdateTax_M_4_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -321,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670281630568</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax">
+      <created>1670282018234</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1670282018234</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +365,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="updated addProduct GUI to properly add a product" />
     <MESSAGE value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
     <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
     <MESSAGE value="Finished displayProducts sorting on GUI" />
@@ -378,6 +389,7 @@
     <MESSAGE value="Added functionality to returnItem GUI and update to returnItem method" />
     <MESSAGE value="Added functionality to RemoveItem GUI" />
     <MESSAGE value="Added search function to createOrder GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added search function to createOrder GUI" />
+    <MESSAGE value="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax" />
   </component>
 </project>

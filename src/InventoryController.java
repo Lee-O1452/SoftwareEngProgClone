@@ -1,4 +1,6 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class InventoryController {
@@ -69,27 +71,31 @@ public class InventoryController {
 			}
 		}
 	}
+
 	public int displayNumberOfProducts(){
 		return inventory.getSize();
 	}
+
 	public double displayTotalValue(){
 		return inventory.getTotalInventoryValue();
 	}
+
 	public ArrayList<Product> displayProductReportName(){
 		return inventory.productReportName();
 	}
-	public ArrayList<Product> displayProductReportID(){
 
+	public ArrayList<Product> displayProductReportID(){
 		return inventory.productReportID();
 	}
-	public ArrayList<Product> displayProductReportManufacturer(){
 
+	public ArrayList<Product> displayProductReportManufacturer(){
 		return inventory.productReportManufacturer();
 	}
-	public ArrayList<Product> displayProductReportIsFood(){
 
+	public ArrayList<Product> displayProductReportIsFood(){
 		return inventory.productReportIsFood();
 	}
+
 	public void removeQuantity(String productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(inventory.getProduct(productID).getQuantity() - quantity);
 	}
@@ -119,8 +125,17 @@ public class InventoryController {
 			}
 		}
 	}
+
 	public void batchAddUpdate(File file){
 		inventory.batchAddOrUpdate(file);
 	}
 
+	public void saveProductReport() throws IOException {
+		File productReport = new File("ProductReport.txt");
+		FileWriter writer = new FileWriter(productReport);
+		for(int i = 0; i < inventory.productReportName().size(); i++) {
+			writer.write(inventory.productReportName().get(i).toString());
+		}
+		writer.close();
+	}
 }

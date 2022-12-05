@@ -21,6 +21,7 @@ public class StoreController {
 		public int displayNumberOfCustomers(Store store){
 			return store.getStoreSize();
 		}
+
 		public ArrayList<Customer> printDisplayCustomers(Store store) {
 			return store.displayCustomers();
 		}
@@ -35,8 +36,6 @@ public class StoreController {
 		
 		//legwork for this is not done
 		public void displayPopularProducts(){
-			
 
 		}
-		
 }

@@ -29,14 +29,15 @@ public class UpdateTax_M_4_ extends JFrame {
         updateFoodButton.addActionListener(e -> {
             if(e.getSource()==updateFoodButton){
                 storeController.updateFoodTax(store, Double.parseDouble(foodField.getText()));
+                JOptionPane.showMessageDialog(frame, "Food tax has been updated.");
             }
         });
 
         updateNonfoodButton.addActionListener(e -> {
             if(e.getSource()==updateNonfoodButton){
                 storeController.updateNonfoodTax(store, Double.parseDouble(nonfoodField.getText()));
+                JOptionPane.showMessageDialog(frame, "Non-food tax has been updated.");
             }
         });
-
     }
 }
