@@ -1,23 +1,32 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class DisplayCustomers_M_5_B extends JFrame{
     private JButton backButton;
-    private JTextArea textArea1;
-    private JScrollBar scrollBar1;
+    private JTextArea customerList;
     private JPanel panel1;
+    JFrame frame = new JFrame();
+    StoreController storeController = new StoreController();
 
-    public void DisplayCustomers_M_5_B(){
+    public DisplayCustomers_M_5_B(Store store){
+        frame.setContentPane(panel1);
+        frame.setTitle("Display Customers");
+        frame.setSize(900,600);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    }
-    public static void main(String[] args){
-        DisplayCustomers_M_5_B a = new DisplayCustomers_M_5_B();
-        a.setContentPane(a.panel1);
-        a.setTitle("Display Customers");
-        a.setSize(900,600);
-        a.setVisible(true);
-        a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        customerList.setText(
+                "There are " + storeController.displayNumberOfCustomers(store) + " customers in the system.\n" +
+                        storeController.printDisplayCustomers(store)
+        );
+
+        backButton.addActionListener(e -> {
+            if(e.getSource()==backButton){
+                frame.dispose();
+                CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A(store);
+            }
+        });
+
+
     }
 }

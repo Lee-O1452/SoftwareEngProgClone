@@ -18,13 +18,11 @@ public class StoreController {
 			return customerID;
 		}
 
-		public void printDisplayCustomers(Store store) {
-			ArrayList<Customer> allCustomers = store.displayCustomers();
-			System.out.println("There are " + allCustomers.size() + " customers in the system.\n");
-			for (Customer allCustomer : allCustomers) {
-				System.out.println(allCustomer);
-			}
-			//gui stuff here
+		public int displayNumberOfCustomers(Store store){
+			return store.getStoreSize();
+		}
+		public ArrayList<Customer> printDisplayCustomers(Store store) {
+			return store.displayCustomers();
 		}
 		
 		public void updateTaxes(Store store, double foodTax, double nonFoodTax) {
