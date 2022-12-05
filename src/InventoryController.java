@@ -46,15 +46,22 @@ public class InventoryController {
 
 			else{
 				try {
-					double d = Double.parseDouble(price);
+					double doublePrice = Double.parseDouble(price);
+					if(doublePrice < 0.01){
+						return "Price has to be greater than one cent!";
+					}
 				} catch (NumberFormatException nfe) {
 					return "Price has to be a double!";
 				}
 				try {
-					int i = Integer.parseInt(quantity);
+					int intQuantity = Integer.parseInt(quantity);
+					if(intQuantity < 1){
+						return "Quantity has to be greater than zero!";
+					}
 				} catch (NumberFormatException nfe) {
 					return "Quantity has to be an Integer!";
 				}
+
 				Product p = new Product(productID, Integer.parseInt(quantity), productName, Double.parseDouble(price), manufacturer, isFood);
 				inventory.addProduct(p);
 				return "Product has been added, please return to inventory menu or add more.";
