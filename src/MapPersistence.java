@@ -1,4 +1,5 @@
-import java.util.Date;
+import java.time.LocalDate;
+
 
 
 public class MapPersistence {
@@ -7,7 +8,11 @@ public class MapPersistence {
 		return new Inventory();
 	}
 	
-	public void buildOrder(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+	public void buildOrder(String orderID, String customerID, Store store) {
+		//date, usingSnap, isPaid,
+		LocalDate date = LocalDate.now();
+		boolean usingSnap = false;
+		boolean isPaid = false;
 		Order o = new Order(orderID, customerID, date, usingSnap, isPaid, store);
 		Main.getOrderList().put(orderID, o);
 	}

@@ -26,7 +26,6 @@ public class Selections_C_1_5 {
         registerButton.addActionListener(e -> {
             if(e.getSource() == registerButton){
                 if(storeSelect.getSelectedValue()!=null) {
-                    String s = (String) storeSelect.getSelectedValue();
                     frame.dispose();
                     Registration_C_2_A registration = new Registration_C_2_A((Store) storeSelect.getSelectedValue());
                 }
@@ -39,7 +38,6 @@ public class Selections_C_1_5 {
         loginButton.addActionListener(e -> {
             if(e.getSource() == loginButton){
                 if(storeSelect.getSelectedValue()!=null) {
-                    String s = (String) storeSelect.getSelectedValue();
                     frame.dispose();
                     Login_C_2_B login = new Login_C_2_B((Store) storeSelect.getSelectedValue());
                 }

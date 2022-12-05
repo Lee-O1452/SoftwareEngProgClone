@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Readded test classes that got lost while switching over IDEs" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated orderHistory and its receipt GUI">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +259,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670201082509</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController">
+      <created>1670216113135</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670216113135</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory">
+      <created>1670219397279</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670219397279</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Updated orderHistory and its receipt GUI">
+      <created>1670221763734</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670221763734</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +332,9 @@
     <MESSAGE value="Updated login page to be inbetween customer selections and afterloginregistration, added customer name and id to display" />
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
     <MESSAGE value="Readded test classes that got lost while switching over IDEs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readded test classes that got lost while switching over IDEs" />
+    <MESSAGE value="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController" />
+    <MESSAGE value="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory" />
+    <MESSAGE value="Updated orderHistory and its receipt GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated orderHistory and its receipt GUI" />
   </component>
 </project>
