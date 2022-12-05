@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class ProductTest {
-	Product x = new Product(1001, 10, "Apple", 0.50, "Davie's Apple Orchard", true);
+	Product x = new Product("1001", 10, "Apple", 0.50, "Davie's Apple Orchard", true);
 
 	@Test
 	@DisplayName("test getProductName()")
@@ -33,8 +33,8 @@ class ProductTest {
 	@Test
 	@DisplayName("test getProductID()")
 	void testGetProductID() {
-		int expectedProductID = 1001;
-		int actualProductID = x.getProductID();
+		String expectedProductID = "1001";
+		String actualProductID = x.getProductID();
 		assertEquals(expectedProductID, actualProductID);
 	}
 
@@ -76,9 +76,9 @@ class ProductTest {
 	@Test
 	@DisplayName("test setProductID()")
 	void testSetProductID() {
-		int expectedProductID = 0001;
-		x.setProductID(0001);
-		int actualProductID = x.getProductID();
+		String expectedProductID = "0001";
+		x.setProductID("0001");
+		String actualProductID = x.getProductID();
 		assertEquals(expectedProductID, actualProductID);
 	}
 

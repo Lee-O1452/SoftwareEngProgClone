@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Updated displayCustomer GUI functionality and respective method storeController">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
-    </list>
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Readded test classes that got lost while switching over IDEs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670200161872</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Readded test classes that got lost while switching over IDEs">
+      <created>1670201082509</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670201082509</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,6 +306,7 @@
     <MESSAGE value="Updated visual of store selection screens for customer and manager" />
     <MESSAGE value="Updated login page to be inbetween customer selections and afterloginregistration, added customer name and id to display" />
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated displayCustomer GUI functionality and respective method storeController" />
+    <MESSAGE value="Readded test classes that got lost while switching over IDEs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readded test classes that got lost while switching over IDEs" />
   </component>
 </project>
