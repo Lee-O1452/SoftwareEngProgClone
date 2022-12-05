@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Readded test classes that got lost while switching over IDEs" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Readded test classes that got lost while switching over IDEs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Receipt_C_3_B.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_3_B.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Receipt_C_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_3_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

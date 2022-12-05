@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Date;
 
 public class AfterLoginRegistration_C_2_5 {
     private JButton backButton;
@@ -34,8 +35,10 @@ public class AfterLoginRegistration_C_2_5 {
 
         createOrderButton.addActionListener(e -> {
             if(e.getSource()==createOrderButton){
+                OrderController orderController = new OrderController();
+                String orderID = orderController.createOrder(store, customer);
                 frame.dispose();
-                CreateOrder_C_3_A createOrder = new CreateOrder_C_3_A(store, customer);
+                CreateOrder_C_3_A createOrder = new CreateOrder_C_3_A(Main.getOrderList().get(orderID));
             }
         });
 
