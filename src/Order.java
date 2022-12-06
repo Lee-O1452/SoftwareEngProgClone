@@ -1,9 +1,10 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
-public class Order {
+public class Order implements Serializable {
 
 	private LinkedHashMap<String, Product> order;
 	private String orderID;
