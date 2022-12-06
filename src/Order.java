@@ -153,7 +153,7 @@ public class Order implements Serializable {
 			for (Product product : productsOrdered) {
 				productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", product.getProductName(), product.getPrice(), product.getQuantity()));
 			}
-			productInformation.append(String.format("\nTotal Price - $%.2f , Taxes - $%.2f , Grand Total - $%.2f", totalPrice, totalTax, grandTotal));
+			productInformation.append(String.format("Total Price - $%.2f , Taxes - $%.2f , Grand Total - $%.2f\n", totalPrice, totalTax, grandTotal));
 		}
 		setGrandTotal(grandTotal);
 		setTotalTax(totalTax);

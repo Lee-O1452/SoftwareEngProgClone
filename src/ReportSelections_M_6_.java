@@ -16,6 +16,8 @@ public class ReportSelections_M_6_ extends JFrame{
     private JButton storesSalesButton;
     private JButton popularProductsRevenueButton;
     private JTextField manufacturerField;
+    private JTextField date1Field;
+    private JTextField date2Field;
     JFrame frame = new JFrame();
 
     public ReportSelections_M_6_(Store store){
@@ -62,6 +64,18 @@ public class ReportSelections_M_6_ extends JFrame{
         customerOrderTotalsButton.addActionListener(e -> {
             if(e.getSource()==customerOrderTotalsButton){
                 reportArea.setText(orderController.displayCustomerOrderTotals(store));
+            }
+        });
+
+        orderStatisticsSNAPButton.addActionListener(e -> {
+            if(e.getSource()==orderStatisticsSNAPButton){
+                reportArea.setText(orderController.displayOrderStatisticsSNAP(store));
+            }
+        });
+
+        ordersInDateRangeButton.addActionListener(e -> {
+            if(e.getSource()==ordersInDateRangeButton){
+                reportArea.setText(orderController.displayOrderDateRange(store, date1Field.getText(), date2Field.getText()));
             }
         });
     }
