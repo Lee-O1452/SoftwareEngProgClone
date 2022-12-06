@@ -1,11 +1,12 @@
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
-public class Inventory {
+public class Inventory implements Serializable {
 
 	private LinkedHashMap<String, Product> inventory;
 	

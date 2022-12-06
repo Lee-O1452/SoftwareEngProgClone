@@ -43,7 +43,7 @@ public class OrderController {
 		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
 		ArrayList<Order> allOrders = new ArrayList<>();
 		for (Order value : orders) {
-			if (value.getStore() == store) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
 				allOrders.add(value);
 			}
 		}
@@ -70,60 +70,125 @@ public class OrderController {
 		return String.format("Total of Taxes: $%.2f\n Total of Orders: $%.2f\n Average Order Total: $%.2f\n Standard Deviation of Order Totals: $%.2f", totalTax, total, average, std);
 	}
 
-	public class popularProductHelperObject{
-		private int quantity;
-		private Product p;
-		public popularProductHelperObject(int quantity, Product p){
-			this.quantity = quantity;
-			this.p = p;
-		}
-		public int getQuantity() {
-			return quantity;
-		}
-
-		public Product getP() {
-			return p;
-		}
-	}
 	public String displayPopularProductsQuantity(Store store){
 		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
 		ArrayList<Order> allOrders = new ArrayList<>();
 
 		for (Order value : orders) {
-			if (value.getStore() == store) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
 				allOrders.add(value);
 			}
 		}
 
-		LinkedHashMap<String, Integer> temp = new LinkedHashMap<>();
+		LinkedHashMap<String, Integer> totalQuantity = new LinkedHashMap<>();
+
 		for(int i = 0; i < allOrders.size(); i++){
-			for(int j = 0; j < allOrders.get(i).getOrder().values().size(); j++){
-				ArrayList<Product> orderProducts = new ArrayList<>(allOrders.get(j).getOrder().values());
-				if(temp.containsKey(orderProducts.get(j).getProductID())){
-					temp.replace(orderProducts.get(j).getProductID(), temp.get(orderProducts.get(j).getProductID()) + orderProducts.get(j).getQuantity());
+			for(int j = 0; j < allOrders.get(i).getOrder().size(); j++){
+				ArrayList<Product> orderProducts = new ArrayList<>(allOrders.get(i).getOrder().values());
+				if(totalQuantity.containsKey(orderProducts.get(j).getProductID())){
+					totalQuantity.replace(orderProducts.get(j).getProductID(), totalQuantity.get(orderProducts.get(j).getProductID()) + orderProducts.get(j).getQuantity());
 				}
 				else{
-					temp.put(orderProducts.get(j).getProductID(), orderProducts.get(j).getQuantity());
+					totalQuantity.put(orderProducts.get(j).getProductID(), orderProducts.get(j).getQuantity());
 				}
 			}
 		}
 
-		ArrayList<String> keySet = new ArrayList<>(temp.keySet());
-		ArrayList<popularProductHelperObject> helpGod = new ArrayList<>();
+		ArrayList<String> popularID = new ArrayList<>(totalQuantity.keySet());
+		ArrayList<reportHelper> sorter = new ArrayList<>();
 
-		for(int i = 0; i < temp.size(); i++){
-			popularProductHelperObject p = new popularProductHelperObject(temp.get(keySet.get(i)),store.getStoreInventory().getProduct(keySet.get(i)));
-			helpGod.add(p);
+		for(int i = 0; i < totalQuantity.size(); i++){
+			reportHelper r =  new reportHelper(totalQuantity.get(popularID.get(i)),store.getStoreInventory().getProduct(popularID.get(i)));
+			sorter.add(r);
 		}
 
-		helpGod.sort(Comparator.comparingInt(popularProductHelperObject::getQuantity));
+		sorter.sort(Comparator.comparingInt(reportHelper::getQuantity));
+		StringBuilder report = new StringBuilder();
 
-		StringBuilder s = new StringBuilder();
-
-		for (OrderController.popularProductHelperObject popularProductHelperObject : helpGod) {
-			s.append("Total Quantity Sold: ").append(popularProductHelperObject.getQuantity()).append(" ").append(popularProductHelperObject.getP());
+		for (reportHelper r : sorter) {
+			report.append("Total Quantity Sold: ").append(r.getQuantity()).append(" ").append(r.getP());
 		}
 
-		return s.toString();
+		return report.toString();
+	}
+
+	public String displayPopularProductsRevenue(Store store){
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		ArrayList<Order> allOrders = new ArrayList<>();
+
+		for (Order value : orders) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
+				allOrders.add(value);
+			}
+		}
+
+		LinkedHashMap<String, Double> totalRevenue = new LinkedHashMap<>();
+
+		for(int i = 0; i < allOrders.size(); i++){
+			for(int j = 0; j < allOrders.get(i).getOrder().size(); j++){
+				ArrayList<Product> orderProducts = new ArrayList<>(allOrders.get(i).getOrder().values());
+				if(totalRevenue.containsKey(orderProducts.get(j).getProductID())){
+					totalRevenue.replace(orderProducts.get(j).getProductID(), totalRevenue.get(orderProducts.get(j).getProductID()) + orderProducts.get(j).getTotalValue());
+				}
+				else{
+					totalRevenue.put(orderProducts.get(j).getProductID(), orderProducts.get(j).getTotalValue());
+				}
+			}
+		}
+
+		ArrayList<String> popularID = new ArrayList<>(totalRevenue.keySet());
+		ArrayList<reportHelper> sorter = new ArrayList<>();
+
+		for(int i = 0; i < totalRevenue.size(); i++){
+			reportHelper r = new reportHelper(totalRevenue.get(popularID.get(i)),store.getStoreInventory().getProduct(popularID.get(i)));
+			sorter.add(r);
+		}
+
+		sorter.sort(Comparator.comparingDouble(reportHelper::getTotalValue));
+		StringBuilder report = new StringBuilder();
+
+		for (reportHelper r : sorter) {
+			report.append("Total Revenue From Product: $").append(r.getTotalValue()).append(" ").append(r.getP());
+		}
+
+		return report.toString();
+	}
+
+	public String displayCustomerOrderTotals(Store store){
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		ArrayList<Order> allOrders = new ArrayList<>();
+
+		for (Order value : orders) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
+				allOrders.add(value);
+			}
+		}
+
+		LinkedHashMap<String, Integer> totalOrders = new LinkedHashMap<>();
+
+		for (Order allOrder : allOrders) {
+			if (totalOrders.containsKey(allOrder.getCustomerID())) {
+				totalOrders.replace(allOrder.getCustomerID(), totalOrders.get(allOrder.getCustomerID()) + 1);
+			} else {
+				totalOrders.put(allOrder.getCustomerID(), 1);
+			}
+		}
+
+		ArrayList<String> popularID = new ArrayList<>(totalOrders.keySet());
+		ArrayList<reportHelper> sorter = new ArrayList<>();
+
+		for(int i = 0; i < totalOrders.size(); i++){
+			reportHelper r = new reportHelper(totalOrders.get(popularID.get(i)),store.getCustomer(popularID.get(i)));
+			sorter.add(r);
+		}
+
+		sorter.sort(Comparator.comparingInt(reportHelper::getTotalOrders));
+		StringBuilder report = new StringBuilder();
+
+		for (reportHelper r : sorter) {
+			report.append("Total Orders From Customer: ").append(r.getTotalOrders()).append(" ").append(r.getC());
+		}
+
+		return report.toString();
 	}
 }

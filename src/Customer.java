@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Customer {
+public class Customer implements Serializable {
 
 	private String customerID;
 	private String firstName;
@@ -10,7 +11,6 @@ public class Customer {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-	
 	
 	//getters
 	public String getCustomerID() {
@@ -24,7 +24,6 @@ public class Customer {
 	public String getLastName() {
 		return lastName;
 	}
-	
 	
 	//setters
 	public void setCustomerID(String customerID) {
