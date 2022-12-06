@@ -58,5 +58,11 @@ public class ReportSelections_M_6_ extends JFrame{
                 reportArea.setText(orderController.displayPopularProductsRevenue(store));
             }
         });
+
+        customerOrderTotalsButton.addActionListener(e -> {
+            if(e.getSource()==customerOrderTotalsButton){
+                reportArea.setText(orderController.displayCustomerOrderTotals(store));
+            }
+        });
     }
 }
