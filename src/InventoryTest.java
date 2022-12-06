@@ -34,7 +34,7 @@ class InventoryTest {
 		inventory.addProduct(x);
 		inventory.addProduct(y);
 		int expectedQuantity = 11;
-		inventory.updateQuantity("1001", 11);
+		inventory.setQuantity("1001", 11);
 		int actualQuantity = inventory.getProduct("1001").getQuantity();
 		assertEquals(expectedQuantity, actualQuantity);
 	}

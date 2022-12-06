@@ -1,11 +1,12 @@
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
-public class Inventory {
+public class Inventory implements Serializable {
 
 	private LinkedHashMap<String, Product> inventory;
 	
@@ -26,12 +27,13 @@ public class Inventory {
 
 			while(fileScanner.hasNextLine()) {
 				String checkId = fileScanner.next();
-				if(inventory.containsKey(checkId) ){
+
+				if(inventory.containsKey(checkId)){
 					int quantityNew = fileScanner.nextInt();
 					int quantityOld = inventory.get(checkId).getQuantity();
-					updateQuantity(checkId, quantityOld + quantityNew);
-
+					setQuantity(checkId, quantityOld + quantityNew);
 				}
+
 				else{ 
 					Product p = new Product(
 					productMaker.next(),
@@ -41,16 +43,11 @@ public class Inventory {
 					productMaker.next(),
 					productMaker.nextBoolean()
 					);
-					
 					addProduct(p);
-					
-
 				}
 				fileScanner.nextLine();
 				productMaker.nextLine();
 			}
-			
-			
 			fileScanner.close();
 			productMaker.close();
 	
@@ -66,22 +63,9 @@ public class Inventory {
 		inventory.remove(p.getProductID());
 	}
 	
-	public void updateQuantity(String productID, int quantity) {
+	public void setQuantity(String productID, int quantity) {
 		inventory.get(productID).setQuantity(quantity);
 	}
-
-	public void increaseQuantity(String productID, int quantity){
-
-		int currentQuantity = quantity + getProduct(productID).getQuantity();
-		getProduct(productID).setQuantity(currentQuantity);
-	}
-
-	public void decreaseQuantity(String productID, int quantity){
-
-		int currentQuantity = getProduct(productID).getQuantity() - quantity;
-		getProduct(productID).setQuantity(currentQuantity);
-	}
-	
 	
 	public boolean containsProduct(String productID){
 		return inventory.containsKey(productID);

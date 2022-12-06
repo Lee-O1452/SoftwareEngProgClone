@@ -1,5 +1,9 @@
 import javax.swing.*;
 import javax.swing.JFrame;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -33,11 +37,38 @@ public class Selections_M_1_A extends JFrame {
 
         });
 
+        saveAllDataButton.addActionListener(e -> {
+            if(e.getSource() == saveAllDataButton){
+                FileOutputStream storeFOS = null;
+                FileOutputStream orderFOS = null;
+                try {
+                    storeFOS = new FileOutputStream("storeList.out");
+                    orderFOS = new FileOutputStream("orderList.out");
+                } catch (FileNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
+                ObjectOutputStream storeOOS = null;
+                ObjectOutputStream orderOOS = null;
+                try {
+                    storeOOS = new ObjectOutputStream(storeFOS);
+                    orderOOS = new ObjectOutputStream(orderFOS);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                try {
+                    storeOOS.writeObject(Main.getStoreList());
+                    orderOOS.writeObject(Main.getOrderList());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                JOptionPane.showMessageDialog(frame, "System has been saved.");
+            }
+        });
+
         backButton.addActionListener(e -> {
             if (e.getSource() == backButton) {
                 frame.dispose();
                 MainMenu_1_ mainMenu = new MainMenu_1_();
-
             }
         });
 

@@ -21,19 +21,21 @@ public class StoreController {
 		public int displayNumberOfCustomers(Store store){
 			return store.getStoreSize();
 		}
+
 		public ArrayList<Customer> printDisplayCustomers(Store store) {
 			return store.displayCustomers();
 		}
 		
-		public void updateTaxes(Store store, double foodTax, double nonFoodTax) {
+		public void updateFoodTax(Store store, double foodTax) {
 			store.setFoodTax(foodTax);
+		}
+
+		public void updateNonfoodTax(Store store, double nonFoodTax) {
 			store.setNonFoodTax(nonFoodTax);
 		}
 		
 		//legwork for this is not done
 		public void displayPopularProducts(){
-			
 
 		}
-		
 }

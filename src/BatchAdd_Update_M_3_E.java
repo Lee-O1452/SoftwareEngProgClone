@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.JFrame;
+import java.io.File;
 
 
 public class BatchAdd_Update_M_3_E extends JFrame{
@@ -8,15 +9,40 @@ public class BatchAdd_Update_M_3_E extends JFrame{
     private JButton addUpdateButton;
     private JPanel panel1;
 
-    public void BatchAdd_Update_M_3_E(){
+    JFrame frame = new JFrame();
+    public BatchAdd_Update_M_3_E(Store store){
+        frame.setContentPane(panel1);
+        frame.setTitle("Batch Add and Update");
+        frame.setSize(900,600);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    }
-    public static void main(String[] args){
-        BatchAdd_Update_M_3_E d = new BatchAdd_Update_M_3_E();
-        d.setContentPane(d.panel1);
-        d.setTitle("Batch Add and Update");
-        d.setSize(900,600);
-        d.setVisible(true);
-        d.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        backButton.addActionListener(e -> {
+            if(e.getSource()==backButton){
+                frame.dispose();
+                Inventory_M_3_A inventorySelect = new Inventory_M_3_A (store);
+            }
+        });
+
+        selectFileButton.addActionListener(e -> {
+            if(e.getSource()==selectFileButton){
+                JFileChooser chooser = new JFileChooser();
+                int status = chooser.showOpenDialog(null);
+                if (status == JFileChooser.APPROVE_OPTION) {
+                    File file = chooser.getSelectedFile();
+                    if (file != null) {
+                        InventoryController inventoryController = new InventoryController(store);
+                        inventoryController.batchAddUpdate(file);
+                        JOptionPane.showMessageDialog(frame, "Products has been updated.");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(frame, "Failed to get file.");
+                    }
+                    //String fileName = chooser.getSelectedFile().getAbsolutePath();
+                    //InventoryController inventoryController = new InventoryController(store);
+                    //inventoryController.batchAddUpdate(file);
+                }
+            }
+        });
     }
 }

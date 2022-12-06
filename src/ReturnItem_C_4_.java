@@ -4,9 +4,9 @@ import javax.swing.*;
 public class ReturnItem_C_4_ {
     private JButton backButton;
     private JButton returnItemButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField orderIDField;
+    private JTextField productIDField;
+    private JTextField quantityField;
     private JPanel panel1;
     JFrame frame = new JFrame();
 
@@ -23,6 +23,14 @@ public class ReturnItem_C_4_ {
             if(e.getSource()==backButton){
                 frame.dispose();
                 AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store, customer);
+            }
+        });
+
+        returnItemButton.addActionListener(e -> {
+            if(e.getSource()==returnItemButton){
+                OrderController orderController = new OrderController();
+                orderController.returnItem(Main.getOrderList().get(orderIDField.getText()), productIDField.getText(), Integer.parseInt(quantityField.getText()));
+                JOptionPane.showMessageDialog(frame, "Product has been returned.");
             }
         });
 

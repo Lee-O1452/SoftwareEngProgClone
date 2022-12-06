@@ -1,30 +1,36 @@
+import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
-public class Order {
+public class Order implements Serializable {
 
 	private LinkedHashMap<String, Product> order;
 	private String orderID;
 	private String customerID;
-	private Date date;
+	private LocalDate date;
 	private boolean usingSnap;
 	private boolean isPaid;
 	private Store store;
+	private double totalTax = 0;
+	private double grandTotal = 0;
 	
-	
-	public Order(String orderID, String customerID, Date date, boolean usingSnap, boolean isPaid, Store store) {
+	public Order(String orderID, String customerID, LocalDate date, boolean usingSnap, boolean isPaid, Store store) {
 		order = new LinkedHashMap<>();
 		this.orderID = orderID;
 		this.customerID = customerID;
 		this.date = date;
-		usingSnap = false;
-		isPaid = false;
+		this.usingSnap = usingSnap;
+		this.isPaid = isPaid;
 		this.store = store;
 	}
 
 		
 	//getters
+	public LinkedHashMap<String, Product> getOrder() {
+		return order;
+	}
 	public String getOrderID() {
 		return orderID;
 	}
@@ -33,7 +39,7 @@ public class Order {
 		return customerID;
 	}
 	
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 	
@@ -55,7 +61,7 @@ public class Order {
 		this.customerID = orderID;
 	}
 	
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 	
@@ -83,8 +89,8 @@ public class Order {
 	public String getDateString() {
 		return getDate().toString();
 	}
-	
-	public void orderReport() {
+
+	public String orderReport() {
 		ArrayList<Product> productsOrdered = new ArrayList<>(order.values());
 		ArrayList<Product> foodItems = new ArrayList<>();
 		ArrayList<Product> nonFoodItems = new ArrayList<>();
@@ -95,6 +101,7 @@ public class Order {
 		double grandTotal;
 		double foodTotal = 0;
 		double nonFoodTotal = 0;
+
 		for (Product product : productsOrdered) {
 			double productCost = product.getPrice() * product.getQuantity();
 			totalPrice += productCost;
@@ -113,33 +120,64 @@ public class Order {
 				}
 			}
 		}
+
 		totalTax = foodTax + nonFoodTax;
 		grandTotal = totalPrice + totalTax;
-		String storeInformation = String.format("Store Name - %s , Store ID - %s , Date - %s\n", store.getStoreName(), store.getStoreID(), getDateString());
-		System.out.println(storeInformation);
+
+		StringBuilder productInformation = new StringBuilder();
+		productInformation.append(String.format("Store Name - %s , Store ID - %s , Date - %s\n", store.getStoreName(), store.getStoreID(), getDateString()));
 		if(getUsingSnap()) {
-			System.out.println("Food Items:");
-			for(int i = 0; i < productsOrdered.size(); i++) {
-				String productInformation = String.format("Item - %s , Price - $%.2f , Quantity - %d", foodItems.get(i).getProductName(), foodItems.get(i).getPrice(), foodItems.get(i).getQuantity());
-				System.out.println(productInformation);
+			productInformation.append("Food Items:\n");
+			if(foodItems.size() > 0){
+				for (Product foodItem : foodItems) {
+					productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", foodItem.getProductName(), foodItem.getPrice(), foodItem.getQuantity()));
+				}
 			}
-			System.out.println("Food Total: $" + foodTotal);
-			System.out.println("Non-food Items:");
-			for(int i = 0; i < productsOrdered.size(); i++) {
-				String productInformation = String.format("Item - %s , Price - $%.2f , Quantity - %d", nonFoodItems.get(i).getProductName(), nonFoodItems.get(i).getPrice(), nonFoodItems.get(i).getQuantity());
-				System.out.println(productInformation);
+			else{
+				productInformation.append("No Food Items\n");
 			}
-			System.out.println("Non-food Subtotal: $" + nonFoodTotal);
-			String costInformation = String.format("\nTaxes - $%.2f , Nonfood Total - $%.2f , Grand Total - $%.2f", totalTax, nonFoodTotal + totalTax, grandTotal);
-			System.out.println(costInformation);
+			productInformation.append("Food Total: $").append(foodTotal).append("\n");
+			productInformation.append("Non-food Items:\n");
+			if(nonFoodItems.size() > 0){
+				for (Product nonFoodItem : nonFoodItems) {
+					productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", nonFoodItem.getProductName(), nonFoodItem.getPrice(), nonFoodItem.getQuantity()));
+				}
+			}
+			else{
+				productInformation.append("No Non-food Items\n");
+			}
+			productInformation.append("Non-food Subtotal: $").append(nonFoodTotal).append("\n");
+			productInformation.append(String.format("Taxes - $%.2f , Nonfood Total - $%.2f , Grand Total - $%.2f\n", totalTax, nonFoodTotal + totalTax, grandTotal));
 		}
 		else {
 			for (Product product : productsOrdered) {
-				String productInformation = String.format("Item - %s , Price - $%.2f , Quantity - %d", product.getProductName(), product.getPrice(), product.getQuantity());
-				System.out.println(productInformation);
+				productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", product.getProductName(), product.getPrice(), product.getQuantity()));
 			}
-			String costInformation = String.format("\nTotal Price - $%.2f , Taxes - $%.2f , Grand Total - $%.2f", totalPrice, totalTax, grandTotal);
-			System.out.println(costInformation);
+			productInformation.append(String.format("\nTotal Price - $%.2f , Taxes - $%.2f , Grand Total - $%.2f", totalPrice, totalTax, grandTotal));
 		}
+		setGrandTotal(grandTotal);
+		setTotalTax(totalTax);
+		return productInformation.toString();
+	}
+
+	public double getTotalTax() {
+		return totalTax;
+	}
+
+	public void setTotalTax(double totalTax) {
+		this.totalTax = totalTax;
+	}
+
+	public double getGrandTotal() {
+		return grandTotal;
+	}
+
+	public void setGrandTotal(double grandTotal) {
+		this.grandTotal = grandTotal;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Order ID - %s\n", orderID);
 	}
 }

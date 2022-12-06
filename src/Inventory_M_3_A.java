@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.JFrame;
+import java.io.IOException;
 
 public class Inventory_M_3_A extends JFrame {
     private JButton backButton;
@@ -10,6 +11,7 @@ public class Inventory_M_3_A extends JFrame {
     private JButton displayProductsButton;
     private JButton removeProductButton;
     private JPanel pane1;
+    private JButton saveProductButton;
     JFrame frame = new JFrame();
 
     public Inventory_M_3_A(Store store) {
@@ -25,17 +27,18 @@ public class Inventory_M_3_A extends JFrame {
                 Selections_M_2_A selections = new Selections_M_2_A(store);
             }
         });
+
         updateProductButton.addActionListener(e -> {
             if(e.getSource()==updateProductButton){
                 frame.dispose();
-                UpdateProduct_M_3_G updateProduct = new UpdateProduct_M_3_G();
+                UpdateProduct_M_3_G updateProduct = new UpdateProduct_M_3_G(store);
             }
         });
 
         batchAddUpdateButton.addActionListener(e -> {
             if(e.getSource()==batchAddUpdateButton){
                 frame.dispose();
-                BatchAdd_Update_M_3_E batchUpdate = new BatchAdd_Update_M_3_E();
+                BatchAdd_Update_M_3_E batchUpdate = new BatchAdd_Update_M_3_E(store);
             }
         });
 
@@ -45,18 +48,21 @@ public class Inventory_M_3_A extends JFrame {
                 AddProduct_M_3_B addProduct = new AddProduct_M_3_B(store);
             }
         });
+
         displayProductsButton.addActionListener(e -> {
             if(e.getSource()==displayProductsButton){
                 frame.dispose();
                 DisplayProducts_M_3_D displayProducts = new DisplayProducts_M_3_D(store);
             }
         });
+
         removeProductButton.addActionListener(e -> {
             if(e.getSource()==removeProductButton){
                 frame.dispose();
-                RemoveProduct_M_3_F removeProduct = new RemoveProduct_M_3_F();
+                RemoveProduct_M_3_F removeProduct = new RemoveProduct_M_3_F(store);
             }
         });
+
         createDealButton.addActionListener(e -> {
             if(e.getSource()==createDealButton){
                 frame.dispose();
@@ -64,5 +70,16 @@ public class Inventory_M_3_A extends JFrame {
             }
         });
 
+        saveProductButton.addActionListener(e -> {
+            if(e.getSource()==saveProductButton){
+                InventoryController inventoryController = new InventoryController(store);
+                try {
+                    inventoryController.saveProductReport();
+                    JOptionPane.showMessageDialog(frame, "ProductReport.txt has been created.");
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
     }
 }

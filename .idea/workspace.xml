@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="made sure that stores had to be given names and customers had to be given a first and last name.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.java" afterDir="false" />
-    </list>
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Readded test classes that got lost while switching over IDEs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,11 +18,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -55,10 +47,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;324&quot;,
@@ -260,28 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670200161872</updated>
     </task>
-    <task id="LOCAL-00027" summary="made sure that the add product function validates all checks.">
-      <created>1670205177031</created>
+    <task id="LOCAL-00027" summary="Readded test classes that got lost while switching over IDEs">
+      <created>1670201082509</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1670205177031</updated>
+      <updated>1670201082509</updated>
     </task>
-    <task id="LOCAL-00028" summary="made sure that the add product can't have prices less than 1 cent, or quantity less than 1.">
-      <created>1670205830129</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1670205830129</updated>
-    </task>
-    <task id="LOCAL-00029" summary="made sure that stores had to be given names and customers had to be given a first and last name.">
-      <created>1670209449274</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1670209449274</updated>
-    </task>
-    <option name="localTasksCounter" value="30" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,9 +306,7 @@
     <MESSAGE value="Updated visual of store selection screens for customer and manager" />
     <MESSAGE value="Updated login page to be inbetween customer selections and afterloginregistration, added customer name and id to display" />
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
-    <MESSAGE value="made sure that the add product function validates all checks." />
-    <MESSAGE value="made sure that the add product can't have prices less than 1 cent, or quantity less than 1." />
-    <MESSAGE value="made sure that stores had to be given names and customers had to be given a first and last name." />
-    <option name="LAST_COMMIT_MESSAGE" value="made sure that stores had to be given names and customers had to be given a first and last name." />
+    <MESSAGE value="Readded test classes that got lost while switching over IDEs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readded test classes that got lost while switching over IDEs" />
   </component>
 </project>
