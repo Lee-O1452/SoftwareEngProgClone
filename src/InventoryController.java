@@ -112,18 +112,23 @@ public class InventoryController {
 		inventory.removeProduct(inventory.getProduct(productID));
 	}
 
-	public void manufacturerProductReport(String manufacturer){
+	public String manufacturerReport(String manufacturer){
 		
 		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
-		
-		System.out.println("All Products made by " + manufacturer + " :");
+		ArrayList<Product> manufacturersProducts = new ArrayList<>();
+		StringBuilder productInformation = new StringBuilder();
+		double totalValue = 0;
 		for (Product product : allProductsManufacturer) {
 			if (product.getManufacturer().equals(manufacturer)) {
-				double totalInventoryValue = product.getTotalValue();
-				System.out.println(product + " Total Value: " + totalInventoryValue);
-
+				manufacturersProducts.add(product);
 			}
 		}
+		for (Product product : manufacturersProducts) {
+			productInformation.append("Total Value: $").append(product.getTotalValue()).append(" ").append(product);
+			totalValue += product.getTotalValue();
+		}
+		productInformation.insert(0, "Total Products: " + manufacturersProducts.size() + " Total Value: $" + totalValue + "\n");
+		return productInformation.toString();
 	}
 
 	public void batchAddUpdate(File file){
