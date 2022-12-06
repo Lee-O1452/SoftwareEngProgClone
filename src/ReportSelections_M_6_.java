@@ -64,5 +64,11 @@ public class ReportSelections_M_6_ extends JFrame{
                 reportArea.setText(orderController.displayCustomerOrderTotals(store));
             }
         });
+
+        orderStatisticsSNAPButton.addActionListener(e -> {
+            if(e.getSource()==orderStatisticsSNAPButton){
+                reportArea.setText(orderController.displayOrderStatisticsSNAP(store));
+            }
+        });
     }
 }

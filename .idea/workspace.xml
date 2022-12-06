@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added customerReceipt GUI for managers">
-      <change afterPath="$PROJECT_DIR$/src/CustomersReceipts_M_5_D.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomersReceipts_M_5_D.java" afterDir="false" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670360429388</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI">
+      <created>1670362310172</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1670362310172</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -428,7 +433,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
     <MESSAGE value="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match" />
     <MESSAGE value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
     <MESSAGE value="Added a scroll bar to the store list" />
@@ -453,6 +457,7 @@
     <MESSAGE value="added popularProductRevenue" />
     <MESSAGE value="added customerOrderTotals" />
     <MESSAGE value="added customerReceipt GUI for managers" />
-    <option name="LAST_COMMIT_MESSAGE" value="added customerReceipt GUI for managers" />
+    <MESSAGE value="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI" />
   </component>
 </project>
