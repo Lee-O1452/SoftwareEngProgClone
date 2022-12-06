@@ -6,6 +6,7 @@ public class CustomerSelections_M_5_A extends JFrame{
     private JButton displayCustomersButton;
     private JButton displayCustomerReceiptButton;
     private JPanel panel1;
+    private JButton displayCustomerSReceiptsButton;
     JFrame frame = new JFrame();
 
     public CustomerSelections_M_5_A(Store store){

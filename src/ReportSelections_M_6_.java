@@ -41,5 +41,16 @@ public class ReportSelections_M_6_ extends JFrame{
             }
         });
 
+        orderStatisticsButton.addActionListener(e -> {
+            if(e.getSource()==orderStatisticsButton){
+                reportArea.setText(orderController.displayOrderStatistics(store));
+            }
+        });
+
+        popularProductsQuantityButton.addActionListener(e -> {
+            if(e.getSource()==popularProductsQuantityButton){
+                reportArea.setText(orderController.displayPopularProductsQuantity(store));
+            }
+        });
     }
 }

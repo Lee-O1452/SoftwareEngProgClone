@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="Added saveProductReport to InventoryController and Inventory GUI">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="rewrote manufacturerReport and integrated into GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -338,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670283748116</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="rewrote manufacturerReport and integrated into GUI">
+      <created>1670286601570</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670286601570</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,7 +378,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
     <MESSAGE value="Finished displayProducts sorting on GUI" />
     <MESSAGE value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
     <MESSAGE value="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI" />
@@ -395,6 +402,7 @@
     <MESSAGE value="Added search function to createOrder GUI" />
     <MESSAGE value="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax" />
     <MESSAGE value="Added saveProductReport to InventoryController and Inventory GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added saveProductReport to InventoryController and Inventory GUI" />
+    <MESSAGE value="rewrote manufacturerReport and integrated into GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewrote manufacturerReport and integrated into GUI" />
   </component>
 </project>
