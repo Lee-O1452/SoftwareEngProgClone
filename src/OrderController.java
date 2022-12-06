@@ -268,4 +268,20 @@ public class OrderController {
 
 		return report.toString();
 	}
+
+	public String displayAllStoresSales(Store store) {
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		StringBuilder report = new StringBuilder();
+		int totalSales = 0;
+
+		for (Order order : orders) {
+			if (order.getIsPaid()) {
+				report.append(order);
+				totalSales += 1;
+			}
+		}
+
+		report.insert(0, "There have been " + totalSales + " total sales across all stores.\n");
+		return report.toString();
+	}
 }
