@@ -241,4 +241,31 @@ public class OrderController {
 		double std = Math.sqrt(additionSqs/(totals.size()-1));
 		return String.format("Percent of Orders SNAP: %.2f\nNumber of SNAP Orders: %d\nTotal of All SNAP Orders: $%.2f\nAverage Total of SNAP Order: $%.2f\nStandard Deviation of SNAP Order Totals: $%.2f\n", percentSNAP, numOrders, total, average, std);
 	}
+
+	public String displayOrderDateRange(Store store, String date1, String date2) {
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		ArrayList<Order> allOrders = new ArrayList<>();
+
+		for (Order value : orders) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
+				allOrders.add(value);
+			}
+		}
+
+		ArrayList<Order> dateOrders = new ArrayList<>();
+
+		for (Order order : allOrders) {
+			if ((order.getDateString().compareTo(date1) > 0 || order.getDateString().compareTo(date1) == 0) && (order.getDateString().compareTo(date2) < 0 || order.getDateString().compareTo(date2) == 0)) {
+				dateOrders.add(order);
+			}
+		}
+
+		StringBuilder report = new StringBuilder();
+		report.append("Orders between ").append(date1).append(" and ").append(date2).append("\n");
+		for (Order order : dateOrders) {
+			report.append(String.format("Date: %s, Order ID: %s, %s", order.getDateString(), order.getOrderID(), store.getCustomer(order.getCustomerID())));
+		}
+
+		return report.toString();
+	}
 }

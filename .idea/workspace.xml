@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added displayOrderStatisticsSNAP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -401,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670362310172</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="added displayOrderStatisticsSNAP">
+      <created>1670367363092</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1670367363092</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -433,7 +441,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match" />
     <MESSAGE value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
     <MESSAGE value="Added a scroll bar to the store list" />
     <MESSAGE value="Updated visual of store selection screens for customer and manager" />
@@ -458,6 +465,7 @@
     <MESSAGE value="added customerOrderTotals" />
     <MESSAGE value="added customerReceipt GUI for managers" />
     <MESSAGE value="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI" />
+    <MESSAGE value="added displayOrderStatisticsSNAP" />
+    <option name="LAST_COMMIT_MESSAGE" value="added displayOrderStatisticsSNAP" />
   </component>
 </project>
