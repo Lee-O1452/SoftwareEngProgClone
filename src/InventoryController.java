@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class InventoryController {
@@ -68,29 +71,37 @@ public class InventoryController {
 			}
 		}
 	}
+
 	public int displayNumberOfProducts(){
 		return inventory.getSize();
 	}
+
 	public double displayTotalValue(){
 		return inventory.getTotalInventoryValue();
 	}
+
 	public ArrayList<Product> displayProductReportName(){
 		return inventory.productReportName();
 	}
-	public ArrayList<Product> displayProductReportID(){
 
+	public ArrayList<Product> displayProductReportID(){
 		return inventory.productReportID();
 	}
-	public ArrayList<Product> displayProductReportManufacturer(){
 
+	public ArrayList<Product> displayProductReportManufacturer(){
 		return inventory.productReportManufacturer();
 	}
-	public ArrayList<Product> displayProductReportIsFood(){
 
+	public ArrayList<Product> displayProductReportIsFood(){
 		return inventory.productReportIsFood();
 	}
-	public void updateQuantity(String productID, int quantity) {
+
+	public void removeQuantity(String productID, int quantity) {
 		inventory.getProduct(productID).setQuantity(inventory.getProduct(productID).getQuantity() - quantity);
+	}
+
+	public void addQuantity(String productID, int quantity) {
+		inventory.getProduct(productID).setQuantity(inventory.getProduct(productID).getQuantity() + quantity);
 	}
 	
 	public void updatePrice(String productID, double price) {
@@ -101,19 +112,35 @@ public class InventoryController {
 		inventory.removeProduct(inventory.getProduct(productID));
 	}
 
-	public void manufacturerProductReport(String manufacturer){
+	public String manufacturerReport(String manufacturer){
 		
 		ArrayList<Product> allProductsManufacturer = inventory.productReportManufacturer();
-		
-		System.out.println("All Products made by " + manufacturer + " :");
+		ArrayList<Product> manufacturersProducts = new ArrayList<>();
+		StringBuilder productInformation = new StringBuilder();
+		double totalValue = 0;
 		for (Product product : allProductsManufacturer) {
 			if (product.getManufacturer().equals(manufacturer)) {
-				double totalInventoryValue = product.getTotalValue();
-				System.out.println(product + " Total Value: " + totalInventoryValue);
-
+				manufacturersProducts.add(product);
 			}
-
 		}
+		for (Product product : manufacturersProducts) {
+			productInformation.append("Total Value: $").append(product.getTotalValue()).append(" ").append(product);
+			totalValue += product.getTotalValue();
+		}
+		productInformation.insert(0, "Total Products: " + manufacturersProducts.size() + " Total Value: $" + totalValue + "\n");
+		return productInformation.toString();
+	}
 
+	public void batchAddUpdate(File file){
+		inventory.batchAddOrUpdate(file);
+	}
+
+	public void saveProductReport() throws IOException {
+		File productReport = new File("ProductReport.txt");
+		FileWriter writer = new FileWriter(productReport);
+		for(int i = 0; i < inventory.productReportName().size(); i++) {
+			writer.write(inventory.productReportName().get(i).toString());
+		}
+		writer.close();
 	}
 }

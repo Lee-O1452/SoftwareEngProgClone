@@ -12,7 +12,8 @@ public class Order {
 	private boolean usingSnap;
 	private boolean isPaid;
 	private Store store;
-	
+	private double totalTax = 0;
+	private double grandTotal = 0;
 	
 	public Order(String orderID, String customerID, LocalDate date, boolean usingSnap, boolean isPaid, Store store) {
 		order = new LinkedHashMap<>();
@@ -153,7 +154,25 @@ public class Order {
 			}
 			productInformation.append(String.format("\nTotal Price - $%.2f , Taxes - $%.2f , Grand Total - $%.2f", totalPrice, totalTax, grandTotal));
 		}
+		setGrandTotal(grandTotal);
+		setTotalTax(totalTax);
 		return productInformation.toString();
+	}
+
+	public double getTotalTax() {
+		return totalTax;
+	}
+
+	public void setTotalTax(double totalTax) {
+		this.totalTax = totalTax;
+	}
+
+	public double getGrandTotal() {
+		return grandTotal;
+	}
+
+	public void setGrandTotal(double grandTotal) {
+		this.grandTotal = grandTotal;
 	}
 
 	@Override
