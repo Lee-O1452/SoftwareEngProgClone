@@ -3,16 +3,15 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 
-public class CustomerReceipt_M_5_C {
+public class CustomersReceipts_M_5_D {
     private JButton backButton;
     private JTextField customerIDField;
-    private JButton viewOrderButton;
     private JPanel panel1;
-    private JList orderHistory;
     private JButton loadButton;
+    private JTextArea receipts;
     JFrame frame = new JFrame();
 
-    public CustomerReceipt_M_5_C(Store store){
+    public CustomersReceipts_M_5_D(Store store){
         frame.setContentPane(panel1);
         frame.setTitle("Create a New Store");
         frame.setSize(900,600);
@@ -37,16 +36,13 @@ public class CustomerReceipt_M_5_C {
                         customersOrders.add(allOrder);
                     }
                 }
-                orderHistory.setListData(new Vector<>(customersOrders));
+                OrderController orderController = new OrderController();
+                receipts.setText("");
+                for(Order o : customersOrders){
+                    receipts.append(orderController.displayOrderReport(o));
+                }
             }
         });
 
-        viewOrderButton.addActionListener(e -> {
-            if(e.getSource()==viewOrderButton){
-                Order o = (Order) orderHistory.getSelectedValue();
-                frame.dispose();
-                Receipt_M_5_C priorReceipt = new Receipt_M_5_C((Order) orderHistory.getSelectedValue());
-            }
-        });
     }
 }

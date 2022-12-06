@@ -30,9 +30,10 @@ public class CustomerSelections_M_5_A extends JFrame{
             }
         });
 
-        displayCustomerReceiptButton.addActionListener(e -> {
-            if(e.getSource()==displayCustomerReceiptButton){
+        displayCustomerSReceiptsButton.addActionListener(e -> {
+            if(e.getSource()==displayCustomerSReceiptsButton){
                 frame.dispose();
+                CustomersReceipts_M_5_D customerReceipt = new CustomersReceipts_M_5_D(store);
             }
         });
 
