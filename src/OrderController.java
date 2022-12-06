@@ -70,7 +70,6 @@ public class OrderController {
 		return String.format("Total of Taxes: $%.2f\n Total of Orders: $%.2f\n Average Order Total: $%.2f\n Standard Deviation of Order Totals: $%.2f", totalTax, total, average, std);
 	}
 
-
 	public String displayPopularProductsQuantity(Store store){
 		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
 		ArrayList<Order> allOrders = new ArrayList<>();
@@ -108,6 +107,48 @@ public class OrderController {
 
 		for (popularProductHelper p : sorter) {
 			s.append("Total Quantity Sold: ").append(p.getQuantity()).append(" ").append(p.getP());
+		}
+
+		return s.toString();
+	}
+
+	public String displayPopularProductsRevenue(Store store){
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		ArrayList<Order> allOrders = new ArrayList<>();
+
+		for (Order value : orders) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
+				allOrders.add(value);
+			}
+		}
+
+		LinkedHashMap<String, Double> totalRevenue = new LinkedHashMap<>();
+
+		for(int i = 0; i < allOrders.size(); i++){
+			for(int j = 0; j < allOrders.get(i).getOrder().size(); j++){
+				ArrayList<Product> orderProducts = new ArrayList<>(allOrders.get(i).getOrder().values());
+				if(totalRevenue.containsKey(orderProducts.get(j).getProductID())){
+					totalRevenue.replace(orderProducts.get(j).getProductID(), totalRevenue.get(orderProducts.get(j).getProductID()) + orderProducts.get(j).getTotalValue());
+				}
+				else{
+					totalRevenue.put(orderProducts.get(j).getProductID(), orderProducts.get(j).getTotalValue());
+				}
+			}
+		}
+
+		ArrayList<String> popularID = new ArrayList<>(totalRevenue.keySet());
+		ArrayList<popularProductHelper> sorter = new ArrayList<>();
+
+		for(int i = 0; i < totalRevenue.size(); i++){
+			popularProductHelper p = new popularProductHelper(totalRevenue.get(popularID.get(i)),store.getStoreInventory().getProduct(popularID.get(i)));
+			sorter.add(p);
+		}
+
+		sorter.sort(Comparator.comparingDouble(popularProductHelper::getTotalValue));
+		StringBuilder s = new StringBuilder();
+
+		for (popularProductHelper p : sorter) {
+			s.append("Total Revenue From Product: $").append(p.getTotalValue()).append(" ").append(p.getP());
 		}
 
 		return s.toString();
