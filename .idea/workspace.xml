@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added popularProductRevenue">
-      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/popularProductHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportHelper.java" afterDir="false" />
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added customerOrderTotals">
+      <change afterPath="$PROJECT_DIR$/src/CustomerReceipt_M_5_C.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomerReceipt_M_5_C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProductReport.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +57,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;324&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "324",
+    "last_opened_file_path": "C:/Users/Nakota/IdeaProjects/_4321_Project/src",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.folding"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nakota\IdeaProjects\_4321_Project\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nakota\IdeaProjects\_4321_Project\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -371,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670356945065</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="added customerOrderTotals">
+      <created>1670358354066</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670358354066</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,7 +421,6 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updated IDValidator checks, made createStore more failproof, and added more popups to create store GUI" />
     <MESSAGE value="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match" />
     <MESSAGE value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
     <MESSAGE value="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match" />
@@ -428,6 +445,7 @@
     <MESSAGE value="added orderStatistics and started on popularProductsQuantity" />
     <MESSAGE value="added system persistence, added a popularProductHelper class, finished popularProductQuantity," />
     <MESSAGE value="added popularProductRevenue" />
-    <option name="LAST_COMMIT_MESSAGE" value="added popularProductRevenue" />
+    <MESSAGE value="added customerOrderTotals" />
+    <option name="LAST_COMMIT_MESSAGE" value="added customerOrderTotals" />
   </component>
 </project>

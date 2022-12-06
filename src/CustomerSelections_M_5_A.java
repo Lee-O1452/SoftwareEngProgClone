@@ -26,6 +26,13 @@ public class CustomerSelections_M_5_A extends JFrame{
         displayCustomerReceiptButton.addActionListener(e -> {
             if(e.getSource()==displayCustomerReceiptButton){
                 frame.dispose();
+                CustomerReceipt_M_5_C customerReceipt = new CustomerReceipt_M_5_C(store);
+            }
+        });
+
+        displayCustomerReceiptButton.addActionListener(e -> {
+            if(e.getSource()==displayCustomerReceiptButton){
+                frame.dispose();
             }
         });
 
