@@ -52,7 +52,7 @@ public class OrderController {
 		ArrayList<Double> squares = new ArrayList<>();
 		double total = 0;
 		double totalTax = 0;
-		double numOrders = 0;
+		int numOrders = 0;
 		double additionSqs = 0;
 		for(Order order : allOrders){
 			numOrders += 1;
@@ -67,7 +67,7 @@ public class OrderController {
 			additionSqs += squares.get(i);
 		}
 		double std = Math.sqrt(additionSqs/(totals.size()-1));
-		return String.format("Total of Taxes: $%.2f\n Total of Orders: $%.2f\n Average Order Total: $%.2f\n Standard Deviation of Order Totals: $%.2f", totalTax, total, average, std);
+		return String.format("Number of Orders: %d\nTotal of Taxes: $%.2f\nTotal of Orders: $%.2f\nAverage Order Total: $%.2f\nStandard Deviation of Order Totals: $%.2f\n", numOrders, totalTax, total, average, std);
 	}
 
 	public String displayPopularProductsQuantity(Store store){
@@ -187,6 +187,83 @@ public class OrderController {
 
 		for (reportHelper r : sorter) {
 			report.append("Total Orders From Customer: ").append(r.getTotalOrders()).append(" ").append(r.getC());
+		}
+
+		return report.toString();
+	}
+
+	public String displayOrderStatisticsSNAP(Store store){
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		ArrayList<Order> allOrders = new ArrayList<>();
+
+		for (Order value : orders) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
+				allOrders.add(value);
+			}
+		}
+
+		int allOrderAmt = 0;
+
+		ArrayList<Order> snapOrders = new ArrayList<>();
+
+		for (Order order : allOrders){
+			allOrderAmt += 1;
+			if(order.getUsingSnap()){
+				snapOrders.add(order);
+			}
+		}
+
+
+
+		ArrayList<Double> totals = new ArrayList<>();
+		ArrayList<Double> deviations = new ArrayList<>();
+		ArrayList<Double> squares = new ArrayList<>();
+
+		double total = 0;
+		int numOrders = 0;
+		double additionSqs = 0;
+
+		for(Order order : snapOrders){
+			numOrders += 1;
+			total += order.getGrandTotal();
+			totals.add(order.getGrandTotal());
+		}
+
+		double average = total/numOrders;
+		double percentSNAP = (numOrders/(double)allOrderAmt)*100;
+
+		for(int i = 0; i < totals.size(); i++){
+			deviations.add(totals.get(i) - average);
+			squares.add(deviations.get(i) * deviations.get(i));
+			additionSqs += squares.get(i);
+		}
+
+		double std = Math.sqrt(additionSqs/(totals.size()-1));
+		return String.format("Percent of Orders SNAP: %.2f\nNumber of SNAP Orders: %d\nTotal of All SNAP Orders: $%.2f\nAverage Total of SNAP Order: $%.2f\nStandard Deviation of SNAP Order Totals: $%.2f\n", percentSNAP, numOrders, total, average, std);
+	}
+
+	public String displayOrderDateRange(Store store, String date1, String date2) {
+		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
+		ArrayList<Order> allOrders = new ArrayList<>();
+
+		for (Order value : orders) {
+			if (value.getStore().getStoreID().equals(store.getStoreID())) {
+				allOrders.add(value);
+			}
+		}
+
+		ArrayList<Order> dateOrders = new ArrayList<>();
+
+		for (Order order : allOrders) {
+			if ((order.getDateString().compareTo(date1) > 0 || order.getDateString().compareTo(date1) == 0) && (order.getDateString().compareTo(date2) < 0 || order.getDateString().compareTo(date2) == 0)) {
+				dateOrders.add(order);
+			}
+		}
+
+		StringBuilder report = new StringBuilder();
+		report.append("Orders between ").append(date1).append(" and ").append(date2).append("\n");
+		for (Order order : dateOrders) {
+			report.append(String.format("Date: %s, Order ID: %s, %s", order.getDateString(), order.getOrderID(), store.getCustomer(order.getCustomerID())));
 		}
 
 		return report.toString();
