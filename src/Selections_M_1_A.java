@@ -33,11 +33,16 @@ public class Selections_M_1_A extends JFrame {
 
         });
 
+        saveAllDataButton.addActionListener(e -> {
+            if(e.getSource() == saveAllDataButton){
+                JOptionPane.showMessageDialog(frame, "System has been saved.");
+            }
+        });
+
         backButton.addActionListener(e -> {
             if (e.getSource() == backButton) {
                 frame.dispose();
                 MainMenu_1_ mainMenu = new MainMenu_1_();
-
             }
         });
 
