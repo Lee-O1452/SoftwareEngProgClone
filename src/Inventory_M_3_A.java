@@ -66,7 +66,7 @@ public class Inventory_M_3_A extends JFrame {
         createDealButton.addActionListener(e -> {
             if(e.getSource()==createDealButton){
                 frame.dispose();
-                CreateDeal_M_3_H createDeal = new CreateDeal_M_3_H();
+                CreateDeal_M_3_H createDeal = new CreateDeal_M_3_H(store);
             }
         });
 
