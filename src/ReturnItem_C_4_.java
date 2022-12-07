@@ -28,9 +28,14 @@ public class ReturnItem_C_4_ {
 
         returnItemButton.addActionListener(e -> {
             if(e.getSource()==returnItemButton){
-                OrderController orderController = new OrderController();
-                orderController.returnItem(Main.getOrderList().get(orderIDField.getText()), productIDField.getText(), Integer.parseInt(quantityField.getText()));
-                JOptionPane.showMessageDialog(frame, "Product has been returned.");
+                try {
+                    OrderController orderController = new OrderController();
+                    orderController.returnItem(Main.getOrderList().get(orderIDField.getText()), productIDField.getText(), Integer.parseInt(quantityField.getText()));
+                    JOptionPane.showMessageDialog(frame, "Product has been returned.");
+                }
+                catch(Exception a){
+                    JOptionPane.showMessageDialog(frame, "Make sure all input fields are supplied correctly.");
+                }
             }
         });
 
