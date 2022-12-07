@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added displayAllStoresSales">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added displayOrderStatisticsSNAP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateDeal_M_3_H.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDeal_M_3_H.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateDeal_M_3_H.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDeal_M_3_H.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration_C_2_A.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration_C_2_A.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration_C_2_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration_C_2_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,21 +409,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670367363092</updated>
     </task>
-    <task id="LOCAL-00047" summary="added displayOrderDateRange">
-      <created>1670369632781</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1670369632781</updated>
-    </task>
-    <task id="LOCAL-00048" summary="added displayAllStoresSales">
-      <created>1670370519226</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1670370519226</updated>
-    </task>
-    <option name="localTasksCounter" value="49" />
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,6 +441,8 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
+    <MESSAGE value="Added a scroll bar to the store list" />
     <MESSAGE value="Updated visual of store selection screens for customer and manager" />
     <MESSAGE value="Updated login page to be inbetween customer selections and afterloginregistration, added customer name and id to display" />
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
@@ -480,8 +466,6 @@
     <MESSAGE value="added customerReceipt GUI for managers" />
     <MESSAGE value="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI" />
     <MESSAGE value="added displayOrderStatisticsSNAP" />
-    <MESSAGE value="added displayOrderDateRange" />
-    <MESSAGE value="added displayAllStoresSales" />
-    <option name="LAST_COMMIT_MESSAGE" value="added displayAllStoresSales" />
+    <option name="LAST_COMMIT_MESSAGE" value="added displayOrderStatisticsSNAP" />
   </component>
 </project>
