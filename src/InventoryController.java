@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class InventoryController {
-
-	//private StoreGui gui;
 	private Inventory inventory;
 
 	public InventoryController(Store store) {

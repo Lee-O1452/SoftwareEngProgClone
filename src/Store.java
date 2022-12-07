@@ -21,10 +21,6 @@ public class Store implements Serializable {
 		foodTax = 0.04;
 		nonFoodTax = 0.08;
 	}
-	
-	public boolean containsCustomer(String customerID) {
-		return store.containsKey(customerID);
-	}
 
 	public Customer getCustomer(String customerID){
 		return store.get(customerID);
@@ -37,15 +33,7 @@ public class Store implements Serializable {
 	public String getStoreID() {
 		return storeID;
 	}
-	
-	public void setStoreName(String storeName) {
-		this.storeName = storeName;
-	}
-	
-	public void setStoreID(String storeID) {
-		this.storeID = storeID;
-	}
-	
+
 	public void addCustomer(Customer c) {
 		store.put(c.getCustomerID(), c);
 	}

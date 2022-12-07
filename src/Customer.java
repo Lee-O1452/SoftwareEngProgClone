@@ -24,21 +24,6 @@ public class Customer implements Serializable {
 	public String getLastName() {
 		return lastName;
 	}
-	
-	//setters
-	public void setCustomerID(String customerID) {
-		this.customerID = customerID;
-	}
-	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-
 
 	@Override
 	public String toString() {

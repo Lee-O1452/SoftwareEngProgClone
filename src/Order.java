@@ -1,7 +1,6 @@
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.LinkedHashMap;
 
 public class Order implements Serializable {
@@ -49,20 +48,6 @@ public class Order implements Serializable {
 	
 	public boolean getIsPaid() {
 		return isPaid;
-	}
-	
-	
-	//setters
-	public void setOrderID(String orderID) {
-		this.orderID = orderID;
-	}
-	
-	public void setCustomerID(String customerID) {
-		this.customerID = orderID;
-	}
-	
-	public void setDate(LocalDate date) {
-		this.date = date;
 	}
 	
 	public void setUsingSnap(boolean usingSnap) {

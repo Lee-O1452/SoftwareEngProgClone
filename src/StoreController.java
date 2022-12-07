@@ -33,9 +33,5 @@ public class StoreController {
 		public void updateNonfoodTax(Store store, double nonFoodTax) {
 			store.setNonFoodTax(nonFoodTax);
 		}
-		
-		//legwork for this is not done
-		public void displayPopularProducts(){
 
-		}
 }
