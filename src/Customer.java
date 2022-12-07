@@ -1,7 +1,6 @@
 import java.io.Serializable;
 
 public class Customer implements Serializable {
-
 	private String customerID;
 	private String firstName;
 	private String lastName;
@@ -11,8 +10,7 @@ public class Customer implements Serializable {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-	
-	//getters
+
 	public String getCustomerID() {
 		return customerID;
 	}
@@ -29,6 +27,4 @@ public class Customer implements Serializable {
 	public String toString() {
 		return String.format("Customer ID - %s , First Name - %s , Last Name - %s\n", customerID, firstName, lastName);
 	}
-	
-	
 }

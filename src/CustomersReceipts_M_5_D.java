@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Vector;
-
 
 public class CustomersReceipts_M_5_D {
     private JButton backButton;
@@ -22,7 +20,7 @@ public class CustomersReceipts_M_5_D {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                CustomerSelections_M_5_A customerSelection = new CustomerSelections_M_5_A(store);
+                new CustomerSelections_M_5_A(store);
             }
         });
 
@@ -43,6 +41,5 @@ public class CustomersReceipts_M_5_D {
                 }
             }
         });
-
     }
 }

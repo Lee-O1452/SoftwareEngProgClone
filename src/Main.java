@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 public class Main {
     private static LinkedHashMap<String, Store> storeList = new LinkedHashMap<>();
     private static LinkedHashMap<String, Order> orderList = new LinkedHashMap<>();
+
     public static void main(String [] args) throws IOException, ClassNotFoundException {
         try {
             FileInputStream storeFIS = new FileInputStream("storeList.out");
@@ -24,8 +25,7 @@ public class Main {
         } catch (FileNotFoundException ex) {
             //continue with empty map
         }
-
-        MainMenu_1_ mainMenu = new MainMenu_1_();
+        new MainMenu_1_();
     }
 
     public static LinkedHashMap<String, Store> getStoreList(){

@@ -25,11 +25,10 @@ public class Order implements Serializable {
 		this.store = store;
 	}
 
-		
-	//getters
 	public LinkedHashMap<String, Product> getOrder() {
 		return order;
 	}
+
 	public String getOrderID() {
 		return orderID;
 	}
@@ -111,6 +110,7 @@ public class Order implements Serializable {
 
 		StringBuilder productInformation = new StringBuilder();
 		productInformation.append(String.format("Store Name - %s , Store ID - %s , Date - %s\n", store.getStoreName(), store.getStoreID(), getDateString()));
+
 		if(getUsingSnap()) {
 			productInformation.append("Food Items:\n");
 			if(foodItems.size() > 0){
@@ -134,6 +134,7 @@ public class Order implements Serializable {
 			productInformation.append("Non-food Subtotal: $").append(nonFoodTotal).append("\n");
 			productInformation.append(String.format("Taxes - $%.2f , Nonfood Total - $%.2f , Grand Total - $%.2f\n", totalTax, nonFoodTotal + totalTax, grandTotal));
 		}
+
 		else {
 			for (Product product : productsOrdered) {
 				productInformation.append(String.format("Item - %s , Price - $%.2f , Quantity - %d\n", product.getProductName(), product.getPrice(), product.getQuantity()));

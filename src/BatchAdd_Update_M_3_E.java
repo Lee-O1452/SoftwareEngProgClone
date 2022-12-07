@@ -2,11 +2,9 @@ import javax.swing.*;
 import javax.swing.JFrame;
 import java.io.File;
 
-
 public class BatchAdd_Update_M_3_E extends JFrame{
     private JButton backButton;
     private JButton selectFileButton;
-    private JButton addUpdateButton;
     private JPanel panel1;
 
     JFrame frame = new JFrame();
@@ -20,7 +18,7 @@ public class BatchAdd_Update_M_3_E extends JFrame{
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Inventory_M_3_A inventorySelect = new Inventory_M_3_A (store);
+                new Inventory_M_3_A (store);
             }
         });
 
@@ -38,9 +36,6 @@ public class BatchAdd_Update_M_3_E extends JFrame{
                     else{
                         JOptionPane.showMessageDialog(frame, "Failed to get file.");
                     }
-                    //String fileName = chooser.getSelectedFile().getAbsolutePath();
-                    //InventoryController inventoryController = new InventoryController(store);
-                    //inventoryController.batchAddUpdate(file);
                 }
             }
         });

@@ -33,5 +33,4 @@ public class StoreController {
 		public void updateNonfoodTax(Store store, double nonFoodTax) {
 			store.setNonFoodTax(nonFoodTax);
 		}
-
 }

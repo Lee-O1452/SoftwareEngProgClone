@@ -1,7 +1,5 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class IDValidatorTest {
     IDValidator idValidator = new IDValidator();
@@ -13,19 +11,19 @@ public class IDValidatorTest {
     @Test
     void test_isIdValidProduct_return_1() {
         productId = "1";
-        assertEquals(1, idValidator.isIdValidProduct(productId));
+        Assertions.assertEquals(1, idValidator.isIdValidProduct(productId));
     }
 
     @Test
     void test_isIdValidProduct_return_2() {
         productId = "*(^s";
-        assertEquals(2, idValidator.isIdValidProduct(productId));
+        Assertions.assertEquals(2, idValidator.isIdValidProduct(productId));
     }
 
     @Test
     void test_isIdValidProduct_return_3() {
         productId = "1233";
-        assertEquals(3, idValidator.isIdValidProduct(productId));
+        Assertions.assertEquals(3, idValidator.isIdValidProduct(productId));
     }
 
     @Test
@@ -33,21 +31,20 @@ public class IDValidatorTest {
         storeController = new StoreController();
         storeController.createStore("S1-Store");
         String actual = idValidator.generateStoreID();
-        assertNotNull(actual);
+        Assertions.assertNotNull(actual);
     }
 
     @Test
     void test_generateStoreID_length_2() {
         storeController = new StoreController();
-        String storeName = "";
+        String storeName;
         for(int i = 0; i < 10; i++) {
             storeName = String.format("S%d-Store", i);
             storeController.createStore(storeName);
         }
 
         String actual = idValidator.generateStoreID();
-        assertNotNull(actual);
-
+        Assertions.assertNotNull(actual);
     }
 
     @Test
@@ -56,8 +53,7 @@ public class IDValidatorTest {
         storeController.createStore("S1-Store");
 
         String actual = idValidator.generateCustomerID(Main.getStoreList().get("01"));
-        assertNotNull(actual);
-
+        Assertions.assertNotNull(actual);
     }
 
     @Test
@@ -67,6 +63,6 @@ public class IDValidatorTest {
                 new Store("123", "S1"),
                 new Customer("01", "firstName", "lastName")
         );
-        assertNotNull(orderIdExpected);
+        Assertions.assertNotNull(orderIdExpected);
     }
 }

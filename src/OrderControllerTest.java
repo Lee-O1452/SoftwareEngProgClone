@@ -1,10 +1,7 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalDate;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class OrderControllerTest {
     public Product product;
@@ -20,7 +17,7 @@ public class OrderControllerTest {
         store = new Store("01", "S001");
         customer = new Customer("0001", "firstName", "lastName");
         orderController = new OrderController();
-        LocalDate localDate = LocalDate.of(2022, 12, 06);
+        LocalDate localDate = LocalDate.of(2022, 12, 6);
         order = new Order("01", "000001", localDate,
                 true, false, store);
     }
@@ -28,22 +25,18 @@ public class OrderControllerTest {
     @Test
     public void test_createOrder() {
         String actual = orderController.createOrder(store, customer);
-        assertNotNull(actual);
+        Assertions.assertNotNull(actual);
     }
 
     @Test
     public void test_displayOrderReport() {
-
         String actual = orderController.displayOrderReport(order);
-        assertNotNull(actual);
-
+        Assertions.assertNotNull(actual);
     }
 
     @Test
     public void test_displayOrderStatistics() {
-
         String actual = orderController.displayOrderStatistics(store);
-        assertNotNull(actual);
-
+        Assertions.assertNotNull(actual);
     }
 }

@@ -20,14 +20,14 @@ public class Receipt_C_3_B {
             if(e.getSource()==payButton){
                 orderController.setOrderPayed(order);
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(order.getStore(), order.getStore().getCustomer(order.getCustomerID()));
+                new AfterLoginRegistration_C_2_5(order.getStore(), order.getStore().getCustomer(order.getCustomerID()));
             }
         });
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                CreateOrder_C_3_A createOrder = new CreateOrder_C_3_A(order);
+                new CreateOrder_C_3_A(order);
             }
         });
     }

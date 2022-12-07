@@ -22,7 +22,7 @@ public class UpdateTax_M_4_ extends JFrame {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Selections_M_2_A selections = new Selections_M_2_A(store);
+                new Selections_M_2_A(store);
             }
         });
 

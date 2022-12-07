@@ -1,7 +1,5 @@
 import java.time.LocalDate;
 
-
-
 public class MapPersistence {
 
 	public Inventory buildInventory() {

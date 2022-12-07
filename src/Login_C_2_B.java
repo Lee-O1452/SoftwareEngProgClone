@@ -1,7 +1,6 @@
 import javax.swing.*;
 import javax.swing.JFrame;
 
-
 public class Login_C_2_B extends JFrame {
     private JButton backButton;
     private JButton loginButton;
@@ -28,19 +27,19 @@ public class Login_C_2_B extends JFrame {
                 if(store.getCustomer(customerIDField.getText())!=null) {
                     frame.dispose();
                     store.getCustomer(customerIDField.getText());
-                    AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(store, store.getCustomer(customerIDField.getText()));
+                    new AfterLoginRegistration_C_2_5(store, store.getCustomer(customerIDField.getText()));
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Login Failed.");
                 }
             }
         });
+
         backButton.addActionListener(e -> {
             if(e.getSource() == backButton){
                 frame.dispose();
-                Selections_C_1_5 selections = new Selections_C_1_5();
+                new Selections_C_1_5();
             }
         });
-
     }
 }

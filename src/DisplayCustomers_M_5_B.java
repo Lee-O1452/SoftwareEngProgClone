@@ -23,10 +23,8 @@ public class DisplayCustomers_M_5_B extends JFrame{
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A(store);
+                new CustomerSelections_M_5_A(store);
             }
         });
-
-
     }
 }

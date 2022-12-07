@@ -4,8 +4,6 @@ import java.util.LinkedHashMap;
 
 public class OrderController {
 
-	private Store store;
-
 	public String createOrder(Store store, Customer customer) {
 		IDValidator buildID = new IDValidator();
 		MapPersistence orderBuilder = new MapPersistence();
@@ -26,7 +24,7 @@ public class OrderController {
 	public void setOrderPayed(Order order) {
 		order.setIsPaid(true);
 		InventoryController inventoryController = new InventoryController(order.getStore());
-		ArrayList keySet = new ArrayList<>(order.getOrder().keySet());
+		ArrayList<String> keySet = new ArrayList<>(order.getOrder().keySet());
 		for(int i = 0; i < order.getOrder().size(); i++){
 			Product p = order.getOrder().get(keySet.get(i));
 			inventoryController.removeQuantity(p.getProductID(), p.getQuantity());
@@ -82,13 +80,12 @@ public class OrderController {
 
 		LinkedHashMap<String, Integer> totalQuantity = new LinkedHashMap<>();
 
-		for(int i = 0; i < allOrders.size(); i++){
-			for(int j = 0; j < allOrders.get(i).getOrder().size(); j++){
-				ArrayList<Product> orderProducts = new ArrayList<>(allOrders.get(i).getOrder().values());
-				if(totalQuantity.containsKey(orderProducts.get(j).getProductID())){
+		for (Order allOrder : allOrders) {
+			for (int j = 0; j < allOrder.getOrder().size(); j++) {
+				ArrayList<Product> orderProducts = new ArrayList<>(allOrder.getOrder().values());
+				if (totalQuantity.containsKey(orderProducts.get(j).getProductID())) {
 					totalQuantity.replace(orderProducts.get(j).getProductID(), totalQuantity.get(orderProducts.get(j).getProductID()) + orderProducts.get(j).getQuantity());
-				}
-				else{
+				} else {
 					totalQuantity.put(orderProducts.get(j).getProductID(), orderProducts.get(j).getQuantity());
 				}
 			}
@@ -124,13 +121,12 @@ public class OrderController {
 
 		LinkedHashMap<String, Double> totalRevenue = new LinkedHashMap<>();
 
-		for(int i = 0; i < allOrders.size(); i++){
-			for(int j = 0; j < allOrders.get(i).getOrder().size(); j++){
-				ArrayList<Product> orderProducts = new ArrayList<>(allOrders.get(i).getOrder().values());
-				if(totalRevenue.containsKey(orderProducts.get(j).getProductID())){
+		for (Order allOrder : allOrders) {
+			for (int j = 0; j < allOrder.getOrder().size(); j++) {
+				ArrayList<Product> orderProducts = new ArrayList<>(allOrder.getOrder().values());
+				if (totalRevenue.containsKey(orderProducts.get(j).getProductID())) {
 					totalRevenue.replace(orderProducts.get(j).getProductID(), totalRevenue.get(orderProducts.get(j).getProductID()) + orderProducts.get(j).getTotalValue());
-				}
-				else{
+				} else {
 					totalRevenue.put(orderProducts.get(j).getProductID(), orderProducts.get(j).getTotalValue());
 				}
 			}
@@ -213,8 +209,6 @@ public class OrderController {
 			}
 		}
 
-
-
 		ArrayList<Double> totals = new ArrayList<>();
 		ArrayList<Double> deviations = new ArrayList<>();
 		ArrayList<Double> squares = new ArrayList<>();
@@ -269,7 +263,7 @@ public class OrderController {
 		return report.toString();
 	}
 
-	public String displayAllStoresSales(Store store) {
+	public String displayAllStoresSales() {
 		ArrayList<Order> orders = new ArrayList<>(Main.getOrderList().values());
 		StringBuilder report = new StringBuilder();
 		int totalSales = 0;
