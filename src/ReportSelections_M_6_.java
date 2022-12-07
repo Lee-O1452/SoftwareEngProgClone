@@ -78,5 +78,11 @@ public class ReportSelections_M_6_ extends JFrame{
                 reportArea.setText(orderController.displayOrderDateRange(store, date1Field.getText(), date2Field.getText()));
             }
         });
+
+        storesSalesButton.addActionListener(e -> {
+            if(e.getSource()==storesSalesButton){
+                reportArea.setText(orderController.displayAllStoresSales(store));
+            }
+        });
     }
 }
