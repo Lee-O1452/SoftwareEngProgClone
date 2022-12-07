@@ -25,8 +25,13 @@ public class RemoveProduct_M_3_F extends JFrame{
 
         removeProductButton.addActionListener(e -> {
             if(e.getSource()==removeProductButton){
-                inventoryController.removeProduct(productIDField.getText());
-                JOptionPane.showMessageDialog(frame, "Product has been removed from the store.");
+                try {
+                    inventoryController.removeProduct(productIDField.getText());
+                    JOptionPane.showMessageDialog(frame, "Product has been removed from the store.");
+                }
+                catch(Exception a){
+                    JOptionPane.showMessageDialog(frame, "Input real Product ID to remove Product.");
+                }
             }
         });
     }

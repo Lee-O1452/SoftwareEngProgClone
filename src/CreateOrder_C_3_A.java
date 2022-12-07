@@ -50,8 +50,14 @@ public class CreateOrder_C_3_A {
 
         addToOrderButton.addActionListener(e -> {
             if(e.getSource() == addToOrderButton) {
-                orderController.addToOrder(order, (Product) productList.getSelectedValue(), Integer.parseInt(quantityField.getText()));
-                JOptionPane.showMessageDialog(frame, "Product added to order.");
+                Product a = (Product) productList.getSelectedValue();
+                if(Integer.parseInt(quantityField.getText()) <= a.getQuantity()){
+                    orderController.addToOrder(order, (Product) productList.getSelectedValue(), Integer.parseInt(quantityField.getText()));
+                    JOptionPane.showMessageDialog(frame, "Product added to order.");
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "the store doesn't have that many products.");
+                }
             }
         });
 
