@@ -25,9 +25,14 @@ public class Login_C_2_B extends JFrame {
 
         loginButton.addActionListener(e -> {
             if(e.getSource() == loginButton){
-                frame.dispose();
-                store.getCustomer(customerIDField.getText());
-                AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(store, store.getCustomer(customerIDField.getText()));
+                if(store.getCustomer(customerIDField.getText())!=null) {
+                    frame.dispose();
+                    store.getCustomer(customerIDField.getText());
+                    AfterLoginRegistration_C_2_5 afterRegistration = new AfterLoginRegistration_C_2_5(store, store.getCustomer(customerIDField.getText()));
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "Login Failed.");
+                }
             }
         });
         backButton.addActionListener(e -> {

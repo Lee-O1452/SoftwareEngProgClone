@@ -44,8 +44,13 @@ public class CustomerReceipt_M_5_C {
         viewOrderButton.addActionListener(e -> {
             if(e.getSource()==viewOrderButton){
                 Order o = (Order) orderHistory.getSelectedValue();
-                frame.dispose();
-                Receipt_M_5_C priorReceipt = new Receipt_M_5_C((Order) orderHistory.getSelectedValue());
+                if(o!=null) {
+                    frame.dispose();
+                    Receipt_M_5_C priorReceipt = new Receipt_M_5_C((Order) orderHistory.getSelectedValue());
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "Select an order from the list to continue.");
+                }
             }
         });
     }

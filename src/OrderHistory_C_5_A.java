@@ -43,10 +43,16 @@ public class OrderHistory_C_5_A {
 
         viewOrderButton.addActionListener(e -> {
             if(e.getSource()==viewOrderButton){
-                Order o = (Order) orderHistory.getSelectedValue();
-                frame.dispose();
-                Receipt_C_5_B priorReceipt = new Receipt_C_5_B((Order) orderHistory.getSelectedValue());
+                if(orderHistory.getSelectedValue()!=null) {
+                    Order o = (Order) orderHistory.getSelectedValue();
+                    frame.dispose();
+                    Receipt_C_5_B priorReceipt = new Receipt_C_5_B((Order) orderHistory.getSelectedValue());
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "Select an order from the list or create a new one to continue.");
+                }
             }
+
         });
     }
 }
