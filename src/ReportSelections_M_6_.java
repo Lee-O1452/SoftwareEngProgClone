@@ -1,10 +1,8 @@
 import javax.swing.*;
 import javax.swing.JFrame;
 
-
 public class ReportSelections_M_6_ extends JFrame{
     private JButton backButton;
-    private JTextField reportName;
     private JPanel panel1;
     private JTextArea reportArea;
     private JButton customerOrderTotalsButton;
@@ -27,13 +25,12 @@ public class ReportSelections_M_6_ extends JFrame{
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         InventoryController inventoryController = new InventoryController(store);
-        StoreController storeController = new StoreController();
         OrderController orderController = new OrderController();
 
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Selections_M_2_A selections = new Selections_M_2_A(store);
+                new Selections_M_2_A(store);
             }
         });
 
@@ -81,7 +78,7 @@ public class ReportSelections_M_6_ extends JFrame{
 
         storesSalesButton.addActionListener(e -> {
             if(e.getSource()==storesSalesButton){
-                reportArea.setText(orderController.displayAllStoresSales(store));
+                reportArea.setText(orderController.displayAllStoresSales());
             }
         });
     }

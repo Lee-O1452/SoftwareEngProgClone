@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class InventoryController {
-
-	//private StoreGui gui;
 	private Inventory inventory;
 
 	public InventoryController(Store store) {
@@ -16,12 +14,10 @@ public class InventoryController {
 
 		IDValidator checkID = new IDValidator();
 
-		//check length
 		if (checkID.isIdValidProduct(productID) == 1) {
 			return "Make sure the ID is four digits.";
 		}
 
-		//check characters
 		else if (checkID.isIdValidProduct(productID) == 2) {
 			return "Make sure the ID only contains digits.";
 		}

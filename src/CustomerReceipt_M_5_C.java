@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-
 public class CustomerReceipt_M_5_C {
     private JButton backButton;
     private JTextField customerIDField;
@@ -23,7 +22,7 @@ public class CustomerReceipt_M_5_C {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                CustomerSelections_M_5_A customerSelection = new CustomerSelections_M_5_A(store);
+                new CustomerSelections_M_5_A(store);
             }
         });
 
@@ -46,7 +45,7 @@ public class CustomerReceipt_M_5_C {
                 Order o = (Order) orderHistory.getSelectedValue();
                 if(o!=null) {
                     frame.dispose();
-                    Receipt_M_5_C priorReceipt = new Receipt_M_5_C((Order) orderHistory.getSelectedValue());
+                    new Receipt_M_5_C((Order) orderHistory.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select an order from the list to continue.");

@@ -33,7 +33,7 @@ public class CreateStore_M_1_B extends JFrame{
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Selections_M_1_A selections = new Selections_M_1_A();
+                new Selections_M_1_A();
             }
         });
     }

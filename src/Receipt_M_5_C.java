@@ -18,7 +18,7 @@ public class Receipt_M_5_C {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                CustomerReceipt_M_5_C orderHistory = new CustomerReceipt_M_5_C(order.getStore());
+                new CustomerReceipt_M_5_C(order.getStore());
             }
         });
     }

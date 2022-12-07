@@ -4,14 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="added lots of checks into user operated features to reduce possibility of error.">
+    <list default="true" id="04a543ac-6101-4bd3-a6d6-df51045d560f" name="Changes" comment="code cleanup">
+      <change afterPath="$PROJECT_DIR$/ProductReport.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderList.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storeList.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddProduct_M_3_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfterLoginRegistration_C_2_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BatchAdd_Update_M_3_E.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateDeal_M_3_H.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDeal_M_3_H.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateOrder_C_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateStore_M_1_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomerReceipt_M_5_C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerReceipt_M_5_C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerSelections_M_5_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomersReceipts_M_5_D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomersReceipts_M_5_D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DisplayCustomers_M_5_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayCustomers_M_5_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayProducts_M_3_D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IDValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IDValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IDValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IDValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inventory_M_3_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory_M_3_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login_C_2_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login_C_2_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu_1_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu_1_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MapPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderHistory_C_5_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Receipt_C_3_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_3_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Receipt_C_5_B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_C_5_B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Receipt_M_5_C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receipt_M_5_C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registration_C_2_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration_C_2_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveProduct_M_3_F.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReportSelections_M_6_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReturnItem_C_4_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReturnItem_C_4_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_C_1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_C_1_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_1_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_1_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selections_M_2_A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selections_M_2_A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StoreControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UpdateProduct_M_3_G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UpdateProduct_M_3_G.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UpdateTax_M_4_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UpdateTax_M_4_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Pull.Settings">
     <option name="OPTIONS">
@@ -53,13 +107,22 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;324&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nakota/IdeaProjects/_4321_Project/src&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nakota\IdeaProjects\_4321_Project\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nakota\IdeaProjects\_4321_Project\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -258,14 +321,147 @@
       <option name="project" value="LOCAL" />
       <updated>1670201082509</updated>
     </task>
-    <task id="LOCAL-00028" summary="added lots of checks into user operated features to reduce possibility of error.">
-      <created>1670370687419</created>
+    <task id="LOCAL-00028" summary="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController">
+      <created>1670216113135</created>
       <option name="number" value="00028" />
       <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1670370687419</updated>
+      <updated>1670216113135</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory">
+      <created>1670219397279</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670219397279</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Updated orderHistory and its receipt GUI">
+      <created>1670221763734</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670221763734</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixed line in orderHistory to properly load">
+      <created>1670222427193</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670222427193</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Added functionality to BatchAddUpdate GUI, added corresponding method to InventoryController">
+      <created>1670278564609</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670278564609</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Added functionality to UpdateProduct GUI, changed updateQuantity to add and removeQuantity">
+      <created>1670279834959</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670279834959</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added functionality to returnItem GUI and update to returnItem method">
+      <created>1670280515493</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1670280515493</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added functionality to RemoveItem GUI">
+      <created>1670280689248</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670280689248</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added search function to createOrder GUI">
+      <created>1670281630568</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1670281630568</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax">
+      <created>1670282018234</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1670282018234</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added saveProductReport to InventoryController and Inventory GUI">
+      <created>1670283748116</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1670283748116</updated>
+    </task>
+    <task id="LOCAL-00039" summary="rewrote manufacturerReport and integrated into GUI">
+      <created>1670286601570</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670286601570</updated>
+    </task>
+    <task id="LOCAL-00040" summary="added orderStatistics and started on popularProductsQuantity">
+      <created>1670352663522</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1670352663522</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added system persistence, added a popularProductHelper class, finished popularProductQuantity,">
+      <created>1670356463099</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1670356463099</updated>
+    </task>
+    <task id="LOCAL-00042" summary="added popularProductRevenue">
+      <created>1670356945065</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1670356945065</updated>
+    </task>
+    <task id="LOCAL-00043" summary="added customerOrderTotals">
+      <created>1670358354066</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670358354066</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added customerReceipt GUI for managers">
+      <created>1670360429388</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670360429388</updated>
+    </task>
+    <task id="LOCAL-00045" summary="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI">
+      <created>1670362310172</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1670362310172</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added displayOrderStatisticsSNAP">
+      <created>1670367363092</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1670367363092</updated>
+    </task>
+    <task id="LOCAL-00047" summary="code cleanup">
+      <created>1670383173295</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1670383173296</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,27 +493,31 @@
       <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="new" />
-    <MESSAGE value="added a global store map, updated buildStore to add to the map, updated GUI to populate store selection screen from it upon loading" />
-    <MESSAGE value="updated multiple gui pages to pass a store throughout once selected" />
-    <MESSAGE value="added popups to store creation and selection, fixed addproduct page to properly load" />
-    <MESSAGE value="updated addProduct GUI to properly add a product" />
-    <MESSAGE value="fixed addProduct back button, updated inventoryController to be connected to a store object" />
-    <MESSAGE value="added getTotalInventoryValue and getSize methods to Inventory and InventoryController classes, split displayProductReport into 4 different methods in InventoryController and streamlined them. Started on updating DisplayProducts GUI to work with each sorting option" />
-    <MESSAGE value="Finished displayProducts sorting on GUI" />
-    <MESSAGE value="Updated all IDs to be strings instead of ints, fixed all related code, other various code cleanups and GUI cleanups" />
-    <MESSAGE value="Updated IDValidator checks, made addProduct more failproof, and added more popups to add product GUI" />
-    <MESSAGE value="Updated IDValidator checks, made createStore more failproof, and added more popups to create store GUI" />
-    <MESSAGE value="Removed isIDValidCustomer and added generateCustomerID to IDValidator, updated registerCustomer in StoreController to match" />
-    <MESSAGE value="Removed isIDValidOrder and added generateOrderID to IDValidator, updated createCustomer in OrderController to match" />
-    <MESSAGE value="Removed isIDValidStore and added generateStoreID to IDValidator, updated createStore in StoreController to match" />
-    <MESSAGE value="Updated createStore GUI to display ID on creation, fixed all ID generation to begin with 1 instead of 0" />
     <MESSAGE value="Added a scroll bar to the store list" />
     <MESSAGE value="Updated visual of store selection screens for customer and manager" />
     <MESSAGE value="Updated login page to be inbetween customer selections and afterloginregistration, added customer name and id to display" />
     <MESSAGE value="Updated displayCustomer GUI functionality and respective method storeController" />
     <MESSAGE value="Readded test classes that got lost while switching over IDEs" />
-    <MESSAGE value="added lots of checks into user operated features to reduce possibility of error." />
-    <option name="LAST_COMMIT_MESSAGE" value="added lots of checks into user operated features to reduce possibility of error." />
+    <MESSAGE value="Update to CreateOrder and Receipt guis, and update to the displayReceipt methods in Order and orderController" />
+    <MESSAGE value="Fixing to CreateOrder and Receipt displays, updating payOrder function to remove the quantity from the stores inventory" />
+    <MESSAGE value="Updated orderHistory and its receipt GUI" />
+    <MESSAGE value="Fixed line in orderHistory to properly load" />
+    <MESSAGE value="Added functionality to BatchAddUpdate GUI, added corresponding method to InventoryController" />
+    <MESSAGE value="Added functionality to UpdateProduct GUI, changed updateQuantity to add and removeQuantity" />
+    <MESSAGE value="Added functionality to returnItem GUI and update to returnItem method" />
+    <MESSAGE value="Added functionality to RemoveItem GUI" />
+    <MESSAGE value="Added search function to createOrder GUI" />
+    <MESSAGE value="Added functionality to UpdateTax GUI, split updateTaxes into updateFoodTax and updateNonfoodTax" />
+    <MESSAGE value="Added saveProductReport to InventoryController and Inventory GUI" />
+    <MESSAGE value="rewrote manufacturerReport and integrated into GUI" />
+    <MESSAGE value="added orderStatistics and started on popularProductsQuantity" />
+    <MESSAGE value="added system persistence, added a popularProductHelper class, finished popularProductQuantity," />
+    <MESSAGE value="added popularProductRevenue" />
+    <MESSAGE value="added customerOrderTotals" />
+    <MESSAGE value="added customerReceipt GUI for managers" />
+    <MESSAGE value="added a new Receipt GUI class for CustomerReceipt to use, added CustomersReceipts GUI" />
+    <MESSAGE value="added displayOrderStatisticsSNAP" />
+    <MESSAGE value="code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
   </component>
 </project>

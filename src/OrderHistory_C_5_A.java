@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-
 public class OrderHistory_C_5_A {
     private JButton backButton;
     private JTextField customerIDField;
@@ -23,7 +22,7 @@ public class OrderHistory_C_5_A {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store, customer);
+                new AfterLoginRegistration_C_2_5(store, customer);
             }
         });
 
@@ -44,15 +43,13 @@ public class OrderHistory_C_5_A {
         viewOrderButton.addActionListener(e -> {
             if(e.getSource()==viewOrderButton){
                 if(orderHistory.getSelectedValue()!=null) {
-                    Order o = (Order) orderHistory.getSelectedValue();
                     frame.dispose();
-                    Receipt_C_5_B priorReceipt = new Receipt_C_5_B((Order) orderHistory.getSelectedValue());
+                    new Receipt_C_5_B((Order) orderHistory.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select an order from the list or create a new one to continue.");
                 }
             }
-
         });
     }
 }

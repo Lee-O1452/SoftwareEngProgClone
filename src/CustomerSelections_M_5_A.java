@@ -19,28 +19,28 @@ public class CustomerSelections_M_5_A extends JFrame{
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Selections_M_2_A selections = new Selections_M_2_A(store);
+                new Selections_M_2_A(store);
             }
         });
 
         displayCustomerReceiptButton.addActionListener(e -> {
             if(e.getSource()==displayCustomerReceiptButton){
                 frame.dispose();
-                CustomerReceipt_M_5_C customerReceipt = new CustomerReceipt_M_5_C(store);
+                new CustomerReceipt_M_5_C(store);
             }
         });
 
         displayCustomerSReceiptsButton.addActionListener(e -> {
             if(e.getSource()==displayCustomerSReceiptsButton){
                 frame.dispose();
-                CustomersReceipts_M_5_D customerReceipt = new CustomersReceipts_M_5_D(store);
+                new CustomersReceipts_M_5_D(store);
             }
         });
 
         displayCustomersButton.addActionListener(e -> {
             if(e.getSource()==displayCustomersButton){
                 frame.dispose();
-                DisplayCustomers_M_5_B customers = new DisplayCustomers_M_5_B(store);
+                new DisplayCustomers_M_5_B(store);
             }
         });
 

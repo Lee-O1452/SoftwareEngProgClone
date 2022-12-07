@@ -24,49 +24,49 @@ public class Inventory_M_3_A extends JFrame {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Selections_M_2_A selections = new Selections_M_2_A(store);
+                new Selections_M_2_A(store);
             }
         });
 
         updateProductButton.addActionListener(e -> {
             if(e.getSource()==updateProductButton){
                 frame.dispose();
-                UpdateProduct_M_3_G updateProduct = new UpdateProduct_M_3_G(store);
+                new UpdateProduct_M_3_G(store);
             }
         });
 
         batchAddUpdateButton.addActionListener(e -> {
             if(e.getSource()==batchAddUpdateButton){
                 frame.dispose();
-                BatchAdd_Update_M_3_E batchUpdate = new BatchAdd_Update_M_3_E(store);
+                new BatchAdd_Update_M_3_E(store);
             }
         });
 
         addProductButton.addActionListener(e -> {
             if(e.getSource()==addProductButton){
                 frame.dispose();
-                AddProduct_M_3_B addProduct = new AddProduct_M_3_B(store);
+                new AddProduct_M_3_B(store);
             }
         });
 
         displayProductsButton.addActionListener(e -> {
             if(e.getSource()==displayProductsButton){
                 frame.dispose();
-                DisplayProducts_M_3_D displayProducts = new DisplayProducts_M_3_D(store);
+                new DisplayProducts_M_3_D(store);
             }
         });
 
         removeProductButton.addActionListener(e -> {
             if(e.getSource()==removeProductButton){
                 frame.dispose();
-                RemoveProduct_M_3_F removeProduct = new RemoveProduct_M_3_F(store);
+                new RemoveProduct_M_3_F(store);
             }
         });
 
         createDealButton.addActionListener(e -> {
             if(e.getSource()==createDealButton){
                 frame.dispose();
-                CreateDeal_M_3_H createDeal = new CreateDeal_M_3_H(store);
+                new CreateDeal_M_3_H(store);
             }
         });
 

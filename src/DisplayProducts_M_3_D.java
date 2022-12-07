@@ -67,7 +67,7 @@ public class DisplayProducts_M_3_D extends JFrame {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Inventory_M_3_A selections = new Inventory_M_3_A(store);
+                new Inventory_M_3_A(store);
             }
         });
     }

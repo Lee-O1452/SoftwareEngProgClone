@@ -1,7 +1,5 @@
 import javax.swing.*;
 import javax.swing.JFrame;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 
 public class Selections_C_1_5 {
@@ -27,7 +25,7 @@ public class Selections_C_1_5 {
             if(e.getSource() == registerButton){
                 if(storeSelect.getSelectedValue()!=null) {
                     frame.dispose();
-                    Registration_C_2_A registration = new Registration_C_2_A((Store) storeSelect.getSelectedValue());
+                    new Registration_C_2_A((Store) storeSelect.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
@@ -39,7 +37,7 @@ public class Selections_C_1_5 {
             if(e.getSource() == loginButton){
                 if(storeSelect.getSelectedValue()!=null) {
                     frame.dispose();
-                    Login_C_2_B login = new Login_C_2_B((Store) storeSelect.getSelectedValue());
+                    new Login_C_2_B((Store) storeSelect.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list to continue.");
@@ -50,7 +48,7 @@ public class Selections_C_1_5 {
         backButton.addActionListener(e -> {
             if(e.getSource() == backButton){
                 frame.dispose();
-                MainMenu_1_ mainMenu = new MainMenu_1_();
+                new MainMenu_1_();
             }
         });
     }

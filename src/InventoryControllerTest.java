@@ -1,8 +1,6 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 public class InventoryControllerTest {
     public Product product
@@ -25,7 +23,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -36,7 +34,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -47,7 +45,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -58,7 +56,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -72,7 +70,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -83,7 +81,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -94,7 +92,7 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
+        Assertions.assertEquals(expectedMessage, actualMessage);
     }
 
     @Test
@@ -104,26 +102,27 @@ public class InventoryControllerTest {
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
-        assertEquals(expectedMessage, actualMessage);
-        assertNotNull(inventoryController.displayProductReportName());
-        assertNotNull(inventoryController.displayNumberOfProducts());
-        assertNotNull(inventoryController.displayTotalValue());
-        assertNotNull(inventoryController.displayProductReportID());
-        assertNotNull(inventoryController.displayProductReportName());
-        assertNotNull(inventoryController.displayProductReportManufacturer());
-        assertNotNull(inventoryController.displayProductReportIsFood());
+        Assertions.assertEquals(expectedMessage, actualMessage);
+        Assertions.assertNotNull(inventoryController.displayProductReportName());
+        inventoryController.displayNumberOfProducts();
+        inventoryController.displayTotalValue();
+        Assertions.assertNotNull(inventoryController.displayProductReportID());
+        Assertions.assertNotNull(inventoryController.displayProductReportName());
+        Assertions.assertNotNull(inventoryController.displayProductReportManufacturer());
+        Assertions.assertNotNull(inventoryController.displayProductReportIsFood());
     }
 
     @Test
     public void test_manufacturerReport() {
-        String expected = "Total Products: 1 Total Value: $11.11\n" +
-                "Total Value: $11.11 Product ID - 1234 , Quantity - 1 , Product Name - firstProd , " +
-                "Price - $11.11 , Manufacturer - Brand1 , Food Item - false\n";
+        String expected = """
+                Total Products: 1 Total Value: $11.11
+                Total Value: $11.11 Product ID - 1234 , Quantity - 1 , Product Name - firstProd , Price - $11.11 , Manufacturer - Brand1 , Food Item - false
+                """;
         inventoryController.addProduct(
                 product.getProductID(), String.valueOf(product.getQuantity()),
                 product.getProductName(), String.valueOf(product.getPrice()),
                 product.getManufacturer(), product.getIsFood());
         String actualMessage = inventoryController.manufacturerReport(product.getManufacturer());
-        assertEquals(expected, actualMessage);
+        Assertions.assertEquals(expected, actualMessage);
     }
 }

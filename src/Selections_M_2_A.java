@@ -26,7 +26,7 @@ public class Selections_M_2_A extends JFrame{
         backButton.addActionListener(e -> {
             if (e.getSource() == backButton) {
                 frame.dispose();
-                Selections_M_1_A selectionsM1 = new Selections_M_1_A();
+                new Selections_M_1_A();
 
             }
         });
@@ -34,7 +34,7 @@ public class Selections_M_2_A extends JFrame{
         inventoryButton.addActionListener(e -> {
             if (e.getSource() == inventoryButton) {
                 frame.dispose();
-                Inventory_M_3_A inventory = new Inventory_M_3_A(store);
+                new Inventory_M_3_A(store);
 
             }
         });
@@ -42,7 +42,7 @@ public class Selections_M_2_A extends JFrame{
         updateTaxButton.addActionListener(e -> {
             if (e.getSource() == updateTaxButton) {
                 frame.dispose();
-                UpdateTax_M_4_ updateTax = new UpdateTax_M_4_(store);
+                new UpdateTax_M_4_(store);
 
             }
         });
@@ -50,7 +50,7 @@ public class Selections_M_2_A extends JFrame{
         customersButton.addActionListener(e -> {
             if (e.getSource() == customersButton) {
                 frame.dispose();
-                CustomerSelections_M_5_A customerSelections = new CustomerSelections_M_5_A(store);
+                new CustomerSelections_M_5_A(store);
 
             }
         });
@@ -58,7 +58,7 @@ public class Selections_M_2_A extends JFrame{
         reportsButton.addActionListener(e -> {
             if (e.getSource() == reportsButton) {
                 frame.dispose();
-                ReportSelections_M_6_ reports = new ReportSelections_M_6_(store);
+                new ReportSelections_M_6_(store);
 
             }
         });

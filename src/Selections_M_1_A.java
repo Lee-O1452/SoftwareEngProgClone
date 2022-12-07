@@ -4,8 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 
 
@@ -32,23 +30,23 @@ public class Selections_M_1_A extends JFrame {
         createStoreButton.addActionListener(e -> {
             if(e.getSource() == createStoreButton){
                 frame.dispose();
-                CreateStore_M_1_B createStore = new CreateStore_M_1_B();
+                new CreateStore_M_1_B();
             }
 
         });
 
         saveAllDataButton.addActionListener(e -> {
             if(e.getSource() == saveAllDataButton){
-                FileOutputStream storeFOS = null;
-                FileOutputStream orderFOS = null;
+                FileOutputStream storeFOS;
+                FileOutputStream orderFOS;
                 try {
                     storeFOS = new FileOutputStream("storeList.out");
                     orderFOS = new FileOutputStream("orderList.out");
                 } catch (FileNotFoundException ex) {
                     throw new RuntimeException(ex);
                 }
-                ObjectOutputStream storeOOS = null;
-                ObjectOutputStream orderOOS = null;
+                ObjectOutputStream storeOOS;
+                ObjectOutputStream orderOOS;
                 try {
                     storeOOS = new ObjectOutputStream(storeFOS);
                     orderOOS = new ObjectOutputStream(orderFOS);
@@ -68,7 +66,7 @@ public class Selections_M_1_A extends JFrame {
         backButton.addActionListener(e -> {
             if (e.getSource() == backButton) {
                 frame.dispose();
-                MainMenu_1_ mainMenu = new MainMenu_1_();
+                new MainMenu_1_();
             }
         });
 
@@ -76,7 +74,7 @@ public class Selections_M_1_A extends JFrame {
             if(e.getSource()==selectStoreButton){
                 if(storeSelect.getSelectedValue()!=null){
                     frame.dispose();
-                    Selections_M_2_A afterLogin = new Selections_M_2_A((Store) storeSelect.getSelectedValue());
+                    new Selections_M_2_A((Store) storeSelect.getSelectedValue());
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "Select a store from the list or create a new one to continue.");

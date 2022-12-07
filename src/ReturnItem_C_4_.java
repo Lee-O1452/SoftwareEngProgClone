@@ -1,6 +1,5 @@
 import javax.swing.*;
 
-
 public class ReturnItem_C_4_ {
     private JButton backButton;
     private JButton returnItemButton;
@@ -22,7 +21,7 @@ public class ReturnItem_C_4_ {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(store, customer);
+                new AfterLoginRegistration_C_2_5(store, customer);
             }
         });
 
@@ -38,6 +37,5 @@ public class ReturnItem_C_4_ {
                 }
             }
         });
-
     }
 }

@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-
 public class CreateOrder_C_3_A {
     private JButton backButton;
     private JButton createOrderButton;
@@ -44,7 +43,7 @@ public class CreateOrder_C_3_A {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                AfterLoginRegistration_C_2_5 afterLogin = new AfterLoginRegistration_C_2_5(order.getStore(), order.getStore().getCustomer(order.getCustomerID()));
+                new AfterLoginRegistration_C_2_5(order.getStore(), order.getStore().getCustomer(order.getCustomerID()));
             }
         });
 
@@ -65,7 +64,7 @@ public class CreateOrder_C_3_A {
             if(e.getSource()==createOrderButton){
                 order.setUsingSnap(usingSNAPBox.isSelected());
                 frame.dispose();
-                Receipt_C_3_B receipt = new Receipt_C_3_B(order);
+                new Receipt_C_3_B(order);
             }
         });
     }

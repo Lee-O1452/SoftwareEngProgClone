@@ -1,4 +1,3 @@
-
 public class IDValidator {
 	
 	public int isIdValidProduct(String productID) {

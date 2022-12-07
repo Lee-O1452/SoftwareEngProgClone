@@ -57,7 +57,6 @@ public class Inventory implements Serializable {
 			System.exit(0);
 	 	}
 	}
-
 	
 	public void removeProduct(Product p) {
 		inventory.remove(p.getProductID());

@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.util.Date;
 
 public class AfterLoginRegistration_C_2_5 {
     private JButton backButton;
@@ -29,7 +28,7 @@ public class AfterLoginRegistration_C_2_5 {
         backButton.addActionListener(e -> {
             if(e.getSource()==backButton){
                 frame.dispose();
-                Login_C_2_B login = new Login_C_2_B(store);
+                new Login_C_2_B(store);
             }
         });
 
@@ -38,21 +37,21 @@ public class AfterLoginRegistration_C_2_5 {
                 OrderController orderController = new OrderController();
                 String orderID = orderController.createOrder(store, customer);
                 frame.dispose();
-                CreateOrder_C_3_A createOrder = new CreateOrder_C_3_A(Main.getOrderList().get(orderID));
+                new CreateOrder_C_3_A(Main.getOrderList().get(orderID));
             }
         });
 
         returnItemButton.addActionListener(e -> {
             if(e.getSource()==returnItemButton){
                 frame.dispose();
-                ReturnItem_C_4_ returnItem = new ReturnItem_C_4_(store, customer);
+                new ReturnItem_C_4_(store, customer);
             }
         });
 
         orderHistoryButton.addActionListener(e -> {
             if(e.getSource()==orderHistoryButton){
                 frame.dispose();
-                OrderHistory_C_5_A orderHistory = new OrderHistory_C_5_A(store, customer);
+                new OrderHistory_C_5_A(store, customer);
             }
         });
 

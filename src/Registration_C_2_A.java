@@ -27,7 +27,7 @@ public class Registration_C_2_A {
         backButton.addActionListener(e -> {
             if (e.getSource() == backButton) {
                 frame.dispose();
-                Selections_C_1_5 selections = new Selections_C_1_5();
+                new Selections_C_1_5();
             }
         });
 
@@ -62,5 +62,4 @@ public class Registration_C_2_A {
             }
         });
     }
-
 }

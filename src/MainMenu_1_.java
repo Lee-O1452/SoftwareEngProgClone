@@ -17,15 +17,15 @@ public class MainMenu_1_ extends JFrame{
         customerButton.addActionListener(e -> {
             if (e.getSource() == customerButton) {
                 frame.dispose();
-                Selections_C_1_5 selections = new Selections_C_1_5();
+                new Selections_C_1_5();
             }
         });
+
         managerButton.addActionListener(e -> {
             if(e.getSource() == managerButton){
                 frame.dispose();
-                Selections_M_1_A selections = new Selections_M_1_A();
+                new Selections_M_1_A();
              }
-
          });
     }
 }
